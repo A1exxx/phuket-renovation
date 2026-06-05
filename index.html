@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phuket Reno — Ремонт вилл и кондо на Пхукете под ключ | Договор, гарантия</title>
+<meta name="description" content="Ремонт и реновация вилл, квартир и коммерческих помещений на Пхукете под ключ. Договор, фиксированная смета, гарантия 2 года. 7 лет на острове. Ведём проект под фото-видео-отчёт, даже если вы за границей.">
+<meta property="og:title" content="Phuket Reno — ремонт вилл и кондо на Пхукете под ключ">
+<meta property="og:description" content="Договор, фиксированная смета, гарантия 2 года. Инженерная команда, 7 лет на Пхукете.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<!--
+  ============================================================
+  TODO перед публикацией — заменить плейсхолдеры на реальное:
+  1. Бренд: «Phuket Reno» → реальное название компании + логотип.
+  2. Контакты: WhatsApp wa.me/66XXXXXXXXX, Telegram t.me/your_account,
+     телефон +66 XX XXX XXXX, email — везде по тексту (ищите PLACEHOLDER).
+  3. Фото проектов «до/после» — заменить CSS-плейсхолдеры на реальные снимки
+     (блоки .work .ph и hero .ba). Рекомендуется WebP, lazy-loading.
+  4. Отзывы — поставить реальные (имена/тексты сейчас условные).
+  5. Цифры в .stats (лет, объектов, кв.м) — выставить фактические.
+  6. Подключить аналитику: Meta Pixel + Google Tag (перед </head>).
+  7. Форму подключить к боту/CRM/Formspree (сейчас демо-обработчик).
+  ============================================================
+-->
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Phuket Reno — на главную">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="9" stroke="#0E5A50" stroke-width="2"/>
+        <path d="M11 27V16l9-6 9 6v11" stroke="#0E5A50" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M17 27v-6h6v6" stroke="#B0894F" stroke-width="2.2" stroke-linejoin="round"/>
+      </svg>
+      <span>Phuket&nbsp;Reno<small>villa renovation</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#services"><span data-ru>Услуги</span><span data-en>Services</span></a>
+      <a href="#why"><span data-ru>Почему мы</span><span data-en>Why us</span></a>
+      <a href="#work"><span data-ru>Работы</span><span data-en>Projects</span></a>
+      <a href="#process"><span data-ru>Как работаем</span><span data-en>Process</span></a>
+      <a href="#contact"><span data-ru>Контакты</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-tools">
+      <div class="lang" role="group" aria-label="Язык / Language">
+        <button data-lang="ru" class="active">RU</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#contact" class="btn btn--primary nav-cta">
+        <span data-ru>Бесплатный замер</span><span data-en>Free estimate</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services"><span data-ru>Услуги</span><span data-en>Services</span></a>
+    <a href="#why"><span data-ru>Почему мы</span><span data-en>Why us</span></a>
+    <a href="#work"><span data-ru>Работы</span><span data-en>Projects</span></a>
+    <a href="#process"><span data-ru>Как работаем</span><span data-en>Process</span></a>
+    <a href="#contact"><span data-ru>Контакты</span><span data-en>Contact</span></a>
+    <a href="#contact" class="btn btn--primary"><span data-ru>Бесплатный замер</span><span data-en>Free estimate</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow hero-eyebrow"><span data-ru>Пхукет · с 2019 года</span><span data-en>Phuket · since 2019</span></span>
+      <h1>
+        <span data-ru>Ремонт виллы под ключ — <span class="accent">без риска</span> и нервов</span>
+        <span data-en>Turnkey villa renovation — <span class="accent">without the risk</span></span>
+      </h1>
+      <p class="hero-lead">
+        <span data-ru>Ремонт и реновация вилл, кондо и коммерческих помещений на Пхукете. Договор, фиксированная смета, гарантия 2 года. Ведём проект под фото- и видео-отчёт — даже если вы не в Таиланде.</span>
+        <span data-en>Renovation of villas, condos and commercial spaces on Phuket. Contract, fixed estimate, 2-year warranty. We run your project with photo & video reports — even when you're abroad.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn--wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.06c-.25.69-1.45 1.32-1.99 1.36-.53.04-1.03.23-3.48-.73-2.93-1.16-4.79-4.18-4.94-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.25-.28.55-.35.74-.35.18 0 .37 0 .53.01.17.01.4-.06.62.48.25.59.84 2.05.91 2.2.07.14.12.31.02.51-.1.2-.15.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.29-.13.57.17.28.74 1.22 1.59 1.98 1.1.98 2.02 1.28 2.31 1.42.29.14.46.12.63-.07.17-.2.72-.84.91-1.13.18-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.32.07.12.07.66-.18 1.35Z"/></svg>
+          <span data-ru>Написать в WhatsApp</span><span data-en>Message on WhatsApp</span>
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <span data-ru>Смета за 24 часа</span><span data-en>Get a quote in 24h</span>
+        </a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Договор и фикс-смета</span><span data-en>Contract & fixed price</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Гарантия 2 года</span><span data-en>2-year warranty</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Отчёты по этапам</span><span data-en>Stage-by-stage reports</span></li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <div class="ba" id="ba">
+        <div class="ba-img ba-after"><span class="ba-tag"><span data-ru>После</span><span data-en>After</span></span></div>
+        <div class="ba-img ba-before" id="baBefore"><span class="ba-tag"><span data-ru>До</span><span data-en>Before</span></span></div>
+        <div class="ba-handle" id="baHandle"></div>
+        <div class="ba-knob" id="baKnob" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+        </div>
+        <input type="range" class="ba-range" id="baRange" min="0" max="100" value="50" aria-label="Сравнить до и после / Compare before and after">
+      </div>
+      <div class="hero-badge">
+        <div class="n">200+</div>
+        <div class="t"><span data-ru>сданных объектов на Пхукете</span><span data-en>projects completed on Phuket</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST STRIP ========== -->
+<div class="strip">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg><span data-ru>Официально и легально</span><span data-en>Licensed & legal</span></span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 7l10-5 10 5"/><path d="M5 10v8M19 10v8M3 18h18"/></svg><span data-ru>Инженерная команда</span><span data-en>In-house engineers</span></span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-ru>Сроки в договоре</span><span data-en>Deadlines in contract</span></span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/><circle cx="12" cy="12" r="10"/></svg><span data-ru>Работаем на русском и English</span><span data-en>We speak Russian & English</span></span>
+  </div>
+</div>
+
+<!-- ========== STATS ========== -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><div class="n">7<b>+</b></div><div class="t"><span data-ru>лет на Пхукете</span><span data-en>years on Phuket</span></div></div>
+      <div class="stat"><div class="n">200<b>+</b></div><div class="t"><span data-ru>сданных объектов</span><span data-en>completed projects</span></div></div>
+      <div class="stat"><div class="n">2 <b data-ru>года</b><b data-en>yrs</b></div><div class="t"><span data-ru>гарантия на работы</span><span data-en>warranty on all works</span></div></div>
+      <div class="stat"><div class="n">100<b>%</b></div><div class="t"><span data-ru>работа по договору</span><span data-en>contract-based</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span data-ru>Услуги</span><span data-en>Services</span></span>
+      <h2><span data-ru>Полный цикл ремонта — от замера до сдачи</span><span data-en>Full-cycle renovation — from survey to handover</span></h2>
+      <p><span data-ru>Берём проект целиком: проектирование, инженерия, отделка, мебель и сдача под ключ. Один подрядчик и одна ответственность.</span><span data-en>We take the whole project: design, engineering, finishing, furniture and turnkey handover. One contractor, one responsibility.</span></p>
+    </div>
+    <div class="services-grid">
+      <article class="card">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg></div>
+        <h3><span data-ru>Ремонт вилл под ключ</span><span data-en>Turnkey villa renovation</span></h3>
+        <p><span data-ru>Полная реновация частных вилл: планировка, бассейн, инженерия, отделка премиум-класса.</span><span data-en>Full renovation of private villas: layout, pool, engineering, premium finishing.</span></p>
+      </article>
+      <article class="card">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3><span data-ru>Ремонт кондо и квартир</span><span data-en>Condo & apartment renovation</span></h3>
+        <p><span data-ru>Ремонт апартаментов под себя или под аренду. Решения, которые поднимают доходность.</span><span data-en>Apartments for living or rental. Solutions that raise your rental yield.</span></p>
+      </article>
+      <article class="card">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M9 13h.01M15 9h.01M15 13h.01"/></svg></div>
+        <h3><span data-ru>Коммерческие помещения</span><span data-en>Commercial fit-out</span></h3>
+        <p><span data-ru>Рестораны, кафе, мини-отели, офисы и магазины. Fit-out в срок — простой стоит денег.</span><span data-en>Restaurants, cafés, boutique hotels, offices and shops. On-time fit-out — downtime costs money.</span></p>
+      </article>
+      <article class="card">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m2 12 5-9 5 9-5 9-5-9ZM12 12l5-9 5 9-5 9-5-9Z"/></svg></div>
+        <h3><span data-ru>Дизайн интерьера</span><span data-en>Interior design</span></h3>
+        <p><span data-ru>Свой дизайн-проект или работа по вашему. 3D-визуализация до старта работ.</span><span data-en>Our design project or work to yours. 3D visualisation before we start.</span></p>
+      </article>
+      <article class="card">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+        <h3><span data-ru>Бассейны и гидроизоляция</span><span data-en>Pools & waterproofing</span></h3>
+        <p><span data-ru>Строительство и реновация бассейнов, профессиональная гидроизоляция против тропической влаги и плесени.</span><span data-en>Pool construction & renovation, professional waterproofing against tropical damp and mould.</span></p>
+      </article>
+      <article class="card is-feature">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 8l3 3 4-5"/></svg></div>
+        <h3><span data-ru>Ведение проекта удалённо</span><span data-en>Remote project management</span></h3>
+        <p><span data-ru>Вы за границей — мы ведём стройку под фото- и видео-отчёт по каждому этапу. Технадзор и приёмка.</span><span data-en>You're abroad — we run the build with photo & video reports at every stage. Supervision and acceptance included.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY US / PILLARS ========== -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span data-ru>Почему нам доверяют</span><span data-en>Why owners trust us</span></span>
+      <h2><span data-ru>Главный страх — «кинут и сделают брак». Мы его снимаем</span><span data-en>The big fear is "they'll vanish or botch it". We remove it</span></h2>
+      <p><span data-ru>Рынок ремонта на Пхукете полон историй с пропавшими подрядчиками и браком, который вылезает в сезон дождей. Вот как мы устроены иначе.</span><span data-en>Phuket's renovation market is full of vanished contractors and defects that surface in the rainy season. Here's how we're built differently.</span></p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-top">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+          <h3><span data-ru>Договор и фиксированная смета</span><span data-en>Contract & fixed estimate</span></h3>
+        </div>
+        <p><span data-ru>Прозрачная смета без «доделок за доплату». Оплата поэтапно — по факту выполненных работ, а не вперёд.</span><span data-en>Transparent estimate with no surprise extras. Staged payment against completed work — never fully upfront.</span></p>
+        <span class="kill"><span data-ru>→ Снимает страх «возьмут предоплату и пропадут»</span><span data-en>→ Kills the "take the deposit and disappear" fear</span></span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-top">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3><span data-ru>Инженерное качество + гарантия 2 года</span><span data-en>Engineering quality + 2-year warranty</span></h3>
+        </div>
+        <p><span data-ru>Гидроизоляция, электрика и сантехника по нормам. Делаем на тропический климат, а не «чтобы приняли».</span><span data-en>Waterproofing, electrics and plumbing done to code. Built for the tropical climate, not just to pass acceptance.</span></p>
+        <span class="kill"><span data-ru>→ Снимает страх «брак вылезет в дожди»</span><span data-en>→ Kills the "it'll fail in the rains" fear</span></span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-top">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m7 10 3 3 5-6M8 21h8"/></svg></div>
+          <h3><span data-ru>Удалённый контроль стройки</span><span data-en>Remote control of the build</span></h3>
+        </div>
+        <p><span data-ru>Фото и видео по каждому этапу в общий чат. Вы видите ход работ из любой точки мира в реальном времени.</span><span data-en>Photo and video at every stage to a shared chat. You watch progress in real time from anywhere in the world.</span></p>
+        <span class="kill"><span data-ru>→ Снимает страх «я не в Таиланде, не проконтролирую»</span><span data-en>→ Kills the "I'm not in Thailand to check" fear</span></span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-top">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 8 10 8 10s8-5 8-10V6z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h3><span data-ru>7 лет и репутация на острове</span><span data-en>7 years and a local reputation</span></h3>
+        </div>
+        <p><span data-ru>Реальное портфолио, отзывы владельцев, офис на Пхукете. Мы никуда не исчезнем после предоплаты.</span><span data-en>Real portfolio, owner reviews, an office on Phuket. We're not going anywhere after the deposit.</span></p>
+        <span class="kill"><span data-ru>→ Снимает страх «непонятно, кто это вообще»</span><span data-en>→ Kills the "who even are these people" fear</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PORTFOLIO ========== -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span data-ru>Наши работы</span><span data-en>Our work</span></span>
+      <h2><span data-ru>До и после: объекты на Пхукете</span><span data-en>Before & after: projects on Phuket</span></h2>
+      <p><span data-ru>Замените эти плейсхолдеры реальными фото ваших объектов — это самый продающий контент в нише.</span><span data-en>Replace these placeholders with real photos of your projects — the highest-converting content in this niche.</span></p>
+    </div>
+    <div class="work-grid">
+      <figure class="work work-1"><div class="ph"><span data-ru>Фото проекта</span><span data-en>Project photo</span></div><figcaption class="work-meta"><b><span data-ru>Вилла, Лагуна</span><span data-en>Villa, Laguna</span></b><small><span data-ru>Ремонт под ключ · 320 м²</span><span data-en>Turnkey renovation · 320 m²</span></small></figcaption></figure>
+      <figure class="work work-2"><div class="ph"><span data-ru>Фото проекта</span><span data-en>Project photo</span></div><figcaption class="work-meta"><b><span data-ru>Кондо, Камала</span><span data-en>Condo, Kamala</span></b><small><span data-ru>Реновация под аренду · 68 м²</span><span data-en>Rental upgrade · 68 m²</span></small></figcaption></figure>
+      <figure class="work work-3"><div class="ph"><span data-ru>Фото проекта</span><span data-en>Project photo</span></div><figcaption class="work-meta"><b><span data-ru>Ресторан, Раваи</span><span data-en>Restaurant, Rawai</span></b><small><span data-ru>Fit-out · 140 м²</span><span data-en>Fit-out · 140 m²</span></small></figcaption></figure>
+      <figure class="work work-4"><div class="ph"><span data-ru>Фото проекта</span><span data-en>Project photo</span></div><figcaption class="work-meta"><b><span data-ru>Вилла, Банг Тао</span><span data-en>Villa, Bang Tao</span></b><small><span data-ru>Бассейн + терраса</span><span data-en>Pool + terrace</span></small></figcaption></figure>
+      <figure class="work work-5"><div class="ph"><span data-ru>Фото проекта</span><span data-en>Project photo</span></div><figcaption class="work-meta"><b><span data-ru>Апартаменты, Патонг</span><span data-en>Apartment, Patong</span></b><small><span data-ru>Дизайн + ремонт · 90 м²</span><span data-en>Design + renovation · 90 m²</span></small></figcaption></figure>
+      <figure class="work work-6"><div class="ph"><span data-ru>Фото проекта</span><span data-en>Project photo</span></div><figcaption class="work-meta"><b><span data-ru>Офис, Чалонг</span><span data-en>Office, Chalong</span></b><small><span data-ru>Коммерческий ремонт · 210 м²</span><span data-en>Commercial fit-out · 210 m²</span></small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROCESS ========== -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span data-ru>Как мы работаем</span><span data-en>How we work</span></span>
+      <h2><span data-ru>5 прозрачных шагов</span><span data-en>5 transparent steps</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><h3><span data-ru>Заявка</span><span data-en>Enquiry</span></h3><p><span data-ru>Пишете в WhatsApp или Telegram, рассказываете об объекте.</span><span data-en>Message us on WhatsApp or Telegram, tell us about the property.</span></p></div>
+      <div class="step"><div class="step-n">2</div><h3><span data-ru>Замер и смета</span><span data-en>Survey & quote</span></h3><p><span data-ru>Бесплатный выезд, фиксированная смета за 24 часа.</span><span data-en>Free visit, fixed estimate within 24 hours.</span></p></div>
+      <div class="step"><div class="step-n">3</div><h3><span data-ru>Договор</span><span data-en>Contract</span></h3><p><span data-ru>Сроки, этапы и оплата зафиксированы на бумаге.</span><span data-en>Timeline, stages and payment fixed on paper.</span></p></div>
+      <div class="step"><div class="step-n">4</div><h3><span data-ru>Работы + отчёты</span><span data-en>Build + reports</span></h3><p><span data-ru>Делаем ремонт, присылаем фото-видео по этапам.</span><span data-en>We build and send photo-video reports per stage.</span></p></div>
+      <div class="step"><div class="step-n">5</div><h3><span data-ru>Сдача и гарантия</span><span data-en>Handover & warranty</span></h3><p><span data-ru>Приёмка, уборка, гарантия 2 года на работы.</span><span data-en>Acceptance, cleaning, 2-year warranty on works.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REMOTE OWNERS ========== -->
+<section class="wrap">
+  <div class="remote">
+    <div class="remote-in">
+      <div>
+        <span class="eyebrow" style="color:var(--brass-soft)"><span data-ru>Для собственников за границей</span><span data-en>For overseas owners</span></span>
+        <h2 style="margin-top:18px"><span data-ru>Вы не в Таиланде? Это не проблема</span><span data-en>Not in Thailand? Not a problem</span></h2>
+        <p><span data-ru>Большинство наших клиентов живут в другой стране. Мы выстроили процесс так, чтобы вы полностью контролировали ремонт удалённо и были спокойны за каждый бат.</span><span data-en>Most of our clients live abroad. We built the process so you fully control the renovation remotely and feel safe about every baht.</span></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Общий чат с фото и видео по каждому этапу</span><span data-en>Shared chat with photos and video at every stage</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Видеозвонки с объекта по запросу</span><span data-en>On-site video calls on request</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Оплата по этапам, привязанным к результату</span><span data-en>Payment by stages tied to results</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-ru>Закупки и приёмка материалов под нашим контролем</span><span data-en>Material purchase and acceptance under our control</span></li>
+        </ul>
+      </div>
+      <div class="remote-card">
+        <div class="rrow"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brass-soft)" stroke-width="2" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><div><b><span data-ru>Этап 1 — демонтаж</span><span data-en>Stage 1 — demolition</span></b><small><span data-ru>Фото-отчёт + смета подтверждена</span><span data-en>Photo report + estimate confirmed</span></small></div></div>
+        <div class="rrow"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brass-soft)" stroke-width="2" width="22" height="22"><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg><div><b><span data-ru>Этап 2 — инженерия</span><span data-en>Stage 2 — engineering</span></b><small><span data-ru>Видео скрытых работ до зашивки</span><span data-en>Video of hidden works before closing</span></small></div></div>
+        <div class="rrow"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brass-soft)" stroke-width="2" width="22" height="22"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/></svg><div><b><span data-ru>Этап 3 — отделка и сдача</span><span data-en>Stage 3 — finishing & handover</span></b><small><span data-ru>Приёмка + гарантийный талон</span><span data-en>Acceptance + warranty certificate</span></small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span data-ru>Отзывы</span><span data-en>Reviews</span></span>
+      <h2><span data-ru>Что говорят владельцы</span><span data-en>What owners say</span></h2>
+      <p><span data-ru>Замените на реальные отзывы клиентов — лучше с именем, объектом и фото.</span><span data-en>Replace with real client reviews — ideally with a name, project and photo.</span></p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 / 5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg></div>
+        <p><span data-ru>«Делали ремонт виллы, пока мы были в Москве. Каждый день фото и видео, смета не выросла ни на бат. Приехали — всё идеально.»</span><span data-en>"They renovated our villa while we were in Moscow. Daily photos and video, the estimate didn't grow by a single baht. We arrived — everything perfect."</span></p>
+        <div class="who"><div class="av">А</div><div><b><span data-ru>Андрей и Мария</span><span data-en>Andrey & Maria</span></b><small><span data-ru>Вилла, Лагуна</span><span data-en>Villa, Laguna</span></small></div></div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 / 5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg></div>
+        <p><span data-ru>«Брал кондо под аренду, ребята сделали ремонт за 6 недель. Доходность выросла, гости в восторге. Договор и сроки — всё чётко.»</span><span data-en>"Bought a condo for rental, the team renovated it in 6 weeks. Yield went up, guests love it. Contract and deadlines — all clear."</span></p>
+        <div class="who"><div class="av">D</div><div><b><span data-ru>Денис</span><span data-en>Denis</span></b><small><span data-ru>Кондо, Камала</span><span data-en>Condo, Kamala</span></small></div></div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 / 5"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg></div>
+        <p><span data-ru>«Открывали кафе, fit-out сделали точно в срок к открытию. Отдельное спасибо за гидроизоляцию — после сезона дождей ни пятна.»</span><span data-en>"We opened a café, the fit-out was done exactly on time for the launch. Special thanks for the waterproofing — not a stain after the rainy season."</span></p>
+        <div class="who"><div class="av">N</div><div><b><span data-ru>Никита</span><span data-en>Nikita</span></b><small><span data-ru>Кафе, Раваи</span><span data-en>Café, Rawai</span></small></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2><span data-ru>Частые вопросы</span><span data-en>Common questions</span></h2>
+    </div>
+    <div class="faq-list" id="faq">
+      <div class="faq-item">
+        <button class="faq-q"><span><span data-ru>Как происходит оплата? Нужна предоплата?</span><span data-en>How does payment work? Is a deposit required?</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p><span data-ru>Оплата делится на этапы, привязанные к выполненным работам. Вы не платите всю сумму вперёд — каждый платёж идёт за уже сделанный и подтверждённый этап.</span><span data-en>Payment is split into stages tied to completed work. You don't pay the full amount upfront — each payment covers an already finished and confirmed stage.</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span data-ru>Я живу за границей. Как я буду контролировать ремонт?</span><span data-en>I live abroad. How will I control the renovation?</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p><span data-ru>Мы ведём общий чат, куда присылаем фото и видео по каждому этапу, включая скрытые работы до зашивки. По запросу — видеозвонки прямо с объекта. Большинство наших клиентов не в Таиланде.</span><span data-en>We run a shared chat with photos and video at every stage, including hidden works before they're closed up. On request — video calls live from the site. Most of our clients are not in Thailand.</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span data-ru>Что входит в гарантию?</span><span data-en>What does the warranty cover?</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p><span data-ru>На все выполненные работы действует гарантия 2 года. Если что-то проявится — исправляем за свой счёт. Условия прописаны в договоре.</span><span data-en>All completed works carry a 2-year warranty. If anything shows up — we fix it at our own cost. The terms are written into the contract.</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span data-ru>На каком языке вы работаете?</span><span data-en>What language do you work in?</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p><span data-ru>Полное сопровождение на русском и английском — договор, смета, общение и отчёты. С тайскими подрядчиками и поставщиками общаемся сами.</span><span data-en>Full support in Russian and English — contract, estimate, communication and reports. We handle Thai contractors and suppliers ourselves.</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT / CTA ========== -->
+<section class="cta" id="contact">
+  <div class="wrap cta-in">
+    <div>
+      <span class="eyebrow" style="color:var(--brass-soft)"><span data-ru>Бесплатный замер</span><span data-en>Free estimate</span></span>
+      <h2 style="margin-top:18px"><span data-ru>Расскажите о вашем объекте — пришлём смету за 24 часа</span><span data-en>Tell us about your property — get a quote in 24 hours</span></h2>
+      <p class="cta-lead"><span data-ru>Без обязательств. Напишите в мессенджер или оставьте заявку — ответим в течение 15 минут в рабочее время.</span><span data-en>No obligations. Message us or leave a request — we reply within 15 minutes during working hours.</span></p>
+      <div class="cta-actions">
+        <!-- PLACEHOLDER: замените 66XXXXXXXXX на реальный номер WhatsApp -->
+        <a href="https://wa.me/66XXXXXXXXX" class="btn btn--wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.06c-.25.69-1.45 1.32-1.99 1.36-.53.04-1.03.23-3.48-.73-2.93-1.16-4.79-4.18-4.94-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.25-.28.55-.35.74-.35.18 0 .37 0 .53.01.17.01.4-.06.62.48.25.59.84 2.05.91 2.2.07.14.12.31.02.51-.1.2-.15.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.29-.13.57.17.28.74 1.22 1.59 1.98 1.1.98 2.02 1.28 2.31 1.42.29.14.46.12.63-.07.17-.2.72-.84.91-1.13.18-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.32.07.12.07.66-.18 1.35Z"/></svg>
+          WhatsApp
+        </a>
+        <!-- PLACEHOLDER: замените your_account на реальный Telegram -->
+        <a href="https://t.me/your_account" class="btn btn--tg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.5 18.6 20.2c-.25 1.1-.92 1.37-1.86.86l-5.14-3.79-2.48 2.39c-.28.27-.5.5-1.03.5l.37-5.2 9.5-8.58c.41-.37-.09-.57-.64-.2L5.06 13.1l-5.06-1.58c-1.1-.34-1.12-1.1.23-1.62l19.78-7.62c.92-.34 1.72.2 1.92 1.62Z" transform="translate(1 0)"/></svg>
+          Telegram
+        </a>
+      </div>
+      <p class="cta-or"><span data-ru>или по телефону / WhatsApp:</span><span data-en>or by phone / WhatsApp:</span> <a href="tel:+66XXXXXXXXX" style="color:#fff;font-weight:700">+66&nbsp;XX&nbsp;XXX&nbsp;XXXX</a></p>
+    </div>
+    <form class="form" id="leadForm" novalidate>
+      <h3><span data-ru>Оставить заявку</span><span data-en>Leave a request</span></h3>
+      <p><span data-ru>Перезвоним или напишем в мессенджер.</span><span data-en>We'll call back or message you.</span></p>
+      <div class="form-ok" id="formOk"><span data-ru>Спасибо! Заявка отправлена — свяжемся с вами в течение 15 минут.</span><span data-en>Thank you! Request sent — we'll contact you within 15 minutes.</span></div>
+      <div class="field">
+        <label for="name"><span data-ru>Ваше имя</span><span data-en>Your name</span></label>
+        <input id="name" name="name" type="text" autocomplete="name" required placeholder="Иван / John">
+      </div>
+      <div class="field">
+        <label for="contact"><span data-ru>WhatsApp / Telegram / телефон</span><span data-en>WhatsApp / Telegram / phone</span></label>
+        <input id="contact" name="contact" type="text" inputmode="tel" autocomplete="tel" required placeholder="+66 …">
+      </div>
+      <div class="field">
+        <label for="object"><span data-ru>Тип объекта</span><span data-en>Property type</span></label>
+        <select id="object" name="object">
+          <option data-ru>Вилла</option><option data-en>Villa</option>
+          <option data-ru>Кондо / квартира</option><option data-en>Condo / apartment</option>
+          <option data-ru>Коммерческое помещение</option><option data-en>Commercial space</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="msg"><span data-ru>Коротко о задаче</span><span data-en>Briefly about the task</span></label>
+        <textarea id="msg" name="msg" placeholder="…"></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block"><span data-ru>Отправить заявку</span><span data-en>Send request</span></button>
+      <p class="form-note"><span data-ru>Нажимая кнопку, вы соглашаетесь на обработку данных для ответа на заявку.</span><span data-en>By submitting, you agree to your data being processed to reply to your request.</span></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:var(--on-dark)">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" stroke="#B0894F" stroke-width="2"/><path d="M11 27V16l9-6 9 6v11" stroke="#EFE9DD" stroke-width="2.2" stroke-linejoin="round"/><path d="M17 27v-6h6v6" stroke="#B0894F" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <span>Phuket&nbsp;Reno</span>
+        </div>
+        <p style="max-width:34ch"><span data-ru>Ремонт и реновация вилл, кондо и коммерческих помещений на Пхукете под ключ. Договор, гарантия, отчёты.</span><span data-en>Turnkey renovation of villas, condos and commercial spaces on Phuket. Contract, warranty, reports.</span></p>
+      </div>
+      <div>
+        <h4><span data-ru>Услуги</span><span data-en>Services</span></h4>
+        <div class="footer-links">
+          <a href="#services"><span data-ru>Ремонт вилл</span><span data-en>Villa renovation</span></a>
+          <a href="#services"><span data-ru>Ремонт кондо</span><span data-en>Condo renovation</span></a>
+          <a href="#services"><span data-ru>Коммерция</span><span data-en>Commercial</span></a>
+          <a href="#services"><span data-ru>Дизайн интерьера</span><span data-en>Interior design</span></a>
+        </div>
+      </div>
+      <div>
+        <h4><span data-ru>Компания</span><span data-en>Company</span></h4>
+        <div class="footer-links">
+          <a href="#why"><span data-ru>Почему мы</span><span data-en>Why us</span></a>
+          <a href="#work"><span data-ru>Работы</span><span data-en>Projects</span></a>
+          <a href="#process"><span data-ru>Как работаем</span><span data-en>Process</span></a>
+          <a href="#contact"><span data-ru>Контакты</span><span data-en>Contact</span></a>
+        </div>
+      </div>
+      <div>
+        <h4><span data-ru>Связаться</span><span data-en>Get in touch</span></h4>
+        <div class="footer-contact">
+          <a href="https://wa.me/66XXXXXXXXX" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg>WhatsApp</a>
+          <a href="https://t.me/your_account" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.5 18.6 20.2c-.25 1.1-.92 1.37-1.86.86l-5.14-3.79-2.48 2.39c-.28.27-.5.5-1.03.5l.37-5.2 9.5-8.58c.41-.37-.09-.57-.64-.2L5.06 13.1 0 11.52c-1.1-.34.23-1.62.23-1.62L22 2.88c.92-.34 1.72.2 1.92 1.62Z"/></svg>Telegram</a>
+          <a href="tel:+66XXXXXXXXX"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>+66 XX XXX XXXX</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Phuket Reno. <span data-ru>Все права защищены.</span><span data-en>All rights reserved.</span></span>
+      <span><span data-ru>Пхукет, Таиланд · Работаем легально по договору</span><span data-en>Phuket, Thailand · Licensed, contract-based</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== FLOATING CONTACT ========== -->
+<div class="fab">
+  <a class="wa" href="https://wa.me/66XXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg></a>
+  <a class="tg" href="https://t.me/your_account" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.5 18.6 20.2c-.25 1.1-.92 1.37-1.86.86l-5.14-3.79-2.48 2.39c-.28.27-.5.5-1.03.5l.37-5.2 9.5-8.58c.41-.37-.09-.57-.64-.2L5.06 13.1 0 11.52c-1.1-.34.23-1.62.23-1.62L22 2.88c.92-.34 1.72.2 1.92 1.62Z"/></svg></a>
+</div>
+
+<script>
+(function () {
+  // ---- language switch ----
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  if (saved) document.documentElement.lang = saved;
+  function setLang(l) {
+    document.documentElement.lang = l;
+    try { localStorage.setItem('lang', l); } catch (e) {}
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === l);
+    });
+  }
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+  });
+  setLang(document.documentElement.lang === 'en' ? 'en' : 'ru');
+
+  // ---- header shadow on scroll ----
+  var header = document.getElementById('header');
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ---- mobile menu ----
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); });
+  });
+
+  // ---- before/after slider ----
+  var range = document.getElementById('baRange');
+  var before = document.getElementById('baBefore');
+  var handle = document.getElementById('baHandle');
+  var knob = document.getElementById('baKnob');
+  function moveBA(v) {
+    before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+    handle.style.left = v + '%';
+    knob.style.left = v + '%';
+  }
+  if (range) { range.addEventListener('input', function () { moveBA(this.value); }); moveBA(50); }
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('#faq .faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function () {
+      var open = item.classList.toggle('open');
+      a.style.maxHeight = open ? a.scrollHeight + 'px' : 0;
+    });
+  });
+
+  // ---- lead form (demo handler — connect to bot/CRM/Formspree) ----
+  var form = document.getElementById('leadForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    // TODO: отправить данные в бот/CRM. Сейчас — демо-подтверждение.
+    document.getElementById('formOk').style.display = 'block';
+    form.reset();
+    document.getElementById('formOk').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+</body>
+</html>
