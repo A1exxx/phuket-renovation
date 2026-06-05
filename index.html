@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect x='1' y='1' width='38' height='38' rx='9' fill='%230E5A50'/><path d='M11 27V16l9-6 9 6v11' stroke='%23F4F0E9' stroke-width='2.4' fill='none' stroke-linejoin='round'/><path d='M17 27v-6h6v6' stroke='%23B0894F' stroke-width='2.4' fill='none' stroke-linejoin='round'/></svg>">
 <!--
   ============================================================
   TODO перед публикацией — заменить плейсхолдеры на реальное:
@@ -23,8 +24,24 @@
   5. Цифры в .stats (лет, объектов, кв.м) — выставить фактические.
   6. Подключить аналитику: Meta Pixel + Google Tag (перед </head>).
   7. Форму подключить к боту/CRM/Formspree (сейчас демо-обработчик).
+  8. Подставить реальные данные в JSON-LD ниже (telephone, sameAs, address) — те же плейсхолдеры.
   ============================================================
 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Phuket Reno",
+  "description": "Ремонт и реновация вилл, кондо и коммерческих помещений на Пхукете под ключ. Договор, фиксированная смета, гарантия 2 года.",
+  "url": "https://a1exxx.github.io/phuket-renovation/",
+  "telephone": "+66XXXXXXXXX",
+  "priceRange": "$$$",
+  "areaServed": { "@type": "Place", "name": "Phuket, Thailand" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Phuket", "addressCountry": "TH" },
+  "knowsLanguage": ["ru", "en"],
+  "sameAs": ["https://t.me/your_account", "https://wa.me/66XXXXXXXXX"]
+}
+</script>
 </head>
 <body>
 
