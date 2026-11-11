@@ -1,0 +1,1212 @@
+<!doctype html>
+<!-- Контакты — здесь: объект CONFIG в самом начале <script> внизу файла (WhatsApp, Telegram, LINE, почта, телефон, соцсети, район, часы).
+     Все ссылки на контакты, форма заявки и разметка для поиска берут данные оттуда. Менять только там. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dryline</title>
+<meta name="description" content="Крыши, протечки, гидроизоляция, фасады, террасы и бассейны на Пхукете, и любой ремонт внутри. Бесплатная проверка крыши с фотоотчётом.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16212b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dryline">
+<meta property="og:title" content="Dryline: течёт крыша? Найдём протечку за один выезд">
+<meta property="og:description" content="Крыши, гидроизоляция, фасады, террасы и бассейны на Пхукете. Бесплатная проверка крыши с фотоотчётом о состоянии.">
+<meta property="og:image" content="img/x-roof-repair.webp">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%2316212b'/%3E%3Cpath d='M6 17L16 9l10 8' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 21.5h14' stroke='%23d0703f' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json" id="ldjson">
+{"@context":"https://schema.org","@type":"RoofingContractor","name":"Dryline",
+"description":"Roof leak detection and repair, waterproofing, facades, terraces and pools in Phuket, plus all interior renovation work.",
+"image":"img/x-roof-repair.webp",
+"areaServed":{"@type":"AdministrativeArea","name":"Phuket, Thailand"},
+"address":{"@type":"PostalAddress","addressLocality":"Rawai","addressRegion":"Phuket","addressCountry":"TH"},
+"priceRange":"350–2,500,000+ THB","currenciesAccepted":"THB",
+"makesOffer":[
+{"@type":"Offer","name":"Roof condition check with photo report","price":0,"priceCurrency":"THB"},
+{"@type":"Offer","name":"Roof repair","priceSpecification":{"@type":"PriceSpecification","minPrice":2500,"priceCurrency":"THB"}},
+{"@type":"Offer","name":"Waterproofing, per m²","priceSpecification":{"@type":"UnitPriceSpecification","minPrice":250,"maxPrice":350,"priceCurrency":"THB","unitText":"m²"}},
+{"@type":"Offer","name":"Turnkey bathroom renovation","priceSpecification":{"@type":"PriceSpecification","minPrice":80000,"priceCurrency":"THB"}},
+{"@type":"Offer","name":"Air-con cleaning, per unit","priceSpecification":{"@type":"PriceSpecification","minPrice":350,"maxPrice":800,"priceCurrency":"THB"}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec;
+  --surface:#ffffff;
+  --surface-2:#e9e5dd;
+  --ink:#16212b;
+  --ink-2:#55606a;
+  --line:rgba(22,33,43,.11);
+  --tile:#c25f34;
+  --tile-2:#a84d27;
+  --tile-soft:color-mix(in srgb,#c25f34 12%,transparent);
+  --on-tile:#fff;
+  --sky:#3d6f86;
+  --night:#121b23;
+  --shell:rgba(22,33,43,.045);
+  --shadow:0 24px 48px -30px rgba(18,27,35,.38);
+  --ok:#2f7a55;--warn:#b7791f;--bad:#b9442b;
+  --ease:cubic-bezier(.32,.72,0,1);
+  --r:26px;
+  --gut:16px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f161d;--surface:#17212a;--surface-2:#1f2b35;--ink:#e9ecee;--ink-2:#a2adb6;
+    --line:rgba(233,236,238,.10);--tile:#e07f50;--tile-2:#ec956a;--on-tile:#1a0d06;--shell:rgba(233,236,238,.04);
+    --sky:#7fb0c6;--shadow:0 24px 48px -28px rgba(0,0,0,.6);--ok:#5fbf8c;--warn:#e0a84c;--bad:#ec7a5f;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f161d;--surface:#17212a;--surface-2:#1f2b35;--ink:#e9ecee;--ink-2:#a2adb6;
+  --line:rgba(233,236,238,.10);--tile:#e07f50;--tile-2:#ec956a;--on-tile:#1a0d06;--shell:rgba(233,236,238,.04);
+  --sky:#7fb0c6;--shadow:0 24px 48px -28px rgba(0,0,0,.6);--ok:#5fbf8c;--warn:#e0a84c;--bad:#ec7a5f;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Onest,system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-feature-settings:"tnum"}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:2px solid var(--tile);outline-offset:3px;border-radius:8px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:20;padding:14px 0}
+.top-in{max-width:1240px;margin:0 auto;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:19px;letter-spacing:-.03em}
+.brand svg{width:30px;height:30px}
+.lang{display:flex;padding:3px;border-radius:999px;background:rgba(18,27,35,.45);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lang button{border:0;background:transparent;color:rgba(255,255,255,.75);font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;transition:background .4s var(--ease),color .4s var(--ease)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--night)}
+.top-r{display:flex;align-items:center;gap:10px}
+.hdr-cta{display:none;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(18,27,35,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hdr-cta:hover{background:rgba(255,255,255,.14)}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;max-height:1000px;display:flex;align-items:flex-end;color:#fff;background:var(--night);overflow:hidden}
+@supports not (height:100dvh){.hero{min-height:100vh}}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 40%;transform:scale(1.04);animation:drift 18s var(--ease) both}
+@keyframes drift{from{transform:scale(1.12)}to{transform:scale(1.02)}}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(14,21,28,.55) 0%,rgba(14,21,28,0) 22%),
+  linear-gradient(0deg,rgba(14,21,28,.97) 10%,rgba(14,21,28,.62) 50%,rgba(14,21,28,0) 74%)}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1240px;margin:0 auto;padding:96px var(--gut) 26px}
+.promo-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:13px;line-height:1.3;margin-bottom:14px}
+.badge{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;padding:4px 9px;border-radius:999px;background:var(--tile);color:var(--on-tile);white-space:nowrap}
+h1{font-weight:800;font-size:clamp(34px,9.6vw,74px);line-height:1;letter-spacing:-.04em;margin:0 0 14px;max-width:14ch;text-wrap:balance}
+h1 em{font-style:normal;color:#f0a37a}
+.lead{font-size:clamp(16px,4.2vw,19px);color:rgba(255,255,255,.84);margin:0 0 18px;max-width:46ch}
+.cta-row{display:grid;grid-template-columns:1fr;gap:10px;max-width:540px}
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;border:0;border-radius:999px;padding:8px 8px 8px 24px;min-height:56px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .5s var(--ease),background .4s var(--ease)}
+.btn:active{transform:scale(.98)}
+.btn .ic{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .5s var(--ease)}
+.btn:hover .ic{transform:translate(2px,-1px) scale(1.05)}
+.btn .ic svg{width:18px;height:18px}
+.btn-tile{background:var(--tile);color:var(--on-tile);width:100%}
+.btn-tile .ic{background:rgba(255,255,255,.18)}
+.btn-tile:hover{background:var(--tile-2)}
+.btn-ink{background:var(--ink);color:var(--bg)}
+.btn-ink .ic{background:color-mix(in srgb,var(--bg) 16%,transparent)}
+.btn-ghost{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);color:#fff;width:100%}
+.btn-ghost .ic{background:rgba(255,255,255,.12)}
+.msgr{display:flex;gap:10px;align-items:center}
+.msgr a{flex:1 0 auto;min-width:52px;padding:0 14px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .4s var(--ease),transform .5s var(--ease)}
+.msgr a:hover{background:rgba(255,255,255,.18)}
+.msgr a:active{transform:scale(.97)}
+.msgr svg{width:20px;height:20px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 18px;margin:16px 0 0;padding:0;list-style:none;font-size:13px;color:rgba(255,255,255,.75)}
+.facts li{display:flex;align-items:center;gap:7px}
+.facts svg{width:15px;height:15px;color:#f0a37a;flex:none}
+.facts li.tr{color:#fff;font-weight:600}
+
+/* why us */
+.why{padding:6px 0 34px}
+.why h2{max-width:22ch}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.wcard{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;padding:16px;border-radius:20px;background:var(--surface);border:1px solid var(--line)}
+.wcard .wi{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--tile-soft);color:var(--tile-2)}
+.wcard .wi svg{width:22px;height:22px}
+.wcard h3{margin:1px 0 3px;font-size:17px;letter-spacing:-.02em;line-height:1.25}
+.wcard p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.45}
+.wcard.hi{background:var(--night);color:#fff;border-color:transparent;box-shadow:var(--shadow)}
+.wcard.hi .wi{background:rgba(255,255,255,.1);color:#f0a37a}
+.wcard.hi p{color:rgba(255,255,255,.78)}
+/* phone: small cards as compact 2x2 tiles, details live in the FAQ below */
+@media (max-width:719px){
+  .why{padding:4px 0 28px}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .wcard.hi{grid-column:1/-1}
+  .wcard:not(.hi){grid-template-columns:30px minmax(0,1fr);gap:8px;align-items:center;padding:11px 10px;border-radius:16px}
+  .wcard:not(.hi) .wi{width:30px;height:30px;border-radius:10px}
+  .wcard:not(.hi) .wi svg{width:17px;height:17px}
+  .wcard:not(.hi) h3{font-size:13.5px;margin:0;line-height:1.25;letter-spacing:-.01em}
+  .wcard:not(.hi) p{display:none}
+  .wfaq summary{min-height:50px;font-size:15px}
+}
+.wfaq{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:14px;align-items:start}
+.wfaq details{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:0 16px}
+.wfaq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:54px;font-weight:700;font-size:15.5px;line-height:1.3}
+.wfaq summary::-webkit-details-marker{display:none}
+.wfaq summary svg{width:18px;height:18px;flex:none;color:var(--tile-2);transform:rotate(90deg);transition:transform .4s var(--ease)}
+.wfaq details[open] summary svg{transform:rotate(-90deg)}
+.wfaq details p{margin:0 0 14px;font-size:14.5px;color:var(--ink-2)}
+/* rain countdown card */
+.rain-card{display:none}
+.cd-bar{height:6px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden;margin-top:10px}
+.cd-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#f0a37a,var(--tile));border-radius:999px;transition:width 1.6s var(--ease)}
+
+/* tabs */
+.tabs{position:sticky;top:0;z-index:15;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.tabs-in{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:10px var(--gut);max-width:1240px;margin:0 auto;scroll-snap-type:x proximity}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{flex:none;scroll-snap-align:start;text-decoration:none;font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px;color:var(--ink-2);border:1px solid var(--line);background:var(--surface);transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* panels */
+.panel{padding:28px 0 32px}
+.panel[hidden]{display:none}
+.panel.in .anim{animation:rise .7s var(--ease) both}
+.panel.in .anim:nth-child(2){animation-delay:.07s}
+.panel.in .anim:nth-child(3){animation-delay:.14s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--tile-2);padding:5px 11px;border-radius:999px;background:var(--shell);border:1px solid var(--line);margin-bottom:12px}
+h2{font-size:clamp(28px,7vw,46px);line-height:1.04;letter-spacing:-.035em;margin:0 0 10px;font-weight:800;max-width:18ch;text-wrap:balance}
+.sub{color:var(--ink-2);margin:0 0 18px;max-width:58ch}
+.split{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+.split>*{min-width:0}
+.bezel{padding:6px;border-radius:var(--r);background:var(--shell);border:1px solid var(--line)}
+.core{border-radius:calc(var(--r) - 6px);background:var(--surface);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),var(--shadow);padding:18px}
+.note{font-size:13px;color:var(--ink-2)}
+.next{margin-top:22px;display:flex;justify-content:flex-end}
+.next a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:15px;padding:6px 6px 6px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);transition:transform .5s var(--ease)}
+.next a:active{transform:scale(.98)}
+.next a span.ic{width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;transition:transform .5s var(--ease)}
+.next a:hover span.ic{transform:translateX(3px)}
+.next svg{width:16px;height:16px}
+
+/* problem picker */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 16px}
+.pbtn{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:11px 12px;font-weight:600;font-size:14px;line-height:1.25;min-height:58px;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease)}
+.pbtn:active{transform:scale(.97)}
+.pbtn svg{width:22px;height:22px;flex:none;color:var(--tile)}
+.pbtn[aria-checked="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pbtn[aria-checked="true"] svg{color:#f0a37a}
+.pres .pimg{position:relative;border-radius:calc(var(--r) - 10px);overflow:hidden;aspect-ratio:16/9;background:var(--night);margin-bottom:14px}
+.pres .pimg img{width:100%;height:100%;object-fit:cover;transition:opacity .45s var(--ease),transform .9s var(--ease)}
+.pres .pimg img.fade{opacity:0;transform:scale(1.04)}
+.pres .pimg .from{position:absolute;left:10px;bottom:10px;padding:8px 12px;border-radius:14px;background:rgba(14,21,28,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:12px;line-height:1.2}
+.pres .pimg .from b{display:block;font:600 19px/1.15 "JetBrains Mono",monospace;letter-spacing:-.02em}
+.pres h3{margin:0 0 10px;font-size:21px;letter-spacing:-.025em;line-height:1.15}
+.pdl{display:grid;gap:10px;margin:0 0 14px}
+.pdl div{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:15px;line-height:1.42}
+.pdl svg{width:20px;height:20px;margin-top:2px;color:var(--sky)}
+.pdl div.risk svg{color:var(--bad)}
+.pdl b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:700;margin-bottom:1px}
+.swap{transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.swap.out{opacity:0;transform:translateY(6px)}
+.alt{display:block;text-align:center;margin-top:10px;font-size:14px;font-weight:600;color:var(--tile-2)}
+
+/* promos */
+.promos{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.promo{position:relative;padding:16px;border-radius:20px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.promo h3{margin:8px 0 4px;font-size:18px;letter-spacing:-.02em;line-height:1.2}
+.promo p{margin:0;font-size:14px;color:var(--ink-2)}
+.promo.dark{background:var(--night);color:#fff;border-color:transparent}
+.promo.dark p{color:rgba(255,255,255,.75)}
+.promo.dark img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.promo.dark>*{position:relative}
+.big-num{font:600 34px/1 "JetBrains Mono",monospace;letter-spacing:-.04em;margin-top:8px}
+.big-num small{font:600 14px Onest,sans-serif;letter-spacing:0;opacity:.75;margin-left:6px}
+/* report sample */
+.rep-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.rep-h b{font-size:17px;letter-spacing:-.02em;display:block}
+.rep-h small{color:var(--ink-2);font-size:13px}
+.tag-ex{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;padding:4px 9px;border-radius:999px;border:1px dashed var(--ink-2);color:var(--ink-2);white-space:nowrap}
+.rrows{display:grid;gap:0}
+.rrow{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:9px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.35}
+.rrow span.d{grid-column:1/-1;color:var(--ink-2);font-size:13px}
+.st{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap;align-self:start}
+.st.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.st.wt{background:color-mix(in srgb,var(--warn) 17%,transparent);color:var(--warn)}
+.st.fx{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.rep-sum{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:6px;padding-top:10px;border-top:1px solid var(--line);font-size:14px}
+.rep-sum .mono{font-size:18px;font-weight:600}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:15px}
+.steps li::before{counter-increment:s;content:counter(s);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:600 13px "JetBrains Mono",monospace;background:var(--surface-2);color:var(--tile-2)}
+.steps b{display:block}
+.steps span{color:var(--ink-2);font-size:14px}
+
+/* catalog */
+.media{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:16/9;background:var(--night);margin:0}
+.media img{width:100%;height:100%;object-fit:cover}
+.media figcaption{position:absolute;left:12px;bottom:12px;color:#fff;font-size:13px;font-weight:600;padding:8px 12px;border-radius:12px;background:rgba(14,21,28,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);max-width:calc(100% - 24px)}
+.cat{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.cat li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cat .n{font-weight:700;font-size:15.5px;line-height:1.3}
+.cat .n i{font-style:normal;font:500 11px "JetBrains Mono",monospace;color:var(--ink-2);margin-right:6px}
+.cat .w{grid-column:1;color:var(--ink-2);font-size:13.5px;line-height:1.4}
+.cat .p{grid-row:1/span 2;grid-column:2;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.cat .p .mono{font-size:14px;font-weight:600;white-space:nowrap}
+.cat .p .q{font-size:13px;color:var(--ink-2);white-space:nowrap}
+.ask{font-size:12.5px;font-weight:700;text-decoration:none;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);white-space:nowrap;transition:background .3s var(--ease)}
+.ask:hover{background:var(--tile-soft)}
+.cat-note{margin:12px 0 0}
+
+/* seasons */
+.months{display:grid;grid-auto-flow:column;grid-auto-columns:64px;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--gut)*-1);padding:2px var(--gut) 8px;scroll-snap-type:x proximity}
+.months::-webkit-scrollbar{display:none}
+.mo{scroll-snap-align:start;border:1px solid var(--line);border-radius:16px;padding:10px 4px 8px;background:var(--surface);display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:700;font-size:13px;transition:transform .45s var(--ease),background .4s var(--ease),color .4s var(--ease)}
+.mo:active{transform:scale(.96)}
+.mo i{width:100%;max-width:40px;height:6px;border-radius:999px;background:#e2b04e}
+.mo.rain i{background:var(--sky)}
+.mo.prep i{background:linear-gradient(90deg,#e2b04e,var(--tile))}
+.mo[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--ink-2);margin:4px 0 12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:16px;height:6px;border-radius:999px;background:#e2b04e}
+.legend i.r{background:var(--sky)}
+.legend i.p{background:linear-gradient(90deg,#e2b04e,var(--tile))}
+.mdetail h3{margin:0 0 4px;font-size:20px;letter-spacing:-.02em}
+.mdetail .tagl{font-size:13px;color:var(--ink-2);margin:0 0 10px}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.incl li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px;line-height:1.4}
+.incl svg{width:20px;height:20px;color:var(--tile);margin-top:1px}
+.tip-card{padding:18px;border-radius:var(--r);background:var(--night);color:#fff;position:relative;overflow:hidden}
+.tip-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.38}
+.tip-card>*{position:relative}
+.tip-card h3{margin:8px 0 6px;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.tip-card p{margin:0 0 14px;color:rgba(255,255,255,.8);font-size:14px}
+
+/* contact */
+.contact{background:var(--night);color:#fff;padding:34px 0 26px}
+.contact h2{color:#fff;max-width:20ch}
+.contact .sub{color:rgba(255,255,255,.72)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:rgba(255,255,255,.55)}
+#contact,#lead{scroll-margin-top:64px}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
+.ct-quick{display:grid;gap:10px}
+
+/* lead form */
+.lf{color:var(--ink);display:grid;gap:12px}
+.lf h3{margin:0;font-size:19px;letter-spacing:-.02em}
+.fld{display:grid;gap:5px;margin:0;padding:0;border:0;min-width:0}
+.fld>label,.fld legend{font-size:13px;font-weight:700;color:var(--ink-2);padding:0}
+.fld legend{margin-bottom:5px}
+.lf input[type=text],.lf select,.lf textarea{width:100%;font:500 16px/1.3 Onest,system-ui,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-height:48px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.lf textarea{resize:vertical;min-height:48px}
+.lf select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 20px) 21px,calc(100% - 15px) 21px;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
+.lf input:focus,.lf select:focus,.lf textarea:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 3px color-mix(in srgb,var(--sky) 22%,transparent)}
+.lf [aria-invalid="true"]{border-color:#c2410c;box-shadow:0 0 0 3px rgba(194,65,12,.15)}
+.err{margin:0;font-size:13px;font-weight:600;color:#c2410c}
+.err[hidden],.ferr[hidden]{display:none}
+.ferr{margin:0;padding:10px 12px;border-radius:12px;background:rgba(194,65,12,.1);color:#c2410c;font-size:14px;font-weight:600}
+.row2{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.chs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;border-radius:999px;background:var(--surface-2)}
+.chs label{position:relative;display:block;cursor:pointer}
+.chs input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chs span{display:block;text-align:center;padding:10px 2px;border-radius:999px;font-weight:700;font-size:13.5px;color:var(--ink-2);transition:background .4s var(--ease),color .4s var(--ease)}
+.chs input:checked+span{background:var(--surface);color:var(--ink);box-shadow:0 6px 16px -8px rgba(18,27,35,.35)}
+.chs input:focus-visible+span{outline:2px solid var(--tile);outline-offset:2px}
+.lf .btn{width:100%}
+.fstat{margin:0;font-size:14px;color:var(--ink)}
+.fstat:empty{display:none}
+.fstat a{font-weight:700;color:var(--tile-2)}
+.fcopy{width:100%;font:500 13px/1.4 Onest,sans-serif;color:var(--ink);background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:6px;resize:none}
+.linkbtn{border:0;background:none;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.lf .note .linkbtn{color:var(--tile-2)}
+
+/* site footer */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:14px}
+.fgrid h3{margin:0 0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:700}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.fgrid a{color:rgba(255,255,255,.88);text-decoration:none}
+.fgrid a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.fgrid p{margin:0 0 6px;color:rgba(255,255,255,.78);line-height:1.45}
+.fcol-ct{grid-column:1/-1}
+.cts{display:flex;flex-wrap:wrap;gap:6px}
+.cts a{display:inline-flex;align-items:center;gap:7px;padding:7px 12px 7px 9px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600;min-height:38px}
+.cts a:hover{text-decoration:none;background:rgba(255,255,255,.16)}
+.cts svg{width:17px;height:17px;flex:none}
+.lang.lang-foot{display:inline-flex;margin-top:6px}
+.foot .linkbtn{color:rgba(255,255,255,.75);font-size:12px}
+
+/* privacy dialog */
+.pv{border:0;padding:0;border-radius:24px;max-width:min(560px,calc(100vw - 32px));max-height:calc(100dvh - 48px);background:var(--surface);color:var(--ink);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.pv::backdrop{background:rgba(8,12,16,.6);backdrop-filter:blur(4px)}
+.pv-in{padding:22px 20px 20px;overflow:auto;max-height:calc(100dvh - 48px)}
+.pv h3{margin:0 40px 10px 0;font-size:20px;letter-spacing:-.02em}
+.pv p{margin:0 0 10px;font-size:14.5px;color:var(--ink-2)}
+.pv p b{color:var(--ink)}
+.pv-x{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--ink)}
+.pv-x svg{width:16px;height:16px}
+
+.fab{position:fixed;z-index:40;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 18px 0 8px;border-radius:999px;background:var(--tile);color:var(--on-tile);font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 16px 32px -14px rgba(18,27,35,.6);transition:opacity .35s var(--ease),transform .45s var(--ease),visibility 0s linear .45s;opacity:0;visibility:hidden;transform:translateY(16px)}
+.fab.on{opacity:1;visibility:visible;transform:none;transition:opacity .35s var(--ease),transform .45s var(--ease),visibility 0s}
+.fab .ic{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.fab svg{width:19px;height:19px}
+
+@media (min-width:720px){
+  :root{--gut:28px}
+  .cta-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cta-row .msgr{grid-column:1/-1;max-width:360px}
+  .pgrid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .row2{grid-template-columns:1fr 1fr}
+  .hdr-cta{display:inline-flex}
+  .fgrid{grid-template-columns:1.1fr 1fr 1.4fr 1fr}
+  .fcol-ct{grid-column:auto}
+  .promos{grid-template-columns:1.3fr 1fr}
+  .promos .promo.dark{grid-row:span 2}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wcard.hi{grid-column:span 2}
+  .wfaq{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:980px){
+  :root{--gut:40px}
+  .hero{align-items:center}
+  .hero-in{padding:120px var(--gut) 70px}
+  .hero::after{background:linear-gradient(90deg,rgba(14,21,28,.93) 0%,rgba(14,21,28,.62) 42%,rgba(14,21,28,0) 72%),linear-gradient(0deg,rgba(14,21,28,.6),rgba(14,21,28,0) 30%)}
+  .hero-img{object-position:60% 40%}
+  .rain-card{display:block;position:absolute;right:var(--gut);bottom:70px;width:290px;padding:16px 18px;border-radius:22px;background:rgba(14,21,28,.5);border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .rain-card small{display:block;font-size:12px;color:rgba(255,255,255,.7);margin-top:8px;line-height:1.35}
+  .panel{padding:52px 0 56px}
+  .split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px}
+  .split.r{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+  .months{grid-auto-flow:row;grid-template-columns:repeat(12,1fr);grid-auto-columns:auto;margin:0;padding:2px 0 8px;overflow:visible}
+  .contact{padding:56px 0 30px}
+  .why{padding:12px 0 56px}
+  .why-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .wcard.wide{grid-column:span 2}
+  .wcard{padding:20px}
+  .wcard.hi{grid-template-columns:52px minmax(0,1fr);padding:24px}
+  .wcard.hi .wi{width:52px;height:52px}
+  .wcard.hi h3{font-size:22px}
+  .wcard.hi p{font-size:15px}
+  .ct-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px}
+  .fab{display:none}
+  .stick{position:sticky;top:76px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-roof" viewBox="0 0 24 24"><path d="M2.5 12.5L12 5l9.5 7.5M5.5 10.5V19h13v-8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12.5s-2 2.3-2 3.6a2 2 0 0 0 4 0c0-1.3-2-3.6-2-3.6z" fill="currentColor"/></symbol>
+  <symbol id="i-mold" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="11" r="2.2" fill="currentColor" opacity=".85"/><circle cx="14.5" cy="14.5" r="1.4" fill="currentColor" opacity=".7"/><circle cx="13.5" cy="8.5" r="1" fill="currentColor" opacity=".6"/></symbol>
+  <symbol id="i-crack" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 3.5l1.5 4.5-2.5 3 3 3.5-1.5 3 1 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-roller" viewBox="0 0 24 24"><rect x="4" y="3.5" width="13" height="5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M17 6h2.5v5H11v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><rect x="9.5" y="14" width="3" height="6.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-deck" viewBox="0 0 24 24"><path d="M3 9h18M3 13h18M3 17h18M6 9v10M18 9v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3.5s-1.8 2-1.8 3.1a1.8 1.8 0 0 0 3.6 0c0-1.1-1.8-3.1-1.8-3.1z" fill="currentColor"/></symbol>
+  <symbol id="i-pool" viewBox="0 0 24 24"><path d="M3 15c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0M3 19c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0M8 13V5.5a2 2 0 0 1 4 0M14 13V5.5a2 2 0 0 1 4 0M8 8.5h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M4 11l8-6.5 8 6.5M6 9.5V20h12V9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><rect x="10" y="13" width="4" height="4" fill="currentColor" opacity=".9"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10h12M8 16.5c0 1.2-1 1.5-1 2.5M12 16.5c0 1.2-1 1.5-1 2.5M16 16.5c0 1.2-1 1.5-1 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.5 5.5a4 4 0 0 0 4.9 4.9L11 18.8a2.1 2.1 0 0 1-3-3l8.4-8.4a4 4 0 0 1-1.9-1.9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4l9 16H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2v.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 8.1c.3-.2.7-.2.9.1l.9 1.6c.1.3 0 .6-.2.8l-.5.5c.5 1.2 1.5 2.2 2.7 2.7l.5-.5c.2-.2.5-.3.8-.2l1.6.9c.3.2.4.6.2.9-.5.9-1.4 1.4-2.4 1.1-2.5-.7-4.4-2.7-5.1-5.1-.3-1 .2-2 1-2.4z" fill="currentColor"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M20.5 4.5L3.6 11.1c-.8.3-.7 1.4.1 1.6l4.2 1.2 1.6 5c.2.7 1.1.9 1.6.3l2.3-2.4 4.3 3.1c.6.4 1.4.1 1.6-.6l2.6-12.5c.2-.9-.6-1.6-1.4-1.3zM9.6 13.6l7.3-5.4-5.6 6.4-.4 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-line" viewBox="0 0 24 24"><path d="M12 4C6.8 4 3 7.2 3 11.2c0 3.5 3 6.4 7.1 7l.4 2.1c.1.5.7.7 1.1.4 2.4-1.6 7.4-4.9 8.7-7.5.5-.9.7-1.8.7-2.8C21 7.2 17.2 4 12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.3 9.6v3.3h1.8M10.6 9.6v3.3M12.6 12.9V9.6l2.2 3.3V9.6M18 9.6h-1.8v3.3H18M16.2 11.25h1.6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 3.8l2.6-.3 1.6 4-2 1.4a10.5 10.5 0 0 0 5.9 5.9l1.4-2 4 1.6-.3 2.6c-.1 1-1 1.8-2 1.7C11.3 18.2 5.8 12.7 5.3 5.8 5.2 4.8 6 3.9 7 3.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.5h2.5V21H14v-6.5h2.5L17 11h-3V9a.5.5 0 0 1 .5-.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.6 12.2l2.4 2.3 4.4-4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8.5L19 8v12.5H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5V8.5h5M9 12.5h7M9 16h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-eng" viewBox="0 0 24 24"><path d="M5 12.5a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3.5 12.5h17M10 5.8V9.5M14 5.8V9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 15.5a5 5 0 0 0 10 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 21c1-1.5 2.4-2.2 4-2.2s3 .7 4 2.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.6 5.2 3.6 8.5s-1.2 6.1-3.6 8.5c-2.4-2.4-3.6-5.2-3.6-8.5s1.2-6.1 3.6-8.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 24 24"><path d="M6 3h12v12.5H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7h6M9 10h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="17.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.6 19.6L10 22l2-1 2 1-.6-2.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 8.5h8M8 12h8M8 15.5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top" aria-label="Dryline">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#16212b" stroke="rgba(255,255,255,.18)"/><path d="M6 17L16 9l10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21.5h14" stroke="#d0703f" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span data-brand>Dryline</span>
+    </a>
+    <div class="top-r">
+      <a class="hdr-cta" href="#lead" data-i="hdr">Оставить заявку</a>
+      <div class="lang" role="group" aria-label="Язык">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <img class="hero-img" src="img/x-roof-repair.webp" alt="" fetchpriority="high">
+  <div class="hero-in">
+    <div class="promo-pill"><span class="badge" data-i="promo">Акция</span><span data-i="pill">Проверка крыши с фотоотчётом бесплатно</span></div>
+    <h1 data-i="h1">Течёт крыша? <em>Найдём протечку</em> за один выезд</h1>
+    <p class="lead" data-i="lead">Крыши, гидроизоляция, фасады, террасы и бассейны на Пхукете. И любой ремонт внутри, от розетки до виллы.</p>
+    <div class="cta-row">
+      <a class="btn btn-tile" href="#lead" data-msg="roofcheck"><span data-i="cta1">Записаться на проверку</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+      <a class="btn btn-ghost" href="#problem"><span data-i="cta2">Что у вас случилось?</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+      <div class="msgr">
+        <a href="#lead" data-msg="hello" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+        <a href="#lead" data-c="tg" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
+        <a href="#lead" data-c="line" aria-label="LINE"><svg><use href="#i-line"/></svg></a>
+      </div>
+    </div>
+    <ul class="facts">
+      <li class="tr"><svg><use href="#i-shield"/></svg><span data-i="tr1">Официальная тайская компания</span></li>
+      <li class="tr"><svg><use href="#i-doc"/></svg><span data-i="tr2">Работаем по договору</span></li>
+      <li class="tr"><svg><use href="#i-eng"/></svg><span data-i="tr3">Русскоязычный менеджер и инженер</span></li>
+      <li><svg><use href="#i-check"/></svg><span data-i="f1">Осмотр бесплатно</span></li>
+    </ul>
+  </div>
+  <div class="rain-card" aria-hidden="true">
+    <span class="badge" data-i="promo">Акция</span>
+    <div class="big-num" id="cdHero">—</div>
+    <small data-i="cd_s">Успейте с крышей до сезона дождей. Он начинается в мае.</small>
+    <div class="cd-bar"><i id="cdBarHero"></i></div>
+  </div>
+</section>
+
+<nav class="tabs" id="sections" aria-label="Разделы">
+  <div class="tabs-in" role="tablist">
+    <a class="tab" role="tab" aria-controls="problem" href="#problem" data-tab="problem" data-i="t1">Что случилось?</a>
+    <a class="tab" role="tab" aria-controls="roof" href="#roof" data-tab="roof" data-i="t2">Проверка крыши и акции</a>
+    <a class="tab" role="tab" aria-controls="outside" href="#outside" data-tab="outside" data-i="t3">Снаружи</a>
+    <a class="tab" role="tab" aria-controls="inside" href="#inside" data-tab="inside" data-i="t4">Внутри</a>
+    <a class="tab" role="tab" aria-controls="seasons" href="#seasons" data-tab="seasons" data-i="t5">Когда что делать</a>
+  </div>
+</nav>
+
+<!-- PROBLEM -->
+<section class="panel" id="problem" role="tabpanel">
+  <div class="wrap split r">
+    <div class="anim">
+      <span class="eyebrow" data-i="e1">Выберите, что видите</span>
+      <h2 data-i="h_p">Что у вас случилось?</h2>
+      <p class="sub" data-i="s_p">Подскажем, что это обычно значит, что мы делаем и сколько это стоит. Заявку отправите одной кнопкой.</p>
+      <div class="pgrid" id="pgrid" role="radiogroup" aria-label="Проблема"></div>
+    </div>
+    <div class="bezel anim stick">
+      <div class="core pres swap" id="pres" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="wrap next"><a href="#roof"><span data-i="n2">Дальше: проверка крыши и акции</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a></div>
+</section>
+
+<!-- ROOF CHECK + PROMOS -->
+<section class="panel" id="roof" role="tabpanel" hidden>
+  <div class="wrap split">
+    <div class="anim">
+      <span class="eyebrow"><span class="badge" data-i="promo">Акция</span><span data-i="e2">До сезона дождей</span></span>
+      <h2 data-i="h_r">Бесплатная проверка крыши с фотоотчётом</h2>
+      <p class="sub" data-i="s_r">Поднимаемся на крышу, смотрим чердак и потолки изнутри. Вы получаете в мессенджер фото и список: что в порядке, за чем следить, что чинить и сколько это стоит.</p>
+      <div class="promos">
+        <div class="promo dark">
+          <img src="img/c-rain.webp" alt="" loading="lazy">
+          <span class="badge" data-i="promo">Акция</span>
+          <h3 data-i="pr1">Успейте до сезона дождей</h3>
+          <div class="big-num" id="cdTab">—</div>
+          <p data-i="pr1s">Запишитесь на кровлю до 30 апреля, и мы поставим работы в график до майских ливней.</p>
+        </div>
+        <div class="promo">
+          <span class="badge" data-i="promo">Акция</span>
+          <h3 data-i="pr2">−10% на гидроизоляцию при заказе кровли</h3>
+          <p data-i="pr2s">Терраса, балкон или плоская крыша вместе с ремонтом кровли.</p>
+        </div>
+        <div class="promo">
+          <span class="badge" data-i="promo">Акция</span>
+          <h3 data-i="pr3">Проверка крыши бесплатно</h3>
+          <p data-i="pr3s">С фотоотчётом о состоянии, даже если ремонт пока не нужен.</p>
+        </div>
+      </div>
+    </div>
+    <div class="anim">
+      <div class="bezel"><div class="core">
+        <div class="rep-h"><span><b data-i="rp_t">Отчёт о состоянии крыши</b><small data-i="rp_s">Вилла, Чалонг · 4 фото на пункт</small></span><span class="tag-ex" data-i="ex">Пример</span></div>
+        <div class="rrows" id="repRows"></div>
+        <div class="rep-sum"><span data-i="rp_sum">Ремонт до мая, ориентир</span><span class="mono" id="repSum">—</span></div>
+      </div></div>
+      <ol class="steps" style="margin-top:18px">
+        <li><span><b data-i="st1">Пишете и присылаете фото</b><span data-i="st1s">Пятно на потолке, капает, видно с улицы. Договариваемся о времени.</span></span></li>
+        <li><span><b data-i="st2">Один выезд, протечка найдена</b><span data-i="st2s">Смотрим крышу, примыкания, водостоки и путь воды до потолка.</span></span></li>
+        <li><span><b data-i="st3">Фотоотчёт и смета по строкам</b><span data-i="st3s">Работа и материалы отдельно. Решаете вы.</span></span></li>
+      </ol>
+      <a class="btn btn-tile" href="#lead" data-msg="roofcheck" style="margin-top:18px"><span data-i="cta_r">Записаться на бесплатную проверку</span><span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+    </div>
+  </div>
+  <div class="wrap next"><a href="#outside"><span data-i="n3">Дальше: работы снаружи</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a></div>
+</section>
+
+<!-- OUTSIDE -->
+<section class="panel" id="outside" role="tabpanel" hidden>
+  <div class="wrap split r">
+    <div class="anim">
+      <span class="eyebrow" data-i="e3">Снаружи и сверху</span>
+      <h2 data-i="h_o">Крыша, стены, терраса, бассейн, участок</h2>
+      <p class="sub" data-i="s_o">Тропический климат быстрее всего разрушает дом снаружи. С этого мы начинаем.</p>
+      <figure class="media"><img src="img/x-waterproof.webp" alt="" loading="lazy"><figcaption data-i="cap_o">Гидроизоляция плоской крыши</figcaption></figure>
+    </div>
+    <div class="anim">
+      <ul class="cat" id="catOut"></ul>
+      <p class="note cat-note" data-i="cat_n">Цены за работу, ориентир по рынку Пхукета в 2026 году. Точная цена после бесплатного осмотра.</p>
+    </div>
+  </div>
+  <div class="wrap next"><a href="#inside"><span data-i="n4">Дальше: работы внутри</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a></div>
+</section>
+
+<!-- INSIDE -->
+<section class="panel" id="inside" role="tabpanel" hidden>
+  <div class="wrap split r">
+    <div class="anim">
+      <span class="eyebrow" data-i="e4">И всё внутри</span>
+      <h2 data-i="h_i">От «мастера на час» до виллы под ключ</h2>
+      <p class="sub" data-i="s_i">Нашли протечку и испорченный потолок? Восстановим и его. Внутренние работы делаем так же: смета по строкам, оплата по этапам.</p>
+      <figure class="media"><img src="img/x-bath-tile.webp" alt="" loading="lazy"><figcaption data-i="cap_i">Санузел под ключ</figcaption></figure>
+    </div>
+    <div class="anim">
+      <ul class="cat" id="catIn"></ul>
+      <p class="note cat-note" data-i="cat_n">Цены за работу, ориентир по рынку Пхукета в 2026 году. Точная цена после бесплатного осмотра.</p>
+    </div>
+  </div>
+  <div class="wrap next"><a href="#seasons"><span data-i="n5">Дальше: когда что делать</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a></div>
+</section>
+
+<!-- SEASONS -->
+<section class="panel" id="seasons" role="tabpanel" hidden>
+  <div class="wrap">
+    <div class="anim">
+      <span class="eyebrow" data-i="e5">Совет владельцу</span>
+      <h2 data-i="h_s">Когда что делать с домом на Пхукете</h2>
+      <p class="sub" data-i="s_s">Сухой сезон с ноября по апрель, дожди с мая по октябрь. Нажмите на месяц.</p>
+      <div class="legend"><span><i></i><span data-i="lg1">Сухой сезон</span></span><span><i class="p"></i><span data-i="lg2">Готовимся к дождям</span></span><span><i class="r"></i><span data-i="lg3">Дожди</span></span></div>
+      <div class="months" id="months" role="group" aria-label="Месяцы"></div>
+    </div>
+    <div class="split anim" style="margin-top:8px">
+      <div class="bezel"><div class="core mdetail swap" id="mDetail"></div></div>
+      <div class="tip-card">
+        <img src="img/c-roof.webp" alt="" loading="lazy">
+        <span class="badge" data-i="promo">Акция</span>
+        <h3 data-i="tc_t">Крышу лучше чинить в сухой сезон</h3>
+        <p data-i="tc_s">Герметики и мастики ложатся на сухую поверхность. В ливень можно только найти протечку и закрыть её временно.</p>
+        <a class="btn btn-tile" href="#lead" data-msg="roofcheck"><span data-i="cta_s">Бесплатная проверка крыши</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap next"><a href="#problem"><span data-i="n1">К выбору проблемы</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></a></div>
+</section>
+
+<!-- WHY US (общий блок под всеми вкладками) -->
+<section class="why" id="why" aria-labelledby="whyT">
+  <div class="wrap">
+    <span class="eyebrow" data-i="e_w">Почему мы</span>
+    <h2 id="whyT" data-i="h_w">Официально, по договору, под контролем инженера</h2>
+    <div class="why-grid">
+      <div class="wcard hi"><span class="wi"><svg><use href="#i-eng"/></svg></span><div><h3 data-i="w1">Русскоязычный менеджер и русский инженер</h3><p data-i="w1s">Менеджер ведёт ваш проект от осмотра до сдачи: одно контактное лицо, фото- и видеоотчёты, всё на русском. Русский инженер проверяет каждый этап работ.</p></div></div>
+      <div class="wcard"><span class="wi"><svg><use href="#i-shield"/></svg></span><div><h3 data-i="w2">Официальная тайская компания</h3><p data-i="w2s">Работаем легально, в белую. Выдаём счёт и акт выполненных работ.</p></div></div>
+      <div class="wcard"><span class="wi"><svg><use href="#i-doc"/></svg></span><div><h3 data-i="w3">Всё по договору</h3><p data-i="w3s">В договоре объём работ, материалы, сроки, цена и гарантия. Оплата по этапам.</p></div></div>
+      <div class="wcard"><span class="wi"><svg><use href="#i-list"/></svg></span><div><h3 data-i="w4">Смета по строкам</h3><p data-i="w4s">Работа и материалы отдельно, итоговая цена записана в договоре.</p></div></div>
+      <div class="wcard"><span class="wi"><svg><use href="#i-globe"/></svg></span><div><h3 data-i="w5">Опыт в Азии и СНГ</h3><p data-i="w5s">Команда с опытом ремонта и строительства в странах Азии и СНГ.</p></div></div>
+      <div class="wcard wide"><span class="wi"><svg><use href="#i-cam"/></svg></span><div><h3 data-i="w6">Фото и видео после каждого этапа</h3><p data-i="w6s">Присылаем в мессенджер, на крупных работах — каждый день. Вы видите работу, даже если вы не на острове.</p></div></div>
+      <div class="wcard"><span class="wi"><svg><use href="#i-cert"/></svg></span><div><h3 data-i="w7">Гарантия на бумаге</h3><p data-i="w7s">12 месяцев на работы, 3 года на гидроизоляцию — прописано в договоре. При сдаче выдаём подписанный гарантийный сертификат.</p></div></div>
+    </div>
+    <div class="wfaq">
+      <details><summary><span data-i="q1">Вы официальная компания?</span><svg><use href="#i-arrow"/></svg></summary><p data-i="q1a">Да. Мы официальная тайская компания и работаем в белую: по договору, со счётом и актом выполненных работ. В договоре объём работ, материалы, сроки, цена и гарантия, оплата по этапам. Договор на английском и тайском, по желанию на русском.</p></details>
+      <details><summary><span data-i="q2">Кто контролирует работы?</span><svg><use href="#i-arrow"/></svg></summary><p data-i="q2a">Русскоязычный менеджер ведёт проект от осмотра до сдачи и присылает фото- и видеоотчёты. Русский инженер проверяет каждый этап работ.</p></details>
+      <details><summary><span data-i="q3">Как я буду видеть ход работ?</span><svg><use href="#i-arrow"/></svg></summary><p data-i="q3a">После каждого этапа присылаем фото и видео в WhatsApp, Telegram или LINE, на крупных работах — каждый день. Вы видите, что сделано, даже если вы не на острове.</p></details>
+      <details><summary><span data-i="q4">Гарантия будет в письменном виде?</span><svg><use href="#i-arrow"/></svg></summary><p data-i="q4a">Да. 12 месяцев на работы и 3 года на гидроизоляцию — это прописано в договоре, а при сдаче выдаём бумажный гарантийный сертификат с подписью.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div>
+        <h2 data-i="h_ct">Пришлите фото, назовём цену</h2>
+        <p class="sub" data-i="s_ct">Пятно на потолке, трещина, облезлая стена. По фото скажем, что это скорее всего, и договоримся об осмотре.</p>
+        <div class="ct-quick">
+          <a class="btn btn-tile" href="#lead" data-msg="hello"><span data-i="cta_ct">Написать в WhatsApp</span><span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+          <div class="msgr">
+            <a href="#lead" data-c="tg"><svg><use href="#i-tg"/></svg><span>Telegram</span></a>
+            <a href="#lead" data-c="line"><svg><use href="#i-line"/></svg><span>LINE</span></a>
+          </div>
+          <img src="img/x-team-van.webp" alt="" loading="lazy" style="border-radius:22px;aspect-ratio:16/9;object-fit:cover;width:100%;margin-top:8px">
+        </div>
+      </div>
+
+      <div class="bezel" id="lead">
+        <form class="core lf" id="leadForm" novalidate>
+          <h3 data-i="lf_t">Заявка за 30 секунд</h3>
+          <div class="fld">
+            <label for="fName" data-i="lf_name">Как вас зовут</label>
+            <input type="text" id="fName" name="name" autocomplete="name" maxlength="60" aria-describedby="eName">
+            <p class="err" id="eName" data-i="lf_eName" hidden>Напишите, как к вам обращаться</p>
+          </div>
+          <fieldset class="fld">
+            <legend data-i="lf_ch">Где удобнее переписываться</legend>
+            <div class="chs">
+              <label><input type="radio" name="ch" value="wa" checked><span>WhatsApp</span></label>
+              <label><input type="radio" name="ch" value="tg"><span>Telegram</span></label>
+              <label><input type="radio" name="ch" value="line"><span>LINE</span></label>
+            </div>
+          </fieldset>
+          <div class="row2">
+            <div class="fld">
+              <label for="fNeed" data-i="lf_need">Что нужно</label>
+              <select id="fNeed" name="need" aria-describedby="eNeed"></select>
+              <p class="err" id="eNeed" data-i="lf_eNeed" hidden>Выберите, что нужно</p>
+            </div>
+            <div class="fld">
+              <label for="fArea" data-i="lf_area">Район</label>
+              <select id="fArea" name="area" aria-describedby="eArea"></select>
+              <p class="err" id="eArea" data-i="lf_eArea" hidden>Выберите район</p>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="fMsg" data-i="lf_msg">Подробнее, если хотите</label>
+            <textarea id="fMsg" name="msg" rows="2" maxlength="500"></textarea>
+          </div>
+          <p class="ferr" id="fErr" role="alert" hidden></p>
+          <button class="btn btn-tile" type="submit"><span id="fBtn">Открыть WhatsApp с готовым текстом</span><span class="ic"><svg><use href="#i-arrow"/></svg></span></button>
+          <div class="fstat" id="fStat" aria-live="polite"></div>
+          <p class="note" style="margin:0"><span data-i="lf_note">Форма ничего не сохраняет: она готовит текст и открывает мессенджер.</span> <button type="button" class="linkbtn" data-privacy data-i="pv_link">Политика конфиденциальности</button></p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="fgrid">
+      <div>
+        <h3 data-i="ft_srv">Услуги</h3>
+        <ul>
+          <li><a href="#problem" data-i="t1">Что случилось?</a></li>
+          <li><a href="#roof" data-i="t2">Проверка крыши и акции</a></li>
+          <li><a href="#outside" data-i="t3">Снаружи</a></li>
+          <li><a href="#inside" data-i="t4">Внутри</a></li>
+          <li><a href="#seasons" data-i="t5">Когда что делать</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i="ft_hours">Часы работы</h3>
+        <p data-cfg="hours">Пн–Сб 9:00–19:00</p>
+        <p data-cfg="address">Раваи, Пхукет</p>
+        <div class="lang lang-foot" role="group" aria-label="Язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <div class="fcol-ct">
+        <h3 data-i="ft_ct">Контакты</h3>
+        <div class="cts">
+          <a href="#lead" data-msg="hello"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          <a href="#lead" data-c="tg"><svg><use href="#i-tg"/></svg><span data-ctext="tg">Telegram</span></a>
+          <a href="#lead" data-c="line"><svg><use href="#i-line"/></svg><span>LINE</span></a>
+          <a href="#lead" data-c="phone"><svg><use href="#i-phone"/></svg><span data-ctext="phone">Телефон</span></a>
+          <a href="#lead" data-c="email"><svg><use href="#i-mail"/></svg><span data-ctext="email">Почта</span></a>
+          <a href="#lead" data-c="ig" aria-label="Instagram"><svg><use href="#i-ig"/></svg><span>Instagram</span></a>
+          <a href="#lead" data-c="fb" aria-label="Facebook"><svg><use href="#i-fb"/></svg><span>Facebook</span></a>
+        </div>
+      </div>
+      <div>
+        <h3 data-i="ft_area">Районы</h3>
+        <p id="fDistricts"></p>
+      </div>
+    </footer>
+    <div class="foot"><span><span data-brand>Dryline</span> · Phuket · 2026</span><span data-i="foot">Договор на английском и тайском, по желанию на русском</span><button type="button" class="linkbtn" data-privacy data-i="pv_link">Политика конфиденциальности</button></div>
+  </div>
+</section>
+
+<a class="fab" id="fab" href="#lead" data-msg="hello" aria-label="WhatsApp"><span class="ic"><svg><use href="#i-wa"/></svg></span><span data-i="fab">Написать</span></a>
+
+<dialog class="pv" id="privacy" aria-labelledby="pvT">
+  <div class="pv-in">
+    <button type="button" class="pv-x" id="pvClose" data-i-aria="close" aria-label="Закрыть"><svg><use href="#i-x"/></svg></button>
+    <h3 id="pvT" data-i="pv_t">Политика конфиденциальности</h3>
+    <p data-i="pv1"><b>Что мы получаем.</b> Имя, район и описание задачи, которые вы вписали в форму, и ваш контакт в мессенджере. Всё это мы видим, только когда вы сами отправите сообщение.</p>
+    <p data-i="pv2"><b>Как работает форма.</b> Она ничего не хранит и никуда не отправляет. Она только собирает текст и открывает выбранный вами мессенджер.</p>
+    <p data-i="pv3"><b>Зачем нам это.</b> Чтобы ответить, назвать цену и договориться об осмотре. Фото вашего дома нужны для сметы и отчёта вам, без вашего согласия мы их не публикуем.</p>
+    <p data-i="pv4"><b>Что хранит сайт.</b> Только выбранный язык, в вашем браузере. Счётчиков посещений и рекламных меток сейчас на сайте нет.</p>
+    <p data-i="pv5"><b>Удалить данные.</b> Напишите нам в любой мессенджер, и мы удалим переписку и фото по вашему объекту.</p>
+  </div>
+</dialog>
+
+<script>
+(function(){
+/* ============ Контакты — здесь ============
+   Меняйте только этот объект: все кнопки, ссылки, подвал, форма заявки и разметка для поиска берут данные отсюда.
+   Сейчас стоят заглушки. */
+var CONFIG={
+  brand:'Dryline',
+  whatsapp:'66000000000',          // номер с кодом страны, без +, пробелов и тире
+  telegram:'your_account',         // username без @
+  line:'your_account',             // LINE ID; для официального аккаунта — с @, например '@dryline'
+  email:'hello@example.com',
+  phone:'+66 00 000 0000',
+  instagram:'your_account',        // без @
+  facebook:'your_page',            // адрес страницы после facebook.com/
+  address:{locality:'Rawai',region:'Phuket',country:'TH',ru:'Раваи, Пхукет',en:'Rawai, Phuket'},
+  hours:{ru:'Пн–Сб 9:00–19:00',en:'Mon–Sat 9:00–19:00',schema:'Mo-Sa 09:00-19:00'},
+  districts:{
+    ru:['Раваи','Найхарн','Чалонг','Ката','Карон','Патонг','Камала','Сурин','Банг Тао и Лагуна','Лаян','Таланг','Пхукет-Таун','Кату','Кох Кео'],
+    en:['Rawai','Nai Harn','Chalong','Kata','Karon','Patong','Kamala','Surin','Bang Tao & Laguna','Layan','Thalang','Phuket Town','Kathu','Koh Kaew']
+  }
+};
+var LINK={
+  wa:function(t){return 'https://wa.me/'+String(CONFIG.whatsapp).replace(/\D/g,'')+(t?'?text='+encodeURIComponent(t):'')},
+  tg:function(){return 'https://t.me/'+encodeURIComponent(String(CONFIG.telegram).replace(/^@/,''))},
+  line:function(){var id=String(CONFIG.line);return id.charAt(0)==='@'?'https://line.me/R/ti/p/'+encodeURIComponent(id):'https://line.me/ti/p/~'+encodeURIComponent(id)},
+  email:function(){return 'mailto:'+CONFIG.email},
+  phone:function(){return 'tel:'+String(CONFIG.phone).replace(/[^\d+]/g,'')},
+  ig:function(){return 'https://www.instagram.com/'+encodeURIComponent(String(CONFIG.instagram).replace(/^@/,''))+'/'},
+  fb:function(){return 'https://www.facebook.com/'+encodeURIComponent(String(CONFIG.facebook))}
+};
+/* ========================================== */
+var T={
+ru:{
+promo:'Акция',pill:'Проверка крыши с фотоотчётом бесплатно',
+h1:'Течёт крыша? <em>Найдём протечку</em> за один выезд',
+lead:'Крыши, гидроизоляция, фасады, террасы и бассейны на Пхукете. И любой ремонт внутри, от розетки до виллы.',
+cta1:'Записаться на проверку',cta2:'Что у вас случилось?',f1:'Осмотр бесплатно',
+tr1:'Официальная тайская компания',tr2:'Работаем по договору',tr3:'Русскоязычный менеджер и инженер',
+e_w:'Почему мы',h_w:'Официально, по договору, под контролем инженера',
+w1:'Русскоязычный менеджер и русский инженер',w1s:'Менеджер ведёт ваш проект от осмотра до сдачи: одно контактное лицо, фото- и видеоотчёты, всё на русском. Русский инженер проверяет каждый этап работ.',
+w2:'Официальная тайская компания',w2s:'Работаем легально, в белую. Выдаём счёт и акт выполненных работ.',
+w3:'Всё по договору',w3s:'В договоре объём работ, материалы, сроки, цена и гарантия. Оплата по этапам.',
+w4:'Смета по строкам',w4s:'Работа и материалы отдельно, итоговая цена записана в договоре.',
+w5:'Опыт в Азии и СНГ',w5s:'Команда с опытом ремонта и строительства в странах Азии и СНГ.',
+w6:'Фото и видео после каждого этапа',w6s:'Присылаем в мессенджер, на крупных работах — каждый день. Вы видите работу, даже если вы не на острове.',
+w7:'Гарантия на бумаге',w7s:'12 месяцев на работы, 3 года на гидроизоляцию — прописано в договоре. При сдаче выдаём подписанный гарантийный сертификат.',
+q1:'Вы официальная компания?',q1a:'Да. Мы официальная тайская компания и работаем в белую: по договору, со счётом и актом выполненных работ. В договоре объём работ, материалы, сроки, цена и гарантия, оплата по этапам. Договор на английском и тайском, по желанию на русском.',
+q2:'Кто контролирует работы?',q2a:'Русскоязычный менеджер ведёт проект от осмотра до сдачи и присылает фото- и видеоотчёты. Русский инженер проверяет каждый этап работ.',
+q3:'Как я буду видеть ход работ?',q3a:'После каждого этапа присылаем фото и видео в WhatsApp, Telegram или LINE, на крупных работах — каждый день. Вы видите, что сделано, даже если вы не на острове.',
+q4:'Гарантия будет в письменном виде?',q4a:'Да. 12 месяцев на работы и 3 года на гидроизоляцию — это прописано в договоре, а при сдаче выдаём бумажный гарантийный сертификат с подписью.',
+cd_s:'Успейте с крышей до сезона дождей. Он начинается в мае.',
+days:['день','дня','дней'],cdLeft:'до дождей',cdNow:'Сезон дождей',
+t1:'Что случилось?',t2:'Проверка крыши и акции',t3:'Снаружи',t4:'Внутри',t5:'Когда что делать',
+e1:'Выберите, что видите',h_p:'Что у вас случилось?',s_p:'Подскажем, что это обычно значит, что мы делаем и сколько это стоит. Заявку отправите одной кнопкой.',
+p_mean:'Что это обычно значит',p_do:'Что делаем',p_risk:'Если отложить',p_from:'Цена',p_btn:'Отправить заявку с этим текстом',p_alt:'или заполнить форму',
+n1:'К выбору проблемы',n2:'Дальше: проверка крыши и акции',n3:'Дальше: работы снаружи',n4:'Дальше: работы внутри',n5:'Дальше: когда что делать',
+e2:'До сезона дождей',h_r:'Бесплатная проверка крыши с фотоотчётом',
+s_r:'Поднимаемся на крышу, смотрим чердак и потолки изнутри. Вы получаете в мессенджер фото и список: что в порядке, за чем следить, что чинить и сколько это стоит.',
+pr1:'Успейте до сезона дождей',pr1s:'Запишитесь на кровлю до 30 апреля, и мы поставим работы в график до майских ливней.',
+pr2:'−10% на гидроизоляцию при заказе кровли',pr2s:'Терраса, балкон или плоская крыша вместе с ремонтом кровли.',
+pr3:'Проверка крыши бесплатно',pr3s:'С фотоотчётом о состоянии, даже если ремонт пока не нужен.',
+rp_t:'Отчёт о состоянии крыши',rp_s:'Вилла, Чалонг · 4 фото на пункт',ex:'Пример',rp_sum:'Ремонт до мая, ориентир',
+st1:'Пишете и присылаете фото',st1s:'Пятно на потолке, капает, видно с улицы. Договариваемся о времени.',
+st2:'Один выезд, протечка найдена',st2s:'Смотрим крышу, примыкания, водостоки и путь воды до потолка.',
+st3:'Фотоотчёт и смета по строкам',st3s:'Работа и материалы отдельно. Решаете вы.',
+cta_r:'Записаться на бесплатную проверку',
+e3:'Снаружи и сверху',h_o:'Крыша, стены, терраса, бассейн, участок',s_o:'Тропический климат быстрее всего разрушает дом снаружи. С этого мы начинаем.',cap_o:'Гидроизоляция плоской крыши',
+e4:'И всё внутри',h_i:'От «мастера на час» до виллы под ключ',s_i:'Нашли протечку и испорченный потолок? Восстановим и его. Внутренние работы делаем так же: смета по строкам, оплата по этапам.',cap_i:'Санузел под ключ',
+cat_n:'Цены за работу, ориентир по рынку Пхукета в 2026 году. Точная цена после бесплатного осмотра.',ask:'Спросить',quote:'по смете',
+e5:'Совет владельцу',h_s:'Когда что делать с домом на Пхукете',s_s:'Сухой сезон с ноября по апрель, дожди с мая по октябрь. Нажмите на месяц.',
+lg1:'Сухой сезон',lg2:'Готовимся к дождям',lg3:'Дожди',
+tc_t:'Крышу лучше чинить в сухой сезон',tc_s:'Герметики и мастики ложатся на сухую поверхность. В ливень можно только найти протечку и закрыть её временно.',cta_s:'Бесплатная проверка крыши',
+h_ct:'Пришлите фото, назовём цену',s_ct:'Пятно на потолке, трещина, облезлая стена. По фото скажем, что это скорее всего, и договоримся об осмотре.',cta_ct:'Написать в WhatsApp',
+foot:'Договор на английском и тайском, по желанию на русском',
+hdr:'Оставить заявку',fab:'Написать',lf_t:'Заявка за 30 секунд',lf_name:'Как вас зовут',lf_eName:'Напишите, как к вам обращаться',
+lf_ch:'Где удобнее переписываться',lf_need:'Что нужно',lf_pick:'Выберите',lf_eNeed:'Выберите, что нужно',lf_area:'Район',lf_eArea:'Выберите район',
+area_other:'Другой район',lf_msg:'Подробнее, если хотите',lf_note:'Форма ничего не сохраняет: она готовит текст и открывает мессенджер.',
+lf_btn_wa:'Открыть WhatsApp с готовым текстом',lf_btn_tg:'Скопировать текст и открыть Telegram',lf_btn_line:'Скопировать текст и открыть LINE',
+lf_err:'Заполните поля, отмеченные красным.',
+lf_st_wa:'Открыли WhatsApp с вашим текстом. Если окно не появилось, <a href="{url}" target="_blank" rel="noopener">нажмите здесь</a>.',
+lf_st_copied:'Текст скопирован. Вставьте его в чат {ch}. Если чат не открылся, <a href="{url}" target="_blank" rel="noopener">нажмите здесь</a>.',
+lf_st_nocopy:'Не получилось скопировать сам текст. Скопируйте его отсюда и вставьте в чат {ch} (<a href="{url}" target="_blank" rel="noopener">открыть чат</a>):',
+lf_text:'Здравствуйте! Меня зовут {name}. Нужно: {need}. Район: {area}.{msg} (Заявка с сайта {brand})',lf_text_msg:' Подробнее: {m}.',
+pv_link:'Политика конфиденциальности',close:'Закрыть',ft_srv:'Услуги',ft_hours:'Часы работы',ft_ct:'Контакты',ft_area:'Районы',
+pv_t:'Политика конфиденциальности',
+pv1:'<b>Что мы получаем.</b> Имя, район и описание задачи, которые вы вписали в форму, и ваш контакт в мессенджере. Всё это мы видим, только когда вы сами отправите сообщение.',
+pv2:'<b>Как работает форма.</b> Она ничего не хранит и никуда не отправляет. Она только собирает текст и открывает выбранный вами мессенджер.',
+pv3:'<b>Зачем нам это.</b> Чтобы ответить, назвать цену и договориться об осмотре. Фото вашего дома нужны для сметы и отчёта вам, без вашего согласия мы их не публикуем.',
+pv4:'<b>Что хранит сайт.</b> Только выбранный язык, в вашем браузере. Счётчиков посещений и рекламных меток сейчас на сайте нет.',
+pv5:'<b>Удалить данные.</b> Напишите нам в любой мессенджер, и мы удалим переписку и фото по вашему объекту.',
+msg_hello:'Здравствуйте! Пишу с сайта {brand}. Хочу узнать про ремонт на Пхукете.',
+msg_roofcheck:'Здравствуйте! Хочу записаться на бесплатную проверку крыши с фотоотчётом (акция). Район: , тип дома: ',
+msg_ask:'Здравствуйте! Сколько будет стоить: {s}? Район: . Пришлю фото.',
+msg_problem:'Здравствуйте! У меня проблема: {p}. Район: . Пришлю фото. (С сайта {brand})',
+need:{roof:'Течёт крыша',check:'Бесплатная проверка крыши (акция)',water:'Гидроизоляция: терраса, балкон, плоская крыша',facade:'Фасад: покраска, трещины, плесень',pool:'Бассейн',terrace:'Терраса, навес, настил',inside:'Ремонт внутри',ac:'Кондиционеры',other:'Другое'},
+mon:['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+monF:['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+seas:{dry:'Сухой сезон',prep:'Сухой сезон · готовимся к дождям',rain:'Сезон дождей',rainS:'Начало дождей'},
+aProb:'Проблема',aMonths:'Месяцы',aLang:'Язык',aSect:'Разделы'
+},
+en:{
+promo:'Offer',pill:'Free roof check with a photo report',
+h1:'Leaking roof? <em>We find the leak</em> in one visit',
+lead:'Roofs, waterproofing, facades, terraces and pools in Phuket. Plus any job inside, from a socket to a whole villa.',
+cta1:'Book a roof check',cta2:'What’s the problem?',f1:'Free inspection',
+tr1:'Official Thai company',tr2:'Every job under contract',tr3:'Foreign engineer on every project',
+e_w:'Why us',h_w:'Registered, under contract, signed off by an engineer',
+w1:'A foreign engineer supervises every stage',w1s:'An engineer working to European standards checks each stage and takes responsibility for the result. One English-speaking project manager runs your job from inspection to handover, with photo and video reports.',
+w2:'Official Thai company',w2s:'We work legally and fully on the books. You get an invoice and a completion certificate.',
+w3:'Every job under contract',w3s:'Scope, materials, timeline, price and warranty are written into the contract. You pay in stages.',
+w4:'Line-by-line quote',w4s:'Labour and materials listed separately, the final price is set in the contract.',
+w5:'Experience across Asia and the CIS',w5s:'A team with renovation and construction experience in Asian and CIS countries.',
+w6:'Photo and video after every stage',w6s:'Sent to your messenger, daily on larger jobs. You see the work even when you are off the island.',
+w7:'Warranty on paper',w7s:'12 months on work, 3 years on waterproofing, written into the contract. At handover you get a signed warranty certificate.',
+q1:'Are you an officially registered company?',q1a:'Yes. We are an official Thai company and work fully on the books: under contract, with an invoice and a completion certificate. The contract sets out scope, materials, timeline, price and warranty, and you pay in stages. It is in English and Thai.',
+q2:'Who supervises the work?',q2a:'A foreign engineer working to European standards supervises every stage and takes responsibility for the result. Your English-speaking project manager runs the job from inspection to handover and sends photo and video reports.',
+q3:'How will I see the progress?',q3a:'After every stage we send photos and video to WhatsApp, Telegram or LINE, and daily on larger jobs. You see what is done even when you are off the island.',
+q4:'Will the warranty be in writing?',q4a:'Yes. 12 months on work and 3 years on waterproofing are written into the contract, and at handover you get a signed paper warranty certificate.',
+cd_s:'Get the roof done before the rainy season. It starts in May.',
+days:['day','days','days'],cdLeft:'to the rains',cdNow:'Rainy season',
+t1:'What happened?',t2:'Roof check and offers',t3:'Outside',t4:'Inside',t5:'What to do when',
+e1:'Pick what you see',h_p:'What’s the problem?',s_p:'We’ll tell you what it usually means, what we do and what it costs. Send the request with one tap.',
+p_mean:'What it usually means',p_do:'What we do',p_risk:'If you wait',p_from:'Price',p_btn:'Send a request with this text',p_alt:'or fill in the form',
+n1:'Back to the problem picker',n2:'Next: roof check and offers',n3:'Next: outside work',n4:'Next: inside work',n5:'Next: what to do when',
+e2:'Before the rains',h_r:'Free roof check with a photo report',
+s_r:'We go up on the roof and check the attic and ceilings from inside. You get photos and a list on your messenger: what’s fine, what to watch, what to fix and what it costs.',
+pr1:'Beat the rainy season',pr1s:'Book roof work by 30 April and we’ll schedule it before the May downpours.',
+pr2:'10% off waterproofing with a roof job',pr2s:'Terrace, balcony or flat roof together with a roof repair.',
+pr3:'Roof check for free',pr3s:'With a photo report on its condition, even if no repair is needed yet.',
+rp_t:'Roof condition report',rp_s:'Villa, Chalong · 4 photos per item',ex:'Sample',rp_sum:'Repairs before May, estimate',
+st1:'Message us and send photos',st1s:'A stain on the ceiling, a drip, something visible from outside. We agree on a time.',
+st2:'One visit, leak found',st2s:'We check the roof, flashings, gutters and the water’s path to the ceiling.',
+st3:'Photo report and line-by-line quote',st3s:'Labour and materials listed separately. You decide.',
+cta_r:'Book a free roof check',
+e3:'Outside and up top',h_o:'Roof, walls, terrace, pool, grounds',s_o:'The tropical climate wears a house down fastest from the outside. That’s where we start.',cap_o:'Flat roof waterproofing',
+e4:'And everything inside',h_i:'From a handyman hour to a turnkey villa',s_i:'Found a leak and a ruined ceiling? We’ll restore that too. Inside work follows the same rules: line-by-line quote, staged payments.',cap_i:'Turnkey bathroom',
+cat_n:'Labour prices, a guide based on the Phuket market in 2026. Exact price after a free inspection.',ask:'Ask',quote:'on quote',
+e5:'Owner’s tip',h_s:'What to do with your Phuket home and when',s_s:'Dry season runs November to April, rains May to October. Tap a month.',
+lg1:'Dry season',lg2:'Pre-rain prep',lg3:'Rains',
+tc_t:'Roofs are best repaired in the dry season',tc_s:'Sealants and coatings need a dry surface. In a downpour we can only find the leak and patch it temporarily.',cta_s:'Free roof check',
+h_ct:'Send a photo, get a price',s_ct:'A ceiling stain, a crack, peeling paint. From a photo we’ll tell you what it most likely is and arrange an inspection.',cta_ct:'Message on WhatsApp',
+foot:'Contract in English and Thai, Russian on request',
+hdr:'Get in touch',fab:'Message us',lf_t:'Request in 30 seconds',lf_name:'Your name',lf_eName:'Please tell us your name',
+lf_ch:'Where should we chat',lf_need:'What you need',lf_pick:'Choose',lf_eNeed:'Please choose what you need',lf_area:'Area',lf_eArea:'Please choose your area',
+area_other:'Other area',lf_msg:'Details, if you like',lf_note:'The form stores nothing: it prepares a message and opens your messenger.',
+lf_btn_wa:'Open WhatsApp with the message',lf_btn_tg:'Copy message and open Telegram',lf_btn_line:'Copy message and open LINE',
+lf_err:'Please fill in the fields marked in red.',
+lf_st_wa:'WhatsApp opened with your message. If nothing appeared, <a href="{url}" target="_blank" rel="noopener">tap here</a>.',
+lf_st_copied:'Message copied. Paste it into the {ch} chat. If the chat didn’t open, <a href="{url}" target="_blank" rel="noopener">tap here</a>.',
+lf_st_nocopy:'We couldn’t copy the message automatically. Copy it from here and paste it into {ch} (<a href="{url}" target="_blank" rel="noopener">open chat</a>):',
+lf_text:'Hello! My name is {name}. I need: {need}. Area: {area}.{msg} (Request from the {brand} website)',lf_text_msg:' Details: {m}.',
+pv_link:'Privacy policy',close:'Close',ft_srv:'Services',ft_hours:'Opening hours',ft_ct:'Contacts',ft_area:'Areas',
+pv_t:'Privacy policy',
+pv1:'<b>What we receive.</b> The name, area and job description you type into the form, plus your messenger contact. We only see this once you send the message yourself.',
+pv2:'<b>How the form works.</b> It stores nothing and sends nothing. It only puts the message together and opens the messenger you chose.',
+pv3:'<b>Why we need it.</b> To reply, give you a price and arrange an inspection. Photos of your home are for the quote and your report; we don’t publish them without your consent.',
+pv4:'<b>What the site stores.</b> Only your chosen language, in your browser. There are currently no visitor counters or ad tracking tags on the site.',
+pv5:'<b>Deleting your data.</b> Message us on any messenger and we’ll delete the chat and photos of your property.',
+msg_hello:'Hello! I found {brand} online and would like to ask about repairs in Phuket.',
+msg_roofcheck:'Hello! I’d like to book the free roof check with a photo report (offer). Area: , type of house: ',
+msg_ask:'Hello! How much would this cost: {s}? Area: . I’ll send photos.',
+msg_problem:'Hello! My problem: {p}. Area: . I’ll send photos. (From the {brand} website)',
+need:{roof:'Leaking roof',check:'Free roof check (offer)',water:'Waterproofing: terrace, balcony, flat roof',facade:'Facade: painting, cracks, mould',pool:'Pool',terrace:'Terrace, pergola, decking',inside:'Work inside',ac:'Air-con',other:'Something else'},
+mon:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+monF:['January','February','March','April','May','June','July','August','September','October','November','December'],
+seas:{dry:'Dry season',prep:'Dry season · pre-rain prep',rain:'Rainy season',rainS:'Rains begin'},
+aProb:'Problem',aMonths:'Months',aLang:'Language',aSect:'Sections'
+}};
+
+/* Проблемы: цены только из разбора рынка (BRIEF-v3 / data.json); где цены нет — «по смете после осмотра» */
+var PROBLEMS=[
+ {id:'roof',ic:'i-roof',img:'img/x-roof-leak.webp',need:'roof',
+  ru:{l:'Течёт крыша',mean:'Чаще всего виноваты сдвинутая или треснувшая черепица, высохший герметик на примыканиях к стенам и трубам или забитый водосток. Вода может течь далеко от места, где капает.',do:'За один выезд находим, откуда идёт вода: крыша, примыкания, водостоки, путь до потолка. Временно закрываем течь, затем меняем черепицу или чиним покрытие.',risk:'Намокает утеплитель и потолок, появляется плесень, под водой может оказаться проводка.',p:'от 2 500 ฿',ps:'ремонт кровли; точечно плоская крыша 100 м² от 13 750 ฿'},
+  en:{l:'Leaking roof',mean:'Usually a shifted or cracked tile, dried-out sealant where the roof meets walls and pipes, or a blocked gutter. The water can drip far from where it gets in.',do:'In one visit we trace where the water comes from: roof, flashings, gutters, the path to the ceiling. We patch it temporarily, then replace tiles or repair the covering.',risk:'Insulation and ceiling get soaked, mould sets in, wiring may end up under water.',p:'from 2,500 ฿',ps:'roof repair; flat roof 100 m² spot repair from 13,750 ฿'}},
+ {id:'mold',ic:'i-mold',img:'img/x-plaster.webp',need:'facade',
+  ru:{l:'Плесень на стене',mean:'Стена постоянно сырая: протечка снаружи, трещина в фасаде, нет гидроизоляции у пола или конденсат от кондиционера.',do:'Находим источник влаги и убираем его. Затем обрабатываем стену от грибка, просушиваем, шпаклюем и красим.',risk:'Пятно возвращается через месяц после покраски, запах въедается в мебель и ткани.',p:'от 120 ฿/м²',ps:'покраска стен; обработка и поиск причины по смете'},
+  en:{l:'Mould on a wall',mean:'The wall stays damp: a leak outside, a crack in the facade, no waterproofing at floor level, or condensation from the air-con.',do:'We find the source of the moisture and fix it. Then we treat the wall for fungus, dry it, skim it and paint.',risk:'The stain comes back a month after painting and the smell gets into furniture and fabrics.',p:'from 120 ฿/m²',ps:'wall painting; treatment and finding the cause on quote'}},
+ {id:'crack',ic:'i-crack',img:'img/x-facade-paint.webp',need:'facade',
+  ru:{l:'Трещины в стенах',mean:'Тонкие трещины в штукатурке обычно от перепадов жары и влаги. Широкие и косые трещины могут говорить об осадке фундамента.',do:'Смотрим ширину и направление трещины. Тонкие расшиваем, заделываем и красим. Если трещина растёт, сначала разбираемся с причиной.',risk:'В трещину заходит вода, стена сыреет изнутри, штукатурка отваливается кусками.',p:'по смете',ps:'после осмотра; покраска от 120 ฿/м²'},
+  en:{l:'Cracks in walls',mean:'Hairline cracks in render usually come from heat and humidity swings. Wide or diagonal cracks can point to foundation settlement.',do:'We check the crack’s width and direction. Hairline ones we open up, fill and paint. If a crack keeps growing, we deal with the cause first.',risk:'Water gets into the crack, the wall gets damp inside and render falls off in chunks.',p:'on quote',ps:'after inspection; painting from 120 ฿/m²'}},
+ {id:'paint',ic:'i-roller',img:'img/x-facade-paint.webp',need:'facade',
+  ru:{l:'Облезла краска',mean:'Краска для помещений на улице, покраска по сырой стене или выгорание на солнце. На Пхукете фасад без подходящей краски держится недолго.',do:'Счищаем старый слой, грунтуем, при необходимости обрабатываем от грибка и красим фасадной краской для влажного климата.',risk:'Под отслоившейся краской стена набирает воду, начинается плесень.',p:'от 120 ฿/м²',ps:'покраска; фасад с лесами по смете'},
+  en:{l:'Peeling paint',mean:'Indoor paint used outside, painting over a damp wall, or sun damage. In Phuket a facade without the right paint doesn’t last.',do:'We strip the old layer, prime, treat for fungus if needed and repaint with facade paint made for humid climates.',risk:'Behind the peeling paint the wall soaks up water and mould starts.',p:'from 120 ฿/m²',ps:'painting; facades with scaffolding on quote'}},
+ {id:'terrace',ic:'i-deck',img:'img/x-waterproof.webp',need:'water',
+  ru:{l:'Протекает терраса',mean:'Под плиткой террасы или балкона нет гидроизоляции или она треснула. Вода уходит в перекрытие и выходит на потолке этажом ниже.',do:'Проверяем уклоны, швы и слив. Делаем новый слой гидроизоляции, при необходимости снимаем и заново кладём плитку.',risk:'Течёт в комнату снизу, ржавеет арматура в перекрытии.',p:'от 250 ฿/м²',ps:'гидроизоляция; акция −10% при заказе кровли'},
+  en:{l:'Leaking terrace',mean:'There’s no waterproofing under the terrace or balcony tiles, or it has cracked. Water gets into the slab and shows up on the ceiling below.',do:'We check falls, joints and drainage. We lay a new waterproofing layer and relay the tiles if needed.',risk:'Water drips into the room below and the rebar in the slab rusts.',p:'from 250 ฿/m²',ps:'waterproofing; offer: 10% off with a roof job'}},
+ {id:'pool',ic:'i-pool',img:'img/x-pool-repair.webp',need:'pool',
+  ru:{l:'Бассейн теряет воду',mean:'Летом вода испаряется на 0,5–1 см в день. Если уходит больше, течь в чаше, швах плитки, закладных или трубах фильтрации.',do:'Проверяем, где уходит вода: чаша, плитка, оборудование. Ремонтируем чашу, меняем плитку и швы, чиним насос и трубы.',risk:'Вода размывает грунт под чашей, растут счета за воду и химию.',p:'по смете',ps:'после осмотра'},
+  en:{l:'Pool losing water',mean:'In summer water evaporates 0.5–1 cm a day. If it drops faster, there’s a leak in the shell, tile joints, fittings or filtration pipes.',do:'We pinpoint where water escapes: shell, tiles or equipment. We repair the shell, replace tiles and grout, fix the pump and pipes.',risk:'Water washes out the ground under the shell, and water and chemical bills climb.',p:'on quote',ps:'after inspection'}},
+ {id:'ac',ic:'i-snow',img:'img/x-team-van.webp',need:'ac',
+  ru:{l:'Капает кондиционер',mean:'Забит дренаж или грязный фильтр и теплообменник. В сезон дождей это одна из самых частых жалоб.',do:'Чистим блок и дренаж, проверяем наклон и трубку слива. Если дело в фреоне или плате, говорим цену до ремонта.',risk:'Вода портит стену и потолок под блоком, появляется плесень и запах.',p:'от 350 ฿',ps:'чистка за блок'},
+  en:{l:'Air-con dripping',mean:'A blocked drain or a dirty filter and coil. One of the most common complaints in the rainy season.',do:'We clean the unit and drain, check the slope and drain line. If it’s refrigerant or the board, you get the price before the repair.',risk:'Water damages the wall and ceiling under the unit, mould and smell follow.',p:'from 350 ฿',ps:'cleaning per unit'}},
+ {id:'inside',ic:'i-house',img:'img/x-bath-tile.webp',need:'inside',
+  ru:{l:'Нужен ремонт внутри',mean:'От испорченного протечкой потолка до нового санузла, кухни или ремонта всей квартиры.',do:'Осмотр, смета по строкам, работы по этапам с фото каждого этапа. Каталог внутренних работ в разделе «Внутри».',risk:'',p:'от 1 500 ฿/м²',ps:'косметика; санузел от 80 000 ฿'},
+  en:{l:'Work needed inside',mean:'From a ceiling ruined by a leak to a new bathroom, kitchen or a full apartment refit.',do:'Inspection, line-by-line quote, staged work with photos of every stage. The full list is in the “Inside” tab.',risk:'',p:'from 1,500 ฿/m²',ps:'cosmetic; bathroom from 80,000 ฿'}}
+];
+
+/* Каталог (BRIEF-v3). p: цена «от» или null = по смете после осмотра */
+var CAT={
+ out:[
+  {ru:['Крыши','Поиск и устранение протечек, черепица, металлочерепица, плоские кровли, водостоки','от 2 500 ฿'],en:['Roofs','Leak detection and repair, tiles, metal roofing, flat roofs, gutters','from 2,500 ฿']},
+  {ru:['Гидроизоляция','Плоские крыши, террасы, балконы, бассейны, фундамент','от 250 ฿/м²'],en:['Waterproofing','Flat roofs, terraces, balconies, pools, foundations','from 250 ฿/m²']},
+  {ru:['Фасады','Покраска, ремонт штукатурки, обработка от плесени и грибка',null],en:['Facades','Painting, render repair, mould and fungus treatment',null]},
+  {ru:['Террасы и навесы','Перголы, навесы, деревянные и композитные настилы',null],en:['Terraces and shades','Pergolas, canopies, timber and composite decking',null]},
+  {ru:['Бассейны','Ремонт чаши, замена плитки, оборудование',null],en:['Pools','Shell repair, retiling, equipment',null]},
+  {ru:['Участок','Заборы, ворота, дорожки, ландшафт, дренаж',null],en:['Grounds','Fences, gates, paths, landscaping, drainage',null]},
+  {ru:['Кондиционеры','Установка, ремонт, чистка','от 350 ฿/блок'],en:['Air-con','Installation, repair, cleaning','from 350 ฿/unit']}
+ ],
+ in:[
+  {ru:['Квартиры и кондо под ключ','Косметический от 1 500 ฿/м², капитальный от 5 000 ฿/м²','от 1 500 ฿/м²'],en:['Apartments and condos, turnkey','Cosmetic from 1,500 ฿/m², full refit from 5,000 ฿/m²','from 1,500 ฿/m²']},
+  {ru:['Реновация вилл','Вилла с 3 спальнями: от 1,5 млн ฿','от 1,5 млн ฿'],en:['Villa renovation','3-bedroom villa: from 1.5M ฿','from 1.5M ฿']},
+  {ru:['Санузлы под ключ','Демонтаж, гидроизоляция, плитка, сантехника','от 80 000 ฿'],en:['Bathrooms, turnkey','Strip-out, waterproofing, tiling, plumbing','from 80,000 ฿']},
+  {ru:['Кухни','Сборка, столешницы, техника, фартук','от 120 000 ฿'],en:['Kitchens','Assembly, worktops, appliances, splashback','from 120,000 ฿']},
+  {ru:['Отделка','Покраска, шпаклёвка, декоративная штукатурка, гипсокартон, потолки','от 120 ฿/м²'],en:['Finishing','Painting, skimming, decorative plaster, drywall, ceilings','from 120 ฿/m²']},
+  {ru:['Полы','Плитка, керамогранит, SPC и ламинат, паркет, выравнивание','от 500 ฿/м²'],en:['Floors','Tile, porcelain, SPC and laminate, parquet, levelling','from 500 ฿/m²']},
+  {ru:['Электрика','Проводка, щиты, розетки, свет','от 450 ฿/точка'],en:['Electrics','Wiring, panels, sockets, lighting','from 450 ฿/point']},
+  {ru:['Сантехника','Трубы, смесители, бойлеры, насосы, засоры','от 900 ฿/точка'],en:['Plumbing','Pipes, taps, water heaters, pumps, blockages','from 900 ฿/point']},
+  {ru:['Двери, окна, мебель','Двери, окна, москитные сетки, встроенная мебель, шкафы',null],en:['Doors, windows, joinery','Doors, windows, insect screens, built-ins, wardrobes',null]},
+  {ru:['Мастер на час','Повесить, собрать, заменить, починить','от 800 ฿/час'],en:['Handyman','Hang, assemble, replace, fix','from 800 ฿/hour']}
+ ]
+};
+
+/* Пример отчёта о крыше: [название, что нашли, статус ok/wt/fx, сумма работы в ฿ или 0] */
+var REPORT={
+ ru:[['Черепица','3 треснувшие плитки над спальней','fx',3500],['Примыкания к стене и трубам','Герметик потрескался, пока сухо','wt',0],['Водостоки','Забиты листьями, почистили на месте','ok',0],['Плоская часть над террасой','Покрытие целое, уклон в норме','ok',0],['Потолок изнутри','Пятно 30×40 см в спальне, сухое','wt',0]],
+ en:[['Tiles','3 cracked tiles above the bedroom','fx',3500],['Wall and pipe flashings','Sealant cracked, dry for now','wt',0],['Gutters','Blocked with leaves, cleared on site','ok',0],['Flat section above terrace','Covering intact, falls OK','ok',0],['Ceiling inside','30×40 cm stain in the bedroom, dry','wt',0]],
+ st:{ru:{ok:'В порядке',wt:'Следить',fx:'Чинить'},en:{ok:'OK',wt:'Watch',fx:'Fix'}}
+};
+
+var MONTHS=[
+ {s:'dry',ru:['Плановые ремонты внутри','Покраска фасадов: стены сухие','Чистка кондиционеров'],en:['Planned indoor works','Facade painting: walls are dry','Air-con cleaning']},
+ {s:'dry',ru:['Лучшее время для кровли и гидроизоляции','Покраска и ремонт штукатурки','Ремонт бассейна: вода и плитка'],en:['Best time for roofing and waterproofing','Painting and render repair','Pool repairs: water and tiles']},
+ {s:'prep',ru:['Проверка крыши до дождей','Герметизация примыканий, окон и террасы','Чистка водостоков и дренажа'],en:['Roof check before the rains','Sealing flashings, windows and terrace','Clearing gutters and drainage']},
+ {s:'prep',ru:['Последний удобный месяц для кровли','Обработка стен от плесени','Чистка кондиционеров перед жарой'],en:['Last easy month for roofing','Mould treatment on walls','Air-con cleaning before the heat']},
+ {s:'rainS',ru:['Первые ливни показывают протечки','Записывайте, где течёт, и фотографируйте','Срочный поиск протечки'],en:['First storms reveal leaks','Note where it drips and take photos','Urgent leak detection']},
+ {s:'rain',ru:['Протечки: находим и закрываем временно','Внутренние работы идут по плану','Проветривайте закрытое жильё'],en:['Leaks: find and patch temporarily','Indoor works run as planned','Air out closed-up homes']},
+ {s:'rain',ru:['Проверяйте водостоки после ливней','Санузлы, кухни, полы внутри','Следите за пятнами на потолке'],en:['Check gutters after storms','Bathrooms, kitchens, floors inside','Watch for ceiling stains']},
+ {s:'rain',ru:['Плесень в шкафах и за мебелью','Капают кондиционеры: чистка дренажа','Ремонт внутри'],en:['Mould in wardrobes and behind furniture','Dripping air-con: drain cleaning','Indoor works']},
+ {s:'rain',ru:['Самые сильные ливни','Срочные протечки','Смета на наружные работы к сухому сезону'],en:['Heaviest rains','Urgent leaks','Quote for outdoor works for the dry season']},
+ {s:'rain',ru:['Последние дожди','Список того, что вскрыл сезон','Бронируйте кровлю на ноябрь–декабрь'],en:['Last rains','List what the season revealed','Book roofing for Nov–Dec']},
+ {s:'dry',ru:['Начинаем наружные работы','Кровля, фасады, террасы','Бесплатная проверка крыши после сезона'],en:['Outdoor works begin','Roofs, facades, terraces','Free roof check after the season']},
+ {s:'dry',ru:['Подготовка к приезду гостей','Мелкий ремонт и кондиционеры','Кровля и гидроизоляция по графику'],en:['Getting ready for guests','Small repairs and air-con','Roofing and waterproofing on schedule']}
+];
+
+var lang='ru',prob='roof',month=(new Date()).getMonth();
+try{var sl=localStorage.getItem('dryline_lang');if(sl==='en'||sl==='ru')lang=sl;}catch(e){}
+
+function $(s,c){return (c||document).querySelector(s)}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
+function svg(id){return '<svg><use href="#'+id+'"/></svg>'}
+function wa(text){return LINK.wa(text)}
+function ext(a){a.target='_blank';a.rel='noopener'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fmt(n){return lang==='ru'?String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' '):String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+function plural(n,f){if(lang!=='ru')return n===1?f[0]:f[1];var a=n%10,b=n%100;return (a===1&&b!==11)?f[0]:(a>=2&&a<=4&&(b<10||b>=20))?f[1]:f[2]}
+
+function applyContacts(){
+  $$('[data-c]').forEach(function(a){var f=LINK[a.dataset.c];if(!f)return;a.href=f();if(/^https?:/.test(a.href))ext(a);else{a.removeAttribute('target')}});
+  var ct={tg:'@'+String(CONFIG.telegram).replace(/^@/,''),phone:CONFIG.phone,email:CONFIG.email};
+  $$('[data-ctext]').forEach(function(el){var v=ct[el.dataset.ctext];if(v)el.textContent=v});
+  $$('[data-brand]').forEach(function(el){el.textContent=CONFIG.brand});
+  var br=$('.brand');if(br)br.setAttribute('aria-label',CONFIG.brand);
+  document.title=CONFIG.brand;
+  try{
+    var ld=JSON.parse($('#ldjson').textContent);
+    ld.name=CONFIG.brand;ld.telephone=CONFIG.phone;ld.email=CONFIG.email;ld.openingHours=CONFIG.hours.schema;
+    ld.address.addressLocality=CONFIG.address.locality;ld.address.addressRegion=CONFIG.address.region;ld.address.addressCountry=CONFIG.address.country;
+    ld.sameAs=[LINK.ig(),LINK.fb()];
+    $('#ldjson').textContent=JSON.stringify(ld);
+  }catch(e){}
+}
+function applyCfgText(){
+  $$('[data-cfg]').forEach(function(el){var v=CONFIG[el.dataset.cfg];if(v&&v[lang])el.textContent=v[lang]});
+  $('#fDistricts').innerHTML=CONFIG.districts[lang].map(function(x){return '<span style="white-space:nowrap">'+esc(x)+'</span>'}).join(' · ');
+  var sel=$('#fArea'),keep=sel.value;
+  sel.innerHTML='<option value="">'+esc(T[lang].lf_pick)+'</option>'+CONFIG.districts[lang].map(function(d,i){return '<option value="'+i+'">'+esc(d)+'</option>'}).join('')+'<option value="x">'+esc(T[lang].area_other)+'</option>';
+  sel.value=keep;
+  var ns=$('#fNeed'),nk=ns.value,nd=T[lang].need;
+  ns.innerHTML='<option value="">'+esc(T[lang].lf_pick)+'</option>'+Object.keys(nd).map(function(k){return '<option value="'+k+'">'+esc(nd[k])+'</option>'}).join('');
+  ns.value=nk;
+}
+
+function applyLang(){
+  var d=T[lang];
+  document.documentElement.lang=lang;
+  $$('[data-i]').forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!=null)el.innerHTML=d[k];});
+  $$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===lang?'true':'false')});
+  $('#sections').setAttribute('aria-label',d.aSect);
+  $('#pgrid').setAttribute('aria-label',d.aProb);
+  $('#months').setAttribute('aria-label',d.aMonths);
+  $$('[data-i-aria]').forEach(function(el){var v=d[el.getAttribute('data-i-aria')];if(v)el.setAttribute('aria-label',v)});
+  $$('.lang').forEach(function(el){el.setAttribute('aria-label',d.aLang)});
+  applyCfgText();updateFormBtn();
+  renderProblems();renderProblem(true);renderCat();renderReport();renderMonths();renderCountdown();updateMsgLinks();
+}
+function updateMsgLinks(){
+  $$('[data-msg]').forEach(function(a){var m=T[lang]['msg_'+a.dataset.msg];if(m){a.href=wa(m.replace('{brand}',CONFIG.brand));ext(a)}});
+}
+
+/* problem picker */
+function renderProblems(){
+  $('#pgrid').innerHTML=PROBLEMS.map(function(p){return '<button type="button" class="pbtn" role="radio" data-p="'+p.id+'" aria-checked="'+(p.id===prob)+'" tabindex="'+(p.id===prob?0:-1)+'">'+svg(p.ic)+'<span>'+esc(p[lang].l)+'</span></button>'}).join('');
+}
+function findP(id){for(var i=0;i<PROBLEMS.length;i++)if(PROBLEMS[i].id===id)return PROBLEMS[i];return PROBLEMS[0]}
+function renderProblem(instant){
+  var box=$('#pres');
+  function fill(){
+    var p=findP(prob),c=p[lang],d=T[lang];
+    var oldImg=$('.pimg img',box);
+    var h='<div class="pimg"><img src="'+p.img+'" alt="" loading="lazy"><span class="from">'+esc(d.p_from)+'<b>'+esc(c.p)+'</b>'+esc(c.ps)+'</span></div>';
+    h+='<h3>'+esc(c.l)+'</h3><div class="pdl">';
+    h+='<div>'+svg('i-eye')+'<span><b>'+esc(d.p_mean)+'</b>'+esc(c.mean)+'</span></div>';
+    h+='<div>'+svg('i-tool')+'<span><b>'+esc(d.p_do)+'</b>'+esc(c.do)+'</span></div>';
+    if(c.risk)h+='<div class="risk">'+svg('i-warn')+'<span><b>'+esc(d.p_risk)+'</b>'+esc(c.risk)+'</span></div>';
+    h+='</div>';
+    h+='<a class="btn btn-tile" id="pCta" href="#lead"><span>'+esc(d.p_btn)+'</span><span class="ic">'+svg('i-wa')+'</span></a>';
+    h+='<a class="alt" id="pAlt" href="#lead" data-need="'+p.need+'">'+esc(d.p_alt)+'</a>';
+    box.innerHTML=h;
+    var a=$('#pCta');a.href=wa(d.msg_problem.replace('{p}',c.l.toLowerCase()).replace('{brand}',CONFIG.brand));ext(a);
+    $$('#pgrid .pbtn').forEach(function(b){var on=b.dataset.p===prob;b.setAttribute('aria-checked',on?'true':'false');b.tabIndex=on?0:-1});
+  }
+  if(instant){fill();return}
+  box.classList.add('out');setTimeout(function(){fill();box.classList.remove('out')},180);
+}
+$('#pgrid').addEventListener('click',function(e){var b=e.target.closest('.pbtn');if(!b||b.dataset.p===prob)return;prob=b.dataset.p;renderProblem(false)});
+$('#pgrid').addEventListener('keydown',function(e){
+  var k=e.key;if(['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].indexOf(k)<0)return;e.preventDefault();
+  var i=PROBLEMS.indexOf(findP(prob)),n=PROBLEMS.length;i=(k==='ArrowRight'||k==='ArrowDown')?(i+1)%n:(i+n-1)%n;
+  prob=PROBLEMS[i].id;renderProblem(false);var b=$('#pgrid [data-p="'+prob+'"]');if(b)b.focus();
+});
+$('#pres').addEventListener('click',function(e){var a=e.target.closest('#pAlt');if(!a)return;var ns=$('#fNeed');ns.value=a.dataset.need;ns.dispatchEvent(new Event('change'))});
+
+/* catalog */
+function renderCat(){
+  var d=T[lang];
+  function list(arr){return arr.map(function(it,i){var c=it[lang];var m=d.msg_ask.replace('{s}',c[0].toLowerCase());
+    return '<li><span class="n">'+esc(c[0])+'</span><span class="w">'+esc(c[1])+'</span><span class="p">'+(c[2]?'<span class="mono">'+esc(c[2])+'</span>':'<span class="q">'+esc(d.quote)+'</span>')+'<a class="ask" href="'+esc(wa(m))+'" target="_blank" rel="noopener">'+esc(d.ask)+'</a></span></li>'}).join('')}
+  $('#catOut').innerHTML=list(CAT.out);$('#catIn').innerHTML=list(CAT.in);
+}
+/* report sample */
+function renderReport(){
+  var rows=REPORT[lang],st=REPORT.st[lang],sum=0;
+  $('#repRows').innerHTML=rows.map(function(r){sum+=r[3];return '<div class="rrow"><span>'+esc(r[0])+'</span><span class="st '+r[2]+'">'+esc(st[r[2]])+'</span><span class="d">'+esc(r[1])+'</span></div>'}).join('');
+  $('#repSum').textContent=(lang==='ru'?'≈ ':'≈ ')+fmt(sum)+' ฿';
+}
+/* countdown to the rainy season (1 May) */
+function renderCountdown(){
+  var d=T[lang],now=new Date(),y=now.getFullYear(),m=now.getMonth();
+  var rainy=m>=4&&m<=9;
+  var start=new Date(m>=10?y:y-1,10,1),end=new Date(m>=10?y+1:y,4,1);
+  var days=Math.max(0,Math.ceil((end-now)/864e5));
+  var txt=rainy?d.cdNow:days+' <small>'+plural(days,d.days)+' '+d.cdLeft+'</small>';
+  ['#cdHero','#cdTab'].forEach(function(s){var el=$(s);if(el)el.innerHTML=txt});
+  var pct=rainy?100:Math.min(100,Math.max(0,(now-start)/(end-start)*100));
+  var bar=$('#cdBarHero');if(bar)requestAnimationFrame(function(){bar.style.width=pct.toFixed(1)+'%'});
+}
+
+/* seasons */
+function renderMonths(){
+  var d=T[lang];
+  $('#months').innerHTML=MONTHS.map(function(m,i){var cls=m.s==='prep'?'prep':(m.s==='dry'?'':'rain');return '<button type="button" class="mo '+cls+'" data-m="'+i+'" aria-pressed="'+(i===month)+'"><span>'+d.mon[i]+'</span><i></i></button>'}).join('');
+  renderMonth(true);
+}
+function centerMonth(){var mc=$('#months'),mb=$('#months .mo[aria-pressed="true"]');if(mc&&mb&&mc.scrollWidth>mc.clientWidth){var rb=mb.getBoundingClientRect(),rc=mc.getBoundingClientRect();mc.scrollLeft+=(rb.left-rc.left)-(rc.width-rb.width)/2}}
+function renderMonth(instant){
+  var box=$('#mDetail');
+  function fill(){
+    var d=T[lang],m=MONTHS[month];
+    box.innerHTML='<h3>'+d.monF[month]+'</h3><p class="tagl">'+d.seas[m.s]+'</p><ul class="incl">'+m[lang].map(function(x){return '<li>'+svg('i-check')+'<span>'+esc(x)+'</span></li>'}).join('')+'</ul>';
+    $$('#months .mo').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.m===month?'true':'false')});
+    centerMonth();
+  }
+  if(instant){fill();return}
+  box.classList.add('out');setTimeout(function(){fill();box.classList.remove('out')},180);
+}
+$('#months').addEventListener('click',function(e){var b=e.target.closest('.mo');if(!b)return;month=+b.dataset.m;renderMonth(false)});
+
+/* tabs */
+var IDS=['problem','roof','outside','inside','seasons'];
+function openTab(id,scroll){
+  if(IDS.indexOf(id)<0)return;
+  IDS.forEach(function(x){var p=document.getElementById(x);var on=x===id;p.hidden=!on;p.classList.toggle('in',on)});
+  $$('.tab').forEach(function(t){var on=t.dataset.tab===id;t.setAttribute('aria-selected',on?'true':'false');if(on){var c=t.parentNode;c.scrollTo({left:t.offsetLeft-c.clientWidth/2+t.clientWidth/2,behavior:'smooth'})}});
+  if(id==='seasons')centerMonth();
+  if(scroll){try{history.replaceState(null,'','#'+id)}catch(e){}
+    var nav=$('#sections');var y=nav.getBoundingClientRect().top+window.pageYOffset;window.scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+}
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href^="#"]');if(!a)return;
+  var id=a.getAttribute('href').slice(1);
+  if(IDS.indexOf(id)>=0){e.preventDefault();openTab(id,true)}
+  else if(id==='top'){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}
+});
+window.addEventListener('hashchange',function(){var id=location.hash.slice(1);if(IDS.indexOf(id)>=0)openTab(id,true)});
+
+$$('.lang button').forEach(function(b){b.addEventListener('click',function(){lang=b.dataset.lang;try{localStorage.setItem('dryline_lang',lang)}catch(e){}applyLang()})});
+
+/* lead form */
+var form=$('#leadForm');
+function chVal(){var r=$('input[name="ch"]:checked',form);return r?r.value:'wa'}
+function updateFormBtn(){$('#fBtn').textContent=T[lang]['lf_btn_'+chVal()]}
+$$('input[name="ch"]',form).forEach(function(r){r.addEventListener('change',function(){updateFormBtn();$('#fStat').innerHTML=''})});
+function setErr(inp,errId,bad){inp.setAttribute('aria-invalid',bad?'true':'false');$('#'+errId).hidden=!bad}
+[['#fName','eName'],['#fNeed','eNeed'],['#fArea','eArea']].forEach(function(x){var el=$(x[0]);el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid')==='true'&&String(el.value).trim()){setErr(el,x[1],false);if(!$$('[aria-invalid="true"]',form).length)$('#fErr').hidden=true}})});
+function copyText(t){
+  var ok=false;
+  try{var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(ta);ta.select();ok=document.execCommand('copy');document.body.removeChild(ta)}catch(e){ok=false}
+  try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).catch(function(){})}}catch(e){}
+  return ok;
+}
+function openUrl(u){try{window.open(u,'_blank','noopener')}catch(e){}}
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=T[lang],name=$('#fName'),need=$('#fNeed'),area=$('#fArea'),msg=$('#fMsg').value.trim().replace(/\s+/g,' ');
+  var badName=name.value.trim().length<2,badNeed=!need.value,badArea=!area.value;
+  setErr(name,'eName',badName);setErr(need,'eNeed',badNeed);setErr(area,'eArea',badArea);
+  var stat=$('#fStat');
+  if(badName||badNeed||badArea){
+    $('#fErr').textContent=d.lf_err;$('#fErr').hidden=false;stat.innerHTML='';
+    (badName?name:badNeed?need:area).focus();return;
+  }
+  $('#fErr').hidden=true;
+  var areaTxt=area.value==='x'?d.area_other:CONFIG.districts[lang][+area.value];
+  var text=d.lf_text.replace('{name}',name.value.trim()).replace('{need}',d.need[need.value]).replace('{area}',areaTxt)
+    .replace('{msg}',msg?d.lf_text_msg.replace('{m}',msg.replace(/[.!?]+$/,'')):'').replace('{brand}',CONFIG.brand);
+  var ch=chVal(),chName={wa:'WhatsApp',tg:'Telegram',line:'LINE'}[ch];
+  form.dataset.lastText=text;
+  if(ch==='wa'){
+    var u=LINK.wa(text);form.dataset.lastUrl=u;openUrl(u);
+    stat.innerHTML=d.lf_st_wa.replace('{url}',esc(u));
+  }else{
+    var cu=LINK[ch]();form.dataset.lastUrl=cu;
+    var ok=copyText(text);openUrl(cu);
+    stat.innerHTML=(ok?d.lf_st_copied:d.lf_st_nocopy).replace('{ch}',chName).replace('{url}',esc(cu))+(ok?'':'<textarea class="fcopy" readonly rows="3"></textarea>');
+    var fc=$('.fcopy',stat);if(fc){fc.value=text;fc.focus();fc.select()}
+  }
+});
+
+/* privacy dialog */
+var pv=$('#privacy');
+function openPv(){try{if(pv.showModal){pv.showModal()}else{pv.setAttribute('open','')}}catch(e){pv.setAttribute('open','')}}
+function closePv(){try{if(pv.close)pv.close();else pv.removeAttribute('open')}catch(e){pv.removeAttribute('open')}}
+$$('[data-privacy]').forEach(function(b){b.addEventListener('click',openPv)});
+$('#pvClose').addEventListener('click',closePv);
+pv.addEventListener('click',function(e){if(e.target===pv)closePv()});
+
+/* floating button: hidden on the first screen and next to the form */
+(function(){
+  var fab=$('#fab'),heroIn=true,near={};
+  function upd(){var n=false;for(var k in near)if(near[k])n=true;fab.classList.toggle('on',!heroIn&&!n)}
+  if(!('IntersectionObserver' in window)){heroIn=false;upd();return}
+  new IntersectionObserver(function(es){es.forEach(function(x){heroIn=x.isIntersecting});upd()},{threshold:0,rootMargin:'0px 0px -40% 0px'}).observe($('.hero'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){near[x.target.id||'f']=x.isIntersecting});upd()},{threshold:0});
+  io.observe($('#lead'));io.observe($('.fgrid'));
+})();
+
+applyContacts();
+applyLang();
+var h=location.hash.slice(1);
+openTab(IDS.indexOf(h)>=0?h:'problem',IDS.indexOf(h)>=0);
+})();
+</script>
+</body>
+</html>

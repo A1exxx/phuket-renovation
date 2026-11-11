@@ -1,0 +1,1358 @@
+<!doctype html>
+<!-- Контакты — здесь: объект CONFIG в самом начале <script> внизу файла (WhatsApp, Telegram, LINE, почта, телефон, соцсети, район, часы). Все ссылки на контакты строятся из него. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sala Renovation</title>
+<meta name="description" content="Ремонт на Пхукете внутри и снаружи: бесплатный осмотр инженера, построчная смета за 48 часов, цена в договоре не растёт, оплата по этапам, гарантия в договоре.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sala Renovation">
+<meta property="og:title" content="Sala Renovation — ремонт на Пхукете без сюрпризов">
+<meta property="og:description" content="Бесплатный осмотр инженера, смета по строкам за 48 часов, цена в договоре не растёт, оплата по этапам.">
+<meta property="og:image" content="img/a-site.webp">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2E4A3B">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E4A3B'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='42' fill='%23F3E9D6'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="preload" as="image" href="img/a-site.webp">
+<style>
+:root{
+  --bg:#F2ECE1; --surface:#FBF8F2; --surface-2:#EAE2D4; --ink:#24221F; --muted:#6A6257;
+  --line:rgba(36,34,31,.12); --accent:#2E4A3B; --accent-ink:#F4EFE5; --sand:#C9B38E; --warm:#B07A45;
+  --shadow:0 24px 48px -28px rgba(60,44,24,.35);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1); --r:22px; --gut:16px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#151412; --surface:#1E1C19; --surface-2:#282521; --ink:#EEE7DA; --muted:#A99F90;
+    --line:rgba(238,231,218,.12); --accent:#8DB49A; --accent-ink:#0F1511; --sand:#C9B38E; --warm:#D19A62;
+    --shadow:0 24px 48px -28px rgba(0,0,0,.6); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151412; --surface:#1E1C19; --surface-2:#282521; --ink:#EEE7DA; --muted:#A99F90;
+  --line:rgba(238,231,218,.12); --accent:#8DB49A; --accent-ink:#0F1511; --sand:#C9B38E; --warm:#D19A62;
+  --shadow:0 24px 48px -28px rgba(0,0,0,.6); color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--gut)}
+@media (min-width:768px){:root{--gut:32px}}
+svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--warm);outline-offset:3px;border-radius:8px}
+
+/* ---------- header ---------- */
+.top{position:absolute;top:0;left:0;right:0;z-index:20;padding-top:max(12px,env(safe-area-inset-top))}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:#F6F0E4}
+.brand b{font-family:var(--serif);font-weight:600;font-size:28px;letter-spacing:.01em;line-height:1}
+.brand span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.75}
+@media (max-width:380px){.brand span{display:none}}
+.top-r{display:flex;align-items:center;gap:8px}
+.lang{display:flex;padding:3px;border-radius:999px;background:rgba(20,18,15,.35);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lang button{border:0;background:none;color:#F6F0E4;font-size:12px;font-weight:700;letter-spacing:.08em;padding:10px 13px;min-width:44px;border-radius:999px;transition:background .4s var(--ease),color .4s var(--ease)}
+.lang button[aria-pressed="true"]{background:#F6F0E4;color:#24221F}
+.top-wa{display:none;align-items:center;gap:8px;color:#F6F0E4;text-decoration:none;font-size:14px;font-weight:600;padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25)}
+@media (min-width:768px){.top-wa{display:inline-flex}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;min-height:100dvh;display:flex;align-items:flex-end;color:#F6F0E4;overflow:hidden;isolation:isolate;background:#1b1712;padding-top:76px}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(1.06);animation:drift 18s var(--ease) forwards}
+@keyframes drift{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(18,15,11,.6) 0%,rgba(18,15,11,.05) 22%,rgba(18,15,11,.25) 45%,rgba(18,15,11,.9) 100%),
+             linear-gradient(90deg,rgba(18,15,11,.6) 0%,rgba(18,15,11,0) 70%)}
+@media (max-width:767px){.hero::before{background:linear-gradient(180deg,rgba(18,15,11,.6) 0%,rgba(18,15,11,.1) 14%,rgba(18,15,11,.45) 30%,rgba(18,15,11,.8) 48%,rgba(18,15,11,.94) 100%)}
+  .hero h1,.lede{text-shadow:0 1px 18px rgba(18,15,11,.55)}}
+.hero .wrap{padding-bottom:max(22px,env(safe-area-inset-bottom));position:relative}
+.hero-grid{display:grid;gap:28px;align-items:end}
+@media (min-width:1024px){.hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:48px;padding-bottom:40px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid rgba(246,240,228,.28);background:rgba(20,18,15,.25)}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:#9FC3A9;animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,10.4vw,88px);line-height:.96;letter-spacing:-.015em;margin:14px 0 12px;max-width:12ch;text-wrap:balance}
+.hero h1 em{font-style:italic;color:#E2CDA6}
+.lede{font-size:15px;line-height:1.5;max-width:48ch;margin:0 0 18px;color:rgba(246,240,228,.88)}
+@media (min-width:768px){.lede{font-size:18px}}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:0 0 18px;padding:0;list-style:none;border-radius:18px;overflow:hidden;background:rgba(246,240,228,.16);border:1px solid rgba(246,240,228,.16);max-width:620px}
+@media (min-width:768px){.offer{grid-template-columns:repeat(4,1fr)}}
+.offer li{background:rgba(20,18,15,.5);padding:10px 12px 12px;line-height:1.25}
+.offer b{display:block;font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.05;color:#F6F0E4}
+.offer span{font-size:12.5px;color:rgba(246,240,228,.78)}
+.cta-row{display:flex;flex-direction:column;gap:10px;max-width:560px}
+@media (min-width:560px){.cta-row{flex-direction:row;align-items:center}}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;border:0;text-decoration:none;border-radius:999px;padding:8px 8px 8px 24px;min-height:58px;font-weight:700;font-size:16px;transition:transform .5s var(--ease),background .4s var(--ease)}
+.btn:active{transform:scale(.98)}
+.btn .bi{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;transition:transform .5s var(--ease)}
+.btn:hover .bi{transform:translate(2px,-1px) scale(1.05)}
+.btn-main{background:#F3E9D6;color:#1F1C18;width:100%}
+.btn-main .bi{background:#2E4A3B;color:#F3E9D6}
+@media (min-width:560px){.btn-main{width:auto}}
+.btn-line{background:rgba(20,18,15,.3);color:#F6F0E4;border:1px solid rgba(246,240,228,.35);min-height:52px;padding:6px 6px 6px 20px;font-size:15px;width:100%}
+.btn-line .bi{width:38px;height:38px;background:rgba(246,240,228,.14)}
+@media (min-width:560px){.btn-line{width:auto}}
+/* sample quote card */
+.qwrap{display:none;border-radius:26px;padding:6px;background:rgba(246,240,228,.08);border:1px solid rgba(246,240,228,.16)}
+@media (min-width:1024px){.qwrap{display:block}}
+.qcard{border-radius:20px;padding:20px 22px 18px;background:#FBF8F2;color:#24221F;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 30px 60px -30px rgba(0,0,0,.6)}
+.qh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid rgba(36,34,31,.14);padding-bottom:10px;margin-bottom:6px}
+.qh b{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.1}
+.qh span{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#B07A45;white-space:nowrap}
+.ql{list-style:none;margin:0;padding:0}
+.ql li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:7px 0;border-bottom:1px dashed rgba(36,34,31,.16);font-size:13px;line-height:1.3;opacity:0;animation:qin .6s var(--ease) forwards}
+.ql li:nth-child(1){animation-delay:.5s}.ql li:nth-child(2){animation-delay:.65s}.ql li:nth-child(3){animation-delay:.8s}.ql li:nth-child(4){animation-delay:.95s}.ql li:nth-child(5){animation-delay:1.1s}
+@keyframes qin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ql small{grid-column:1;color:#6A6257;font-size:11.5px}
+.ql b{grid-row:1/3;grid-column:2;align-self:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+.qt{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:10px}
+.qt span{font-size:12.5px;font-weight:700}
+.qt b{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1}
+.qlock{display:flex;align-items:center;gap:8px;margin-top:10px;padding:9px 12px;border-radius:12px;background:#E7EFE8;color:#2E4A3B;font-size:12.5px;font-weight:700;line-height:1.3}
+.qlock svg{width:17px;height:17px}
+.qnote{margin:8px 0 0;font-size:11px;color:#6A6257;line-height:1.35}
+
+/* ---------- tabs ---------- */
+.why{margin:0 0 30px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+@media (min-width:768px){.why{margin-bottom:44px;padding-bottom:40px}}
+.why h2{font-size:clamp(28px,6.6vw,48px);margin:6px 0 16px;max-width:22ch}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:0;padding:0;list-style:none;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+@media (min-width:900px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why-grid li{background:var(--surface);padding:14px 14px 16px}
+.why-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 12%,var(--surface));color:var(--accent)}
+.why-ic svg.i{width:22px;height:22px}
+.why-grid h3{margin:10px 0 4px;font-size:15px;line-height:1.25}
+.why-grid p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.4}
+@media (min-width:900px){.why-grid li{padding:20px 20px 22px}.why-grid h3{font-size:17px}.why-grid p{font-size:14px}}
+.trust{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;margin:14px 0 0;padding:0;max-width:620px;font-size:12.5px;font-weight:600;line-height:1.3;color:rgba(246,240,228,.88)}
+.trust li{display:inline-flex;align-items:center;gap:6px}
+.trust svg.i{width:15px;height:15px;color:#9FC3A9;stroke-width:2.2}
+.tabs-sec{padding:28px 0 8px}
+@media (min-width:768px){.tabs-sec{padding:72px 0 24px}}
+.tabs-head{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.tabbar{position:sticky;top:0;z-index:15;margin:0 calc(var(--gut) * -1);padding:10px var(--gut);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.tablist{display:flex;gap:6px;overflow-x:auto;scroll-padding-inline:var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+.tablist::-webkit-scrollbar{display:none}
+.tab{flex:none;scroll-snap-align:start;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 15px;font-size:14px;font-weight:600;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.tab small{font-size:11px;color:var(--muted);font-weight:700}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.tab[aria-selected="true"] small{color:inherit;opacity:.7}
+.panel{padding:26px 0 8px;scroll-margin-top:84px}
+.panel[hidden]{display:none}
+.panel.in>*{animation:rise .7s var(--ease) both}
+.panel.in>*:nth-child(2){animation-delay:.06s}.panel.in>*:nth-child(3){animation-delay:.12s}.panel.in>*:nth-child(4){animation-delay:.18s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,7.4vw,56px);line-height:1.02;letter-spacing:-.01em;margin:0 0 10px;max-width:18ch;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 20px;max-width:60ch;font-size:15px}
+.next{display:flex;justify-content:flex-end;margin-top:26px;padding-top:18px;border-top:1px solid var(--line)}
+.next button{display:inline-flex;align-items:center;gap:12px;border:0;background:none;font-weight:700;font-size:15px;padding:6px 0}
+.next button .bi{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);transition:transform .5s var(--ease)}
+.next button:hover .bi{transform:translateX(3px)}
+.next button span.t{color:var(--muted);font-weight:500;margin-right:2px}
+.note{font-size:12px;color:var(--muted);margin:12px 0 0}
+.tagx{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:color-mix(in srgb,var(--warm) 16%,transparent);color:var(--warm)}
+
+/* bezel */
+.bezel{border-radius:var(--r);padding:5px;background:color-mix(in srgb,var(--ink) 5%,transparent);border:1px solid var(--line)}
+.bezel>.core{border-radius:calc(var(--r) - 5px);background:var(--surface);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+
+/* ---------- services catalog ---------- */
+.svc-grid{display:grid;gap:18px}
+.svc-grid>*{min-width:0}
+@media (min-width:1024px){.svc-grid{grid-template-columns:1.25fr .75fr;gap:40px;align-items:start}}
+.grp{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;border-radius:999px;background:var(--surface-2);margin-bottom:10px;max-width:440px}
+.grp button{border:0;border-radius:999px;background:transparent;padding:10px 12px;font-weight:700;font-size:14px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .4s var(--ease),color .4s var(--ease)}
+.grp button small{font-size:11.5px;opacity:.6}
+.grp button[aria-pressed="true"]{background:var(--surface);box-shadow:0 6px 16px -10px rgba(60,44,24,.5)}
+.svlist{list-style:none;margin:0;padding:0}
+.svlist li{border-bottom:1px solid var(--line)}
+.sv{width:100%;border:0;background:none;text-align:left;display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 0;transition:transform .4s var(--ease)}
+.sv:active{transform:scale(.99)}
+.sv .th{width:56px;height:56px;border-radius:14px;overflow:hidden;background:var(--surface-2);display:grid;place-items:center;color:var(--warm)}
+.sv .th img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.sv:hover .th img{transform:scale(1.08)}
+.sv .th svg{width:24px;height:24px}
+.sv b{display:block;font-size:15px;line-height:1.25}
+.sv .d{display:block;font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:2px}
+.sv .p{text-align:right;font-size:13px;font-weight:700;color:var(--accent);line-height:1.25;max-width:118px}
+.sv .p small{display:block;font-size:11px;font-weight:600;color:var(--muted);margin-top:2px}
+.sv .p.q{color:var(--muted);font-weight:600;font-size:12px}
+.svc-side{display:none}
+@media (min-width:1024px){.svc-side{display:block;position:sticky;top:90px}}
+.svc-side .ph{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow)}
+.svc-side .ph img{width:100%;height:100%;object-fit:cover;transition:opacity .5s var(--ease)}
+.svc-cta .core{padding:16px 18px}
+.svc-cta p{margin:0 0 4px;font-size:14px}
+.svc-cta .btn{margin-top:10px}
+
+/* ---------- calculator ---------- */
+.calc{display:grid;gap:16px}
+.calc>*,.ba-wrap>*,.terms-grid>*,.ct-in>*,.hero-grid>*{min-width:0}
+@media (min-width:1024px){.calc{grid-template-columns:1.05fr .95fr;gap:28px;align-items:start}}
+.fld{margin-bottom:18px}
+.fld[hidden]{display:none}
+.fld>label,.fld>.lbl{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:8px}
+.fld .val{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:0}
+.wsel{width:100%;-webkit-appearance:none;appearance:none;border-radius:16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:16px;font-weight:600;padding:14px 44px 14px 16px;min-height:54px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B07A45' stroke-width='1.8'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.quick button{border:1px solid var(--line);background:transparent;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:600;min-height:36px;transition:background .4s var(--ease),border-color .4s var(--ease)}
+.quick button[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface))}
+.seg{display:grid;gap:8px}
+.seg.three{grid-template-columns:repeat(3,1fr)}
+.opt{border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;min-height:48px;transition:border-color .4s var(--ease),background .4s var(--ease),transform .4s var(--ease)}
+.opt:active{transform:scale(.98)}
+.opt b{font-size:14px;line-height:1.2}
+.opt small{font-size:11.5px;color:var(--muted);line-height:1.3}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface));box-shadow:inset 0 0 0 1px var(--accent)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:0}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--accent) var(--p,40%),var(--line) var(--p,40%))}
+input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--line)}
+input[type=range]::-moz-range-progress{height:4px;border-radius:2px;background:var(--accent)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);margin-top:-11px;box-shadow:0 4px 12px -4px rgba(0,0,0,.35)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.range-ends{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
+.result .core{padding:20px}
+.res-lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.res-big{font-family:var(--serif);font-weight:600;font-size:clamp(32px,8.6vw,50px);line-height:1.05;margin:6px 0 2px;letter-spacing:-.01em}
+.res-usd{font-size:14px;color:var(--muted)}
+.res-usd:empty{display:none}
+.res-meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:12px 0 16px;font-size:13px}
+.res-meta span{display:inline-flex;align-items:center;gap:6px}
+.res-meta svg{width:16px;height:16px;color:var(--accent)}
+.pay{border-top:1px solid var(--line);padding-top:14px}
+.pay[hidden]{display:none}
+.pay-h{font-size:13px;font-weight:700;margin-bottom:10px}
+.pay-bar{display:grid;gap:4px;margin-bottom:12px}
+.pay-bar i{height:10px;border-radius:5px;background:var(--accent);transform-origin:left;animation:grow .9s var(--ease) both}
+.pay-bar i:nth-child(2){opacity:.75;animation-delay:.08s}.pay-bar i:nth-child(3){opacity:.5;animation-delay:.16s}.pay-bar i:last-child{background:var(--warm);opacity:1}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.pay-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.pay-list li{font-size:12.5px;color:var(--muted);line-height:1.35}
+.pay-list b{display:block;color:var(--ink);font-size:15px}
+.pay-list em{font-style:normal;font-weight:700;color:var(--accent)}
+.btn-acc{background:var(--accent);color:var(--accent-ink);width:100%;margin-top:16px}
+.btn-acc .bi{background:var(--accent-ink);color:var(--accent)}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink);width:100%;margin-top:16px}
+.btn-ghost .bi{background:var(--surface-2)}
+@media (min-width:560px){.btn-ghost,.btn-acc{width:auto}}
+@media (max-width:400px){.btn-acc,.btn-ghost{font-size:14.5px;padding-left:18px}}
+
+/* ---------- terms ---------- */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:22px}
+@media (min-width:900px){.pillars{grid-template-columns:repeat(4,1fr)}}
+.pillars div{background:var(--surface);padding:14px 14px 16px}
+.pillars b{display:block;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;color:var(--accent)}
+.pillars h3{margin:8px 0 4px;font-size:14.5px;line-height:1.25}
+.pillars p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.4}
+.terms-grid{display:grid;gap:22px}
+@media (min-width:1024px){.terms-grid{grid-template-columns:1fr 1fr;gap:40px;align-items:start}}
+.steps{list-style:none;margin:0 calc(var(--gut) * -1);padding:0 var(--gut) 6px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);scrollbar-width:none;align-items:stretch}
+.steps::-webkit-scrollbar{display:none}
+.steps li{flex:0 0 74%;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 18px}
+@media (min-width:768px){.steps{margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;overflow:visible}.steps li{flex:auto}}
+.steps .n{font-family:var(--serif);font-size:34px;line-height:1;color:var(--warm)}
+.steps h3{margin:8px 0 6px;font-size:16px;line-height:1.3}
+.steps p{margin:0;color:var(--muted);font-size:13.5px}
+.steps .t{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--accent)}
+.swipe-hint{font-size:12px;color:var(--muted);margin:8px 0 0;display:flex;align-items:center;gap:6px}
+@media (min-width:768px){.swipe-hint{display:none}}
+.big2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.big2 .core{padding:14px 14px 16px;height:100%}
+.big2 b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(36px,10vw,56px);line-height:1;color:var(--accent)}
+.big2 span{font-size:12.5px;color:var(--muted);display:block;margin-top:6px;line-height:1.35}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.checks .ck{width:28px;height:28px;border-radius:50%;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);display:grid;place-items:center}
+.checks .ck svg{width:15px;height:15px;stroke-width:2.2}
+.checks b{display:block;font-size:14.5px}
+.checks span{font-size:13px;color:var(--muted)}
+.team{display:none;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;box-shadow:var(--shadow);margin-bottom:18px}
+.team img{width:100%;height:100%;object-fit:cover}
+@media (min-width:1024px){.team{display:block}}
+.qwrap.inline{display:block;background:color-mix(in srgb,var(--ink) 5%,transparent);border-color:var(--line);margin-top:4px}
+.qwrap.inline .qcard{box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+@media (min-width:1024px){.qwrap.inline{display:none}}
+.stage-h{font-size:13px;font-weight:700;margin:20px 0 10px}
+
+/* ---------- cases ---------- */
+.ba-wrap{display:grid;gap:16px}
+@media (min-width:1024px){.ba-wrap{grid-template-columns:1.25fr .75fr;gap:36px;align-items:center}}
+.ba{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1;max-height:62vh;width:100%;background:#2a241c;touch-action:pan-y;user-select:none;box-shadow:var(--shadow)}
+@media (min-width:768px){.ba{aspect-ratio:4/3;max-height:70vh}}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--x,50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;background:#F6F0E4;transform:translateX(-1px);pointer-events:none}
+.ba .handle i{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:#F6F0E4;color:#24221F;display:grid;place-items:center;box-shadow:0 8px 24px -8px rgba(0,0,0,.5)}
+.ba .tag{position:absolute;top:12px;padding:5px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(20,18,15,.6);color:#F6F0E4}
+.ba .tag.l{left:12px}.ba .tag.r{right:12px}
+.ba .tag.ex{top:auto;bottom:12px;left:12px;background:#B07A45}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba:focus-within .handle i{outline:2px solid var(--warm);outline-offset:3px}
+.ba-pick{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;scrollbar-width:none}
+.ba-pick::-webkit-scrollbar{display:none}
+.ba-pick .opt{flex:none;flex-direction:row;align-items:center;padding:9px 14px;border-radius:999px;min-height:42px}
+.ba-side h3{margin:8px 0 10px;font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.1}
+.ba-side ul{list-style:none;margin:0;padding:0}
+.ba-side li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ba-side li span{color:var(--muted)}
+.ba-side li b{text-align:right}
+
+/* ---------- faq ---------- */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 0;font-weight:600;font-size:15.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:30px;height:30px;flex:none;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .5s var(--ease)}
+.faq details[open] summary .pm{transform:rotate(45deg)}
+.faq details p{margin:0 0 16px;color:var(--muted);font-size:14.5px;max-width:64ch}
+
+/* ---------- contact ---------- */
+.contact{padding:28px 0 32px}
+@media (min-width:768px){.contact{padding:64px 0 72px}}
+.ct{border-radius:28px;padding:6px;background:color-mix(in srgb,var(--ink) 6%,transparent);border:1px solid var(--line)}
+.ct-in{border-radius:23px;background:#2E4A3B;color:#F4EFE5;--accent:#2E4A3B;--accent-ink:#F4EFE5;padding:24px 18px;display:grid;gap:18px}
+@media (min-width:1024px){.ct-in{grid-template-columns:1fr 1fr;padding:44px;gap:40px;align-items:end}}
+.ct h2{color:inherit;margin-bottom:8px}
+.ct p{margin:0;opacity:.8;font-size:15px}
+.ct-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px;font-size:14px}
+.ct-list li{display:flex;gap:10px;align-items:flex-start}
+.ct-list svg{width:18px;height:18px;margin-top:2px;color:#9FC3A9}
+.pick{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.pick button{border:1px solid color-mix(in srgb,var(--accent-ink) 35%,transparent);background:transparent;color:inherit;border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:600;transition:background .4s var(--ease),color .4s var(--ease)}
+.pick button[aria-pressed="true"]{background:var(--accent-ink);color:var(--accent)}
+.ct label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;margin:4px 0 6px;opacity:.85}
+.ct input::placeholder{color:inherit;opacity:.55}
+.ct .btn-main{margin-top:14px;width:100%}
+.lead .lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;margin:14px 0 6px;opacity:.85}
+.lead>.lbl:first-child,.lead>label:first-child{margin-top:0}
+.ct label.fl{margin-top:14px}
+.ct input[type=text],.ct select{width:100%;border-radius:14px;border:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);background:color-mix(in srgb,var(--accent-ink) 8%,transparent);color:inherit;font:inherit;font-size:16px;padding:12px 14px;min-height:48px}
+.ct select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F4EFE5' stroke-width='1.8'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px}
+.ct select option{color:#24221F;background:#FBF8F2}
+.ct [aria-invalid="true"]{border-color:#F2B8A0;box-shadow:inset 0 0 0 1px #F2B8A0}
+.pick[aria-invalid="true"] button{border-color:#F2B8A0}
+.ct #fNote{margin-top:8px}
+.via{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.via label{margin:0;letter-spacing:0;opacity:1;position:relative}
+.via input{position:absolute;opacity:0;width:1px;height:1px}
+.via span{display:flex;align-items:center;justify-content:center;gap:5px;padding:0 6px;white-space:nowrap;min-height:44px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent-ink) 35%,transparent);font-size:13.5px;font-weight:600;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease)}
+.via span svg{width:16px;height:16px}
+@media (max-width:400px){.via span{font-size:12.5px}}
+.via input:checked+span{background:var(--accent-ink);color:var(--accent)}
+.via input:focus-visible+span{outline:2px solid var(--warm);outline-offset:3px}
+.err{margin:6px 0 0;font-size:13px;font-weight:600;color:#F7CDBB;display:flex;gap:6px;align-items:flex-start}
+.err[hidden]{display:none}
+.form-st{margin:10px 0 0;font-size:13.5px;opacity:.9}
+.form-st:empty{display:none}
+.form-st a{font-weight:700}
+.form-st textarea{display:block;width:100%;margin-top:8px;border-radius:12px;border:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);background:transparent;color:inherit;font:inherit;font-size:14px;padding:10px;min-height:110px}
+.fine{margin:10px 0 0;font-size:12px;opacity:.7}
+.linkbtn{border:0;background:none;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+/* footer */
+footer{padding:8px 0 calc(28px + env(safe-area-inset-bottom));font-size:13.5px;color:var(--muted)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;padding-top:22px;border-top:1px solid var(--line)}
+@media (min-width:900px){.fgrid{grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:32px}}
+.fbrand{grid-column:1/-1}
+@media (min-width:900px){.fbrand{grid-column:auto}}
+.fname{font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:600;text-decoration:none;line-height:1}
+.fcol p{margin:6px 0 0}
+.fcol h4{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.fcol ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.fcol a{text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:32px;transition:color .3s var(--ease)}
+.fcol a:hover{color:var(--ink)}
+.fcol a svg{width:17px;height:17px}
+.fcontacts{grid-column:1/-1}
+@media (min-width:900px){.fcontacts{grid-column:auto}}
+.fcontacts ul{grid-template-columns:1fr 1fr;column-gap:12px}
+@media (min-width:900px){.fcontacts ul{grid-template-columns:1fr}}
+.fcontacts a{word-break:break-all}
+.flang{display:inline-flex;margin-top:12px;padding:3px;border-radius:999px;border:1px solid var(--line)}
+.flang button{border:0;background:none;font-size:12px;font-weight:700;letter-spacing:.08em;padding:8px 12px;min-width:44px;min-height:36px;border-radius:999px;color:var(--muted)}
+.flang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px}
+
+/* floating message button (phones) */
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;display:none;align-items:center;gap:8px;padding:0 18px 0 14px;height:52px;border-radius:999px;background:#2E4A3B;color:#F4EFE5;text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 14px 30px -12px rgba(20,30,24,.6);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.fab svg{width:22px;height:22px}
+.fab.off{opacity:0;transform:translateY(12px);pointer-events:none}
+@media (max-width:767px){.fab{display:inline-flex}}
+
+/* privacy dialog */
+dialog.pv{border:0;padding:0;border-radius:24px;width:min(560px,calc(100% - 32px));max-height:calc(100dvh - 48px);background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog.pv::backdrop{background:rgba(18,15,11,.55);backdrop-filter:blur(3px)}
+.pv-in{padding:22px 20px 20px;overflow:auto;max-height:calc(100dvh - 48px)}
+.pv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.pv h3{margin:0;font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.1}
+.pv-x{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;display:grid;place-items:center}
+.pv-x svg{transform:rotate(45deg)}
+.pv-body{font-size:14.5px;color:var(--muted)}
+.pv-body p{margin:12px 0 0}.pv-body ul{margin:8px 0 0;padding-left:18px}.pv-body li{margin:3px 0}
+.pv-body b{color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .hero-img img{transform:none}
+  .ql li{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4z"/><path d="M9.2 8.6c.2-.4.6-.4.9-.3l.9 1.6c.1.3 0 .5-.2.7l-.5.5c.5 1.1 1.4 2 2.6 2.6l.5-.5c.2-.2.5-.3.7-.2l1.6.9c.2.2.2.6-.2.9-.6.6-1.4.8-2.2.5-2-.8-3.6-2.4-4.4-4.4-.3-.8-.1-1.6.3-2.3z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path d="M20.5 4.5L3.5 11.2l5.2 1.9 2 6.2 3-3.6 4.5 3.3z"/><path d="M8.7 13.1l8.6-6.1-6.6 7.4"/></symbol>
+    <symbol id="i-line" viewBox="0 0 24 24"><path d="M12 4C7 4 3 7.2 3 11.1c0 3.5 3.1 6.4 7.4 7l-.4 2.4c0 .3.3.5.6.3 1.5-.9 5.9-3.6 7.8-6 1-1.1 1.6-2.4 1.6-3.7C21 7.2 17 4 12 4z"/><path d="M7.5 9.5v3.5h2M11.3 9.5V13M13.3 13V9.5l2.4 3.5V9.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></symbol>
+    <symbol id="i-fence" viewBox="0 0 24 24"><path d="M5 20V7l2-3 2 3v13M15 20V7l2-3 2 3v13M3 10h18M3 16h18"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.5h2.5V21H14v-6.5h2.5l.5-3.5h-3V9a.5.5 0 0 1 .5-.5z"/></symbol>
+    <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><path d="M3 9.5L12 4l9 5.5M5.5 10.5v7M10 10.5v7M14 10.5v7M18.5 10.5v7M3 20h18"/></symbol>
+    <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M3.5 17h17M5 17a7 7 0 0 1 14 0M10 10.4V6.5h4v3.9M3.5 20h17"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.6 3.4 5.4 3.4 8.5s-1 5.9-3.4 8.5c-2.4-2.6-3.4-5.4-3.4-8.5s1-5.9 3.4-8.5z"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3.5l1.5-2.5h6L16.5 8H20v11H4z"/><circle cx="12" cy="13.2" r="3.6"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><path d="M6 3h12v12.5H6z"/><path d="M9 7h6M9 10h4"/><circle cx="12" cy="17.5" r="2.5"/><path d="M10.6 19.6L10 22l2-1 2 1-.6-2.4"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2M16 11v6"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sala Renovation"><b>Sala</b><span>renovation · phuket</span></a>
+    <div class="top-r">
+      <a class="top-wa" data-c="wa" data-msg="waHello" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span data-i18n="topWa"></span></a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-img"><img src="img/a-site.webp" alt="" fetchpriority="high"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><i></i><span data-i18n="eyebrow"></span></span>
+        <h1 data-i18n="h1"></h1>
+        <p class="lede" data-i18n="lede"></p>
+        <ul class="offer">
+          <li><b data-i18n="o1b"></b><span data-i18n="o1"></span></li>
+          <li><b data-i18n="o2b"></b><span data-i18n="o2"></span></li>
+          <li><b data-i18n="o3b"></b><span data-i18n="o3"></span></li>
+          <li><b data-i18n="o4b"></b><span data-i18n="o4"></span></li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-main" href="#contact" data-pick="kVisit"><span data-i18n="ctaMain"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+          <a class="btn btn-line" href="#calc"><span data-i18n="ctaCalc"></span><span class="bi"><svg class="i"><use href="#i-calc"/></svg></span></a>
+        </div>
+        <ul class="trust">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="tb1"></span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="tb2"></span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="tb3"></span></li>
+        </ul>
+      </div>
+      <aside class="qwrap" aria-labelledby="qh1"><div class="qcard" data-quote="qh1"></div></aside>
+    </div>
+  </div>
+</section>
+
+<section class="tabs-sec" id="tabs">
+  <div class="wrap">
+    <div class="tabs-head"><span class="kicker" data-i18n="tabsKicker"></span></div>
+    <div class="tabbar">
+      <div class="tablist" role="tablist" aria-label="Sections">
+        <button class="tab" role="tab" id="t-services" aria-controls="services" data-tab="services"><small>01</small><span data-i18n="tab1"></span></button>
+        <button class="tab" role="tab" id="t-calc" aria-controls="calc" data-tab="calc"><small>02</small><span data-i18n="tab2"></span></button>
+        <button class="tab" role="tab" id="t-terms" aria-controls="terms" data-tab="terms"><small>03</small><span data-i18n="tab3"></span></button>
+        <button class="tab" role="tab" id="t-cases" aria-controls="cases" data-tab="cases"><small>04</small><span data-i18n="tab4"></span></button>
+        <button class="tab" role="tab" id="t-faq" aria-controls="faq" data-tab="faq"><small>05</small><span data-i18n="tab5"></span></button>
+      </div>
+    </div>
+
+    <!-- 1 services -->
+    <div class="panel" role="tabpanel" id="services" aria-labelledby="t-services">
+      <div class="why" id="why" role="region" aria-labelledby="whyH">
+        <span class="kicker" data-i18n="wyK"></span>
+      <h2 id="whyH" data-i18n="wyH"></h2>
+      <ul class="why-grid">
+        <li><span class="why-ic"><svg class="i" aria-hidden="true"><use href="#i-seal"/></svg></span><h3 data-i18n="w1h"></h3><p data-i18n="w1p"></p></li>
+        <li><span class="why-ic"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-i18n="w2h"></h3><p data-i18n="w2p"></p></li>
+        <li><span class="why-ic"><svg class="i" aria-hidden="true"><use href="#i-helmet"/></svg></span><h3 data-i18n="w3h"></h3><p data-i18n="w3p"></p></li>
+        <li><span class="why-ic"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg></span><h3 data-i18n="w4h"></h3><p data-i18n="w4p"></p></li>
+        <li><span class="why-ic"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg></span><h3 data-i18n="w5h"></h3><p data-i18n="w5p"></p></li>
+        <li><span class="why-ic"><svg class="i" aria-hidden="true"><use href="#i-cert"/></svg></span><h3 data-i18n="w6h"></h3><p data-i18n="w6p"></p></li>
+      </ul>
+      </div>
+      <h2 data-i18n="svH"></h2>
+      <p class="sub" data-i18n="svSub"></p>
+      <div class="svc-grid">
+        <div>
+          <div class="grp" role="group" aria-label="Group" id="grp">
+            <button type="button" data-g="in" aria-pressed="true"><span data-i18n="gIn"></span><small>10</small></button>
+            <button type="button" data-g="out" aria-pressed="false"><span data-i18n="gOut"></span><small>7</small></button>
+          </div>
+          <ul class="svlist" id="svlist"></ul>
+          <p class="note" data-i18n="svNote"></p>
+        </div>
+        <div class="svc-side">
+          <div class="ph"><img id="svImg" src="img/a-hero.webp" alt="" loading="lazy"></div>
+          <div class="bezel svc-cta" style="margin-top:14px"><div class="core">
+            <p><b data-i18n="svCtaH"></b></p>
+            <p class="note" style="margin:0" data-i18n="svCtaP"></p>
+            <a class="btn btn-acc" href="#contact" data-pick="kVisit"><span data-i18n="ctaMain"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+          </div></div>
+        </div>
+      </div>
+      <div class="next"><button type="button" data-next="calc"><span class="t" data-i18n="nextL"></span><span data-i18n="tab2"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></button></div>
+    </div>
+
+    <!-- 2 calculator -->
+    <div class="panel" role="tabpanel" id="calc" aria-labelledby="t-calc" hidden>
+      <h2 data-i18n="cH"></h2>
+      <p class="sub" data-i18n="cSub"></p>
+      <div class="calc">
+        <div>
+          <div class="fld">
+            <label for="wsel" data-i18n="cType"></label>
+            <select class="wsel" id="wsel"></select>
+            <div class="quick" id="quick" role="group" aria-label="Popular"></div>
+          </div>
+          <div class="fld" id="fQty">
+            <label for="qty"><span id="qtyL"></span><span class="val"><span id="qtyVal"></span> <span id="qtyU"></span></span></label>
+            <input type="range" id="qty" min="1" max="100" step="1" value="10">
+            <div class="range-ends"><span id="qMin"></span><span id="qMax"></span></div>
+          </div>
+          <div class="fld" id="fLvl">
+            <span class="lbl" data-i18n="cLevel"></span>
+            <div class="seg three" id="levelSeg">
+              <button type="button" class="opt" data-level="0"><b id="lv0"></b><small id="lv0s"></small></button>
+              <button type="button" class="opt" data-level="1"><b id="lv1"></b><small id="lv1s"></small></button>
+              <button type="button" class="opt" data-level="2"><b id="lv2"></b><small id="lv2s"></small></button>
+            </div>
+          </div>
+        </div>
+        <div class="bezel result" aria-live="polite">
+          <div class="core">
+            <div class="res-lbl" data-i18n="rLbl"></div>
+            <div class="res-big" id="rBig"></div>
+            <div class="res-usd" id="rUsd"></div>
+            <div class="res-meta">
+              <span><svg class="i"><use href="#i-clock"/></svg><span id="rTime"></span></span>
+              <span><svg class="i"><use href="#i-lock"/></svg><span data-i18n="rFix"></span></span>
+            </div>
+            <div class="pay" id="pay">
+              <div class="pay-h" id="payH"></div>
+              <div class="pay-bar" id="payBar"></div>
+              <ul class="pay-list" id="payList"></ul>
+            </div>
+            <p class="note" id="rNote"></p>
+            <a class="btn btn-acc" id="calcWa" data-c="wa" href="#contact" target="_blank" rel="noopener"><span data-i18n="cBtn"></span><span class="bi"><svg class="i"><use href="#i-wa"/></svg></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="next"><button type="button" data-next="terms"><span class="t" data-i18n="nextL"></span><span data-i18n="tab3"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></button></div>
+    </div>
+
+    <!-- 3 terms -->
+    <div class="panel" role="tabpanel" id="terms" aria-labelledby="t-terms" hidden>
+      <h2 data-i18n="tH"></h2>
+      <p class="sub" data-i18n="tSub"></p>
+      <div class="pillars">
+        <div><b data-i18n="o1b"></b><h3 data-i18n="pl1h"></h3><p data-i18n="pl1"></p></div>
+        <div><b data-i18n="o2b"></b><h3 data-i18n="pl2h"></h3><p data-i18n="pl2"></p></div>
+        <div><b data-i18n="o3b"></b><h3 data-i18n="pl3h"></h3><p data-i18n="pl3"></p></div>
+        <div><b>30%</b><h3 data-i18n="pl4h"></h3><p data-i18n="pl4"></p></div>
+      </div>
+      <div class="terms-grid">
+        <div>
+          <ol class="steps">
+            <li><div class="n">01</div><h3 data-i18n="s1h"></h3><p data-i18n="s1p"></p><span class="t" data-i18n="s1t"></span></li>
+            <li><div class="n">02</div><h3 data-i18n="s2h"></h3><p data-i18n="s2p"></p><span class="t" data-i18n="s2t"></span></li>
+            <li><div class="n">03</div><h3 data-i18n="s3h"></h3><p data-i18n="s3p"></p><span class="t" data-i18n="s3t"></span></li>
+            <li><div class="n">04</div><h3 data-i18n="s4h"></h3><p data-i18n="s4p"></p><span class="t" data-i18n="s4t"></span></li>
+          </ol>
+          <p class="swipe-hint"><svg class="i"><use href="#i-drag"/></svg><span data-i18n="swipe"></span></p>
+          <div class="qwrap inline"><div class="qcard" data-quote="qh2"></div></div>
+        </div>
+        <div>
+          <div class="team"><img src="img/x-team-van.webp" alt="" loading="lazy"></div>
+          <div class="big2">
+            <div class="bezel"><div class="core"><b data-i18n="g1b"></b><span data-i18n="g1"></span></div></div>
+            <div class="bezel"><div class="core"><b data-i18n="g2b"></b><span data-i18n="g2"></span></div></div>
+          </div>
+          <ul class="checks" style="margin-top:12px">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><div><b data-i18n="gc1"></b><span data-i18n="gc1p"></span></div></li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><div><b data-i18n="gc2"></b><span data-i18n="gc2p"></span></div></li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><div><b data-i18n="gc3"></b><span data-i18n="gc3p"></span></div></li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span><div><b data-i18n="gc4"></b><span data-i18n="gc4p"></span></div></li>
+            <li><span class="ck"><svg class="i"><use href="#i-cert"/></svg></span><div><b data-i18n="gc5"></b><span data-i18n="gc5p"></span></div></li>
+          </ul>
+          <a class="btn btn-ghost" data-c="wa" data-msg="waContract" href="#contact" target="_blank" rel="noopener"><span data-i18n="gBtn"></span><span class="bi"><svg class="i"><use href="#i-doc"/></svg></span></a>
+        </div>
+      </div>
+      <div class="next"><button type="button" data-next="cases"><span class="t" data-i18n="nextL"></span><span data-i18n="tab4"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></button></div>
+    </div>
+
+    <!-- 4 cases -->
+    <div class="panel" role="tabpanel" id="cases" aria-labelledby="t-cases" hidden>
+      <h2 data-i18n="bH"></h2>
+      <p class="sub" data-i18n="bSub"></p>
+      <div class="ba-wrap">
+        <div>
+          <div class="ba-pick" id="baPick">
+            <button type="button" class="opt" data-case="0" aria-pressed="true"><b data-i18n="c0n"></b></button>
+            <button type="button" class="opt" data-case="1" aria-pressed="false"><b data-i18n="c1n"></b></button>
+            <button type="button" class="opt" data-case="2" aria-pressed="false"><b data-i18n="c2n"></b></button>
+          </div>
+          <div class="ba" id="ba" style="--x:50%">
+            <div class="before"><img id="beforeImg" src="img/a-before.webp" alt="" loading="lazy"></div>
+            <div class="after"><img id="afterImg" src="img/a-hero.webp" alt="" loading="lazy"></div>
+            <span class="tag l" data-i18n="baBefore"></span><span class="tag r" data-i18n="baAfter"></span>
+            <span class="tag ex" data-i18n="exTag"></span>
+            <div class="handle"><i><svg class="i"><use href="#i-drag"/></svg></i></div>
+            <label class="sr" for="baRange" data-i18n="baDrag"></label>
+            <input type="range" id="baRange" min="0" max="100" value="50">
+          </div>
+        </div>
+        <div class="ba-side">
+          <span class="tagx" data-i18n="exTag"></span>
+          <h3 id="cTitle"></h3>
+          <ul id="cList"></ul>
+          <p class="note" data-i18n="bNote"></p>
+        </div>
+      </div>
+      <div class="next"><button type="button" data-next="faq"><span class="t" data-i18n="nextL"></span><span data-i18n="tab5"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></button></div>
+    </div>
+
+    <!-- 5 faq -->
+    <div class="panel" role="tabpanel" id="faq" aria-labelledby="t-faq" hidden>
+      <h2 data-i18n="qH"></h2>
+      <div class="faq">
+        <details><summary><span data-i18n="q1"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a1"></p></details>
+        <details><summary><span data-i18n="q8"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a8"></p></details>
+        <details><summary><span data-i18n="q9"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a9"></p></details>
+        <details><summary><span data-i18n="q10"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a10"></p></details>
+        <details><summary><span data-i18n="q11"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a11"></p></details>
+        <details><summary><span data-i18n="q2"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a2"></p></details>
+        <details><summary><span data-i18n="q3"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a3"></p></details>
+        <details><summary><span data-i18n="q4"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a4"></p></details>
+        <details><summary><span data-i18n="q5"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a5"></p></details>
+        <details><summary><span data-i18n="q6"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a6"></p></details>
+        <details><summary><span data-i18n="q7"></span><span class="pm"><svg class="i"><use href="#i-plus"/></svg></span></summary><p data-i18n="a7"></p></details>
+      </div>
+      <div class="next"><button type="button" data-next="contact"><span class="t" data-i18n="nextL"></span><span data-i18n="toContact"></span><span class="bi"><svg class="i"><use href="#i-arrow"/></svg></span></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="ct"><div class="ct-in">
+      <div>
+        <h2 data-i18n="ctH"></h2>
+        <p data-i18n="ctP"></p>
+        <ul class="ct-list">
+          <li><svg class="i"><use href="#i-check"/></svg><span data-i18n="ctL1"></span></li>
+          <li><svg class="i"><use href="#i-check"/></svg><span data-i18n="ctL2"></span></li>
+          <li><svg class="i"><use href="#i-check"/></svg><span data-i18n="ctL3"></span></li>
+        </ul>
+      </div>
+      <div>
+        <form class="lead" id="lead" novalidate>
+          <label for="fName" data-i18n="fName"></label>
+          <input type="text" id="fName" name="name" autocomplete="name" maxlength="60" data-i18n-ph="fNamePh" aria-describedby="eName">
+          <p class="err" id="eName" role="alert" hidden></p>
+          <span class="lbl" id="lblVia" data-i18n="fVia"></span>
+          <div class="via" role="radiogroup" aria-labelledby="lblVia">
+            <label><input type="radio" name="via" value="wa" checked><span><svg class="i"><use href="#i-wa"/></svg>WhatsApp</span></label>
+            <label><input type="radio" name="via" value="tg"><span><svg class="i"><use href="#i-tg"/></svg>Telegram</span></label>
+            <label><input type="radio" name="via" value="line"><span><svg class="i"><use href="#i-line"/></svg>LINE</span></label>
+          </div>
+          <span class="lbl" id="lblNeed" data-i18n="fNeed"></span>
+          <div class="pick" id="pick" role="group" aria-labelledby="lblNeed" aria-describedby="eNeed">
+            <button type="button" data-k="kVisit" aria-pressed="false"></button>
+            <button type="button" data-k="kInside" aria-pressed="false"></button>
+            <button type="button" data-k="kBathKit" aria-pressed="false"></button>
+            <button type="button" data-k="kRoof" aria-pressed="false"></button>
+            <button type="button" data-k="kWater" aria-pressed="false"></button>
+            <button type="button" data-k="kOut" aria-pressed="false"></button>
+            <button type="button" data-k="kPool" aria-pressed="false"></button>
+            <button type="button" data-k="kSmall" aria-pressed="false"></button>
+            <button type="button" data-k="kRemote" aria-pressed="false"></button>
+          </div>
+          <input type="text" id="fNote" maxlength="200" autocomplete="off" data-i18n-ph="fNotePh" data-i18n-aria="fNotePh" aria-describedby="eNeed">
+          <p class="err" id="eNeed" role="alert" hidden></p>
+          <label class="fl" for="where" data-i18n="ctWhere"></label>
+          <select id="where" aria-describedby="eWhere"><option value="" data-i18n="whPick"></option></select>
+          <p class="err" id="eWhere" role="alert" hidden></p>
+          <button type="submit" class="btn btn-main" id="ctGo"><span id="ctGoT"></span><span class="bi"><svg class="i"><use id="ctGoI" href="#i-wa"/></svg></span></button>
+          <div class="form-st" id="fSt" role="status" aria-live="polite"></div>
+          <p class="fine"><span data-i18n="fFine"></span> <button type="button" class="linkbtn js-privacy" data-i18n="privacy"></button></p>
+        </form>
+      </div>
+    </div></div>
+  </div>
+</section>
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol fbrand">
+        <a class="fname" href="#top" data-ct="brand">Sala Renovation</a>
+        <p data-i18n="foot1"></p>
+        <p><span data-i18n="fHours"></span>: <span data-ct="hours"></span></p>
+        <div class="flang" role="group" aria-label="Language">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <nav class="fcol" aria-labelledby="fSvcH">
+        <h4 id="fSvcH" data-i18n="fSvc"></h4>
+        <ul>
+          <li><a href="#services" data-grp="in" data-i18n="gIn"></a></li>
+          <li><a href="#services" data-grp="out" data-i18n="gOut"></a></li>
+          <li><a href="#calc" data-svc="roof" data-i18n="sv_roof"></a></li>
+          <li><a href="#calc" data-svc="bath" data-i18n="sv_bath"></a></li>
+          <li><a href="#calc" data-svc="condo" data-i18n="sv_condo"></a></li>
+          <li><a href="#terms" data-i18n="tab3"></a></li>
+          <li><a href="#cases" data-i18n="tab4"></a></li>
+          <li><a href="#faq" data-i18n="tab5"></a></li>
+        </ul>
+      </nav>
+      <div class="fcol">
+        <h4 data-i18n="fAreas"></h4>
+        <ul id="fAreas"></ul>
+      </div>
+      <div class="fcol fcontacts">
+        <h4 data-i18n="fContacts"></h4>
+        <ul>
+          <li><a data-c="wa" data-msg="waHello" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>WhatsApp</a></li>
+          <li><a data-c="tg" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-tg"/></svg>Telegram</a></li>
+          <li><a data-c="line" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-line"/></svg>LINE</a></li>
+          <li><a data-c="phone" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span data-ct="phone"></span></a></li>
+          <li><a data-c="email" href="#contact"><svg class="i"><use href="#i-mail"/></svg><span data-ct="email"></span></a></li>
+          <li><a data-c="ig" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-ig"/></svg>Instagram</a></li>
+          <li><a data-c="fb" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-fb"/></svg>Facebook</a></li>
+        </ul>
+        <p><span data-ct="address"></span></p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 <span data-ct="brand">Sala Renovation</span></span>
+      <button type="button" class="linkbtn js-privacy" data-i18n="privacy"></button>
+    </div>
+  </div>
+</footer>
+
+<a class="fab off" id="fab" data-c="wa" data-msg="waHello" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span data-i18n="fabT"></span></a>
+
+<dialog class="pv" id="pv" aria-labelledby="pvH">
+  <div class="pv-in">
+    <div class="pv-top"><h3 id="pvH" data-i18n="pvH"></h3><button type="button" class="pv-x" id="pvX" data-i18n-aria="close"><svg class="i"><use href="#i-plus"/></svg></button></div>
+    <div class="pv-body" data-i18n="pvBody"></div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+/* ================= КОНТАКТЫ — ЗДЕСЬ =================
+   Замените заглушки на настоящие данные. Все ссылки на странице
+   (WhatsApp, Telegram, LINE, почта, телефон, соцсети, подвал, форма,
+   плавающая кнопка, разметка для поисковиков) строятся отсюда. */
+var CONFIG={
+  brand:'Sala Renovation',
+  whatsapp:'66000000000',      /* номер для WhatsApp: только цифры, с кодом страны 66 */
+  telegram:'your_account',     /* имя пользователя Telegram без @ */
+  line:'your_account',         /* LINE ID без ~ */
+  email:'hello@example.com',
+  phone:'+66 00 000 0000',     /* как показывать на сайте; для звонка лишние знаки уберутся сами */
+  instagram:'your_account',
+  facebook:'your_account',
+  address:{ru:'Пхукет, Таиланд · выезжаем по всему острову',en:'Phuket, Thailand · we cover the whole island'},
+  hours:{ru:'ежедневно 8:00–19:00',en:'daily 8:00–19:00'},
+  hoursSchema:['Mo-Su 08:00-19:00']
+};
+/* ===================================================== */
+function link(k,text){
+  var e=text?encodeURIComponent(text):'';
+  switch(k){
+    case 'wa':return 'https://wa.me/'+String(CONFIG.whatsapp).replace(/\D/g,'')+(e?'?text='+e:'');
+    case 'tg':return 'https://t.me/'+String(CONFIG.telegram).replace(/^@/,'')+(e?'?text='+e:'');
+    case 'line':return 'https://line.me/R/ti/p/~'+String(CONFIG.line).replace(/^~/,'');
+    case 'email':return 'mailto:'+CONFIG.email;
+    case 'phone':return 'tel:'+String(CONFIG.phone).replace(/[^\d+]/g,'');
+    case 'ig':return 'https://www.instagram.com/'+CONFIG.instagram+'/';
+    case 'fb':return 'https://www.facebook.com/'+CONFIG.facebook;
+  }
+  return '#contact';
+}
+var FX=33.5;
+var T={
+ru:{
+topWa:'Написать',eyebrow:'Пхукет · ремонт внутри и снаружи',
+h1:'Ремонт на Пхукете <em>без сюрпризов</em>',
+lede:'Инженер бесплатно осмотрит дом, а через 48 часов вы получите смету, где каждая работа — отдельной строкой. Эту цену записываем в договор, платите по этапам.',
+o1b:'0 ฿',o1:'осмотр инженера',o2b:'48 ч',o2:'смета по строкам',o3b:'Фикс',o3:'цена в договоре',o4b:'12 мес',o4:'гарантия в договоре',
+ctaMain:'Записаться на осмотр',ctaCalc:'Посчитать смету',
+tb1:'Официальная тайская компания',tb2:'Работаем по договору',tb3:'Русскоязычный менеджер и инженер',
+wyK:'Почему мы',wyH:'Ремонт, за который отвечают',
+w1h:'Официальная тайская компания',w1p:'Работаем легально и в белую: счёт и акт на каждую оплату.',
+w2h:'Всё по договору',w2p:'Объём, материалы, сроки, цена и гарантия записаны. Оплата по этапам.',
+w3h:'Менеджер и инженер говорят по-русски',w3p:'Менеджер ведёт проект от осмотра до сдачи, русский инженер проверяет каждый этап.',
+w4h:'Опыт в Азии и СНГ',w4p:'Команда с опытом ремонта и строительства в странах Азии и СНГ.',
+w5h:'Фото и видео после каждого этапа',w5p:'Присылаем в мессенджер, на крупных работах — каждый день. Вы видите ремонт, даже если вы не на острове.',
+w6h:'Гарантия на бумаге',w6p:'Прописана в договоре: 12 мес. на работы, 3 года на гидроизоляцию. При сдаче выдаём гарантийный сертификат.',
+qh1:'Образец сметы',qTag:'санузел 5 м²',q_1:'Плитка 60×60, пол и стены',q_1s:'18 м² × 550 ฿',q_2:'Гидроизоляция пола',q_2s:'6 м² × 300 ฿',q_3:'Сантехнические точки',q_3s:'4 × 1 000 ฿',q_4:'Электроточки',q_4s:'3 × 500 ฿',q_5:'Покраска потолка',q_5s:'5 м² × 150 ฿',qTot:'Итого, работа',qLock:'Цена фиксируется в договоре',qNote:'Образец строк по ценам рынка 2026, только работа. Ваша смета — после осмотра.',
+tabsKicker:'Всё о работе по разделам',
+tab1:'Услуги и цены',tab2:'Смета онлайн',tab3:'Условия и гарантия',tab4:'Примеры',tab5:'Вопросы',
+nextL:'Дальше:',toContact:'Записаться на осмотр',
+svH:'Делаем всё: от розетки до крыши',svSub:'17 видов работ внутри дома и снаружи. Нажмите на работу — посчитаем ориентир в калькуляторе.',
+gIn:'Внутри',gOut:'Снаружи',
+svNote:'Цены «от» — по рынку Пхукета 2026, только работа. Точная цена — после бесплатного осмотра, и в договоре она не растёт.',
+svCtaH:'Не нашли свою работу?',svCtaP:'Опишите её в заявке — инженер приедет и посчитает.',
+priceQ:'по смете после осмотра',
+sv_condo:'Ремонт квартир и кондо',sd_condo:'Под ключ: косметический или капитальный',sp_condo:'от 1 500 ฿/м²',
+sv_villa:'Реновация вилл',sd_villa:'Полная переделка дома и участка',sp_villa:'от 1,5 млн ฿',sx_villa:'3 спальни',
+sv_bath:'Санузлы и ванные под ключ',sd_bath:'Демонтаж, гидроизоляция, плитка, сантехника',sp_bath:'от 80 тыс. ฿',
+sv_kitchen:'Кухни',sd_kitchen:'Сборка, столешницы, техника, фартук',sp_kitchen:'от 120 тыс. ฿',
+sv_finish:'Отделка',sd_finish:'Покраска, шпаклёвка, декоративная штукатурка, гипсокартон, потолки',sp_finish:'от 120 ฿/м²',sx_finish:'покраска',
+sv_floor:'Полы',sd_floor:'Плитка, керамогранит, SPC и ламинат, паркет, выравнивание',sp_floor:'от 500 ฿/м²',sx_floor:'плитка 60×60',
+sv_electric:'Электрика',sd_electric:'Проводка, щиты, розетки, свет',sp_electric:'от 450 ฿',sx_electric:'за точку',
+sv_plumbing:'Сантехника',sd_plumbing:'Трубы, смесители, бойлеры, насосы, засоры',sp_plumbing:'от 900 ฿',sx_plumbing:'за точку',
+sv_doors:'Двери, окна, мебель',sd_doors:'Москитные сетки, встроенные шкафы',
+sv_handyman:'Мелкий ремонт',sd_handyman:'Повесить, собрать, заменить, починить',sp_handyman:'от 800 ฿',sx_handyman:'час мастера',
+sv_roof:'Крыши',sd_roof:'Поиск протечек, черепица, металлочерепица, плоские кровли, водостоки',sp_roof:'от 2 500 ฿',
+sv_waterproof:'Гидроизоляция',sd_waterproof:'Плоские крыши, террасы, балконы, бассейны, фундамент',sp_waterproof:'от 250 ฿/м²',
+sv_facade:'Фасады',sd_facade:'Покраска, ремонт штукатурки, обработка от плесени и грибка',
+sv_terrace:'Террасы и перголы',sd_terrace:'Навесы, деревянные настилы',
+sv_pool:'Бассейны',sd_pool:'Ремонт чаши, замена плитки, оборудование',
+sv_yard:'Заборы и участок',sd_yard:'Ворота, дорожки, ландшафт, дренаж',
+sv_ac:'Кондиционеры',sd_ac:'Установка, ремонт, чистка',sp_ac:'от 350 ฿',sx_ac:'чистка блока',
+cH:'Смета онлайн по любой работе',cSub:'Выберите работу и объём — покажем вилку по ценам рынка Пхукета 2026. Точную цену даст инженер после бесплатного осмотра.',
+cType:'Какая работа',grpIn:'Внутри',grpOut:'Снаружи',cLevel:'Объём работ',
+u_m2:'м²',u_pt:'точек',u_h:'ч',u_pc:'блоков',l_m2:'Площадь',l_pt:'Сколько точек',l_h:'Часов работы',l_pc:'Сколько блоков',l_fix:'Площадь помещения',
+lv_rep0:'Косметика',lv_rep0s:'покраска, мелочи',lv_rep1:'Капитальный',lv_rep1s:'с коммуникациями',lv_rep2:'Премиум',lv_rep2s:'дорогие материалы',
+lv_roof0:'Точечно',lv_roof0s:'найти и закрыть течь',lv_roof1:'Новый слой',lv_roof1s:'поверх старого',lv_roof2:'Полностью',lv_roof2s:'снять и сделать заново',
+rLbl:'Ориентир по рынку, работа',rFix:'Цена в договоре не растёт',rQuote:'По смете после осмотра',rQuoteU:'Цен «от» для этой работы на рынке нет — инженер посчитает на месте, бесплатно.',
+payH0:'Как платите при смете ~',payS:'Небольшая работа: 50/50',
+st1:'при подписании договора',st2:'после черновых работ',st3:'после чистовой отделки',st4:'через 30 дней после приёмки',st50a:'до начала работ',st50b:'после приёмки',
+cBtn:'Записаться на осмотр и смету',
+t_condo:'Срок 1–3 месяца',t_villa:'Срок 3–6 месяцев',t_bath:'Срок 2–4 недели',t_def:'Срок — в смете',
+n_condo:'Рынок: косметика 1 500–2 000 ฿/м², капитальный 5 000–11 000 ฿/м², премиум — от верхней границы капитального.',
+n_villa:'Рынок: вилла с 3 спальнями (около 250 м²) — 1,5–2,5 млн ฿ косметика, 3–5 млн капитальный, от 6 млн премиум. Пересчитано на вашу площадь.',
+n_bath:'Рынок: санузел около 5 м² под ключ — 80–120 тыс. ฿, 150–250 тыс., от 300 тыс. ฿. Больше площадь — пропорционально.',
+n_kitchen:'Рынок: кухня под ключ — 120–200 тыс. ฿, 250–500 тыс., от 600 тыс. ฿. Ориентир для кухни около 10 м².',
+n_finish:'Рынок: покраска стен 120–180 ฿/м², только работа. Штукатурка и гипсокартон — по смете.',
+n_floor:'Рынок: укладка плитки 60×60 — 500–650 ฿/м², только работа. Паркет, SPC и выравнивание — по смете.',
+n_electric:'Рынок: электроточка 450–600 ฿. Щит и проводка целиком — по смете.',
+n_plumbing:'Рынок: сантехточка 900–1 200 ฿. Бойлеры и насосы — по смете.',
+n_handyman:'Рынок: час мастера для иностранца 800–1 500 ฿. Выезд 500 ฿ — в зачёт работы.',
+n_roof:'Рынок: плоская крыша 100 м², только работа — точечно 13 750–20 250 ฿, новый слой 38–55 тыс., полностью 85–123 тыс. ฿. Скатные крыши — по смете.',
+n_waterproof:'Рынок: гидроизоляция кровли 250–350 ฿/м², только работа.',
+n_ac:'Рынок: чистка кондиционера 350–800 ฿ за блок. Установка и ремонт — по смете.',
+n_quote:'Бесплатный осмотр инженера и построчная смета за 48 часов.',
+from:'от ',
+tH:'Цена в договоре не растёт',tSub:'Сначала осмотр и смета, потом договор с этой суммой. Если вы сами добавите работы — сначала согласуем их цену письменно.',
+pl1h:'Осмотр инженера',pl1:'Замер, проверка влагомером, вскрытие подозрительных мест.',
+pl2h:'Смета по строкам',pl2:'Каждая работа и материал — отдельно, 2–3 варианта.',
+pl3h:'Цена в договоре',pl3:'Сумма из сметы. Без «вскрылось — доплатите».',
+pl4h:'Аванс, дальше по этапам',pl4:'30/30/30, последние 10% — через 30 дней после сдачи.',
+s1h:'Заявка и фото',s1p:'Пишете в WhatsApp, Telegram или LINE, присылаете фото.',s1t:'Ответ за 15 минут днём',
+s2h:'Бесплатный осмотр',s2p:'Инженер приезжает, всё замеряет и проверяет.',s2t:'В день заявки или на следующий',
+s3h:'Смета и договор',s3p:'Смета по строкам на RU или EN, договор на EN и TH.',s3t:'Смета до 48 часов',
+s4h:'Работы и сдача',s4p:'Фотоотчёт в общий чат, этап принимаете до оплаты. Можно по видео.',s4t:'Фото после каждого этапа',
+swipe:'Листайте шаги вбок',
+g1b:'12 мес.',g1:'гарантия на все работы',g2b:'3 года',g2:'гарантия на гидроизоляцию',
+gBtn:'Запросить образец договора',
+gc1:'Материалы по названиям',gc1p:'Марка, артикул и цена в смете. Замена — только с вашего согласия.',
+gc2:'Договор на EN и TH',gc2p:'Русская версия — по желанию. Объём, сроки и гарантия прописаны.',
+gc3:'Можно не прилетать',gc3p:'Фото и видео в мессенджер после каждого этапа, на крупных работах — каждый день. Приёмка этапа по видео.',
+gc4:'Официальная тайская компания',gc4p:'Всё в белую: договор, счёт, акт. Мастера тайские, иностранцы — менеджер и инженер технадзора.',
+gc5:'Гарантийный сертификат на бумаге',gc5p:'Сроки гарантии — в договоре. При сдаче вручаем подписанный сертификат: что покрыто и до какой даты.',
+bH:'Так выглядит работа с ценой и сроком',bSub:'Потяните ползунок. Это примеры: кадры-иллюстрации и расчёт по ценам рынка, а не объекты компании.',
+exTag:'Пример',baBefore:'До',baAfter:'После',baDrag:'Сравнить до и после',
+c0n:'Кондо 60 м²',c1n:'Кухня',c2n:'Плоская крыша',
+c0t:'Кондо 60 м², капитальный ремонт',c1t:'Кухня под ключ, стандарт',c2t:'Протечка плоской крыши, 100 м²',
+cl_work:'Работы',cl_sum:'Смета, работа',cl_time:'Срок',cl_pay:'Оплата',cl_gua:'Гарантия',
+c0w:'полы, стены, электрика, санузел',c0s:'≈ 480 тыс. ฿',c0d:'8 недель',c0p:'30/30/30/10',c0g:'12 мес.',
+c1w:'сборка, столешница, фартук, техника',c1s:'≈ 320 тыс. ฿',c1d:'4 недели',c1p:'30/30/30/10',c1g:'12 мес.',
+c2w:'поиск течи, новый слой гидроизоляции',c2s:'≈ 46 тыс. ฿',c2d:'3 дня',c2p:'50/50',c2g:'3 года',
+bNote:'Цифры — пример расчёта по ценам рынка 2026. Реальные объекты с ценой и сроком будут здесь же.',
+qH:'Частые вопросы',
+q1:'Сколько стоит осмотр и смета?',a1:'Осмотр инженера и построчная смета — бесплатно. Для мелкого ремонта выезд мастера 500 ฿ — в зачёт работы.',
+q2:'Может ли цена вырасти после начала работ?',a2:'Нет. В договор идёт сумма из сметы. Если вы сами решите добавить или поменять работы, сначала письменно согласуем их цену.',
+q3:'Как платить?',a3:'Аванс 30%, дальше 30% и 30% после приёмки этапов, последние 10% — через 30 дней после сдачи. Мелкие работы — 50/50.',
+q4:'Что даёт гарантия?',a4:'12 месяцев на все работы и 3 года на гидроизоляцию — прописано в договоре. Если что-то не так, исправляем за свой счёт.',
+q5:'Можно ли сделать ремонт, если я не на Пхукете?',a5:'Да. Фото и видео после каждого этапа, общий чат и приёмка этапа по видео. Ключи можно оставить управляющей компании или нам.',
+q6:'Когда делать крышу и гидроизоляцию?',a6:'Лучше в сухой сезон, с ноября по апрель, и закончить до дождей — к маю. Протечку ищем и закрываем в любой сезон.',
+q8:'Вы официальная компания?',a8:'Да. Мы официальная тайская компания и работаем в белую: договор на EN и TH, счёт и акт на каждую оплату.',
+q9:'Кто контролирует работы?',a9:'Русскоязычный менеджер ведёт ваш проект от осмотра до сдачи — один контакт на всё время ремонта. Русский инженер проверяет каждый этап до того, как вы его оплатите. Фото- и видеоотчёты — в общем чате.',
+q10:'Как я буду видеть ход работ?',a10:'После каждого этапа присылаем фото и видео в WhatsApp, Telegram или LINE, на крупных работах — каждый день. Вы видите, что сделано, даже если вы не на острове, и принимаете этап по видео до оплаты.',
+q11:'Гарантия будет в письменном виде?',a11:'Да. Гарантия прописана в договоре: 12 месяцев на все работы и 3 года на гидроизоляцию. При сдаче выдаём бумажный гарантийный сертификат с подписью.',
+q7:'Нужно ли разрешение в кондо?',a7:'Обычно да — от юристик-офиса здания. Мы готовим и подаём заявку за вас.',
+ctH:'Запишитесь на бесплатный осмотр',ctP:'Ответим сегодня и договоримся о времени выезда инженера.',
+ctL1:'Осмотр и замер — бесплатно',ctL2:'Смета по строкам — за 48 часов',ctL3:'Цена из сметы — в договоре',
+kVisit:'Осмотр инженера',kInside:'Ремонт внутри',kBathKit:'Санузел или кухня',kRoof:'Крыша, протечка',kWater:'Гидроизоляция',kOut:'Фасад, терраса, двор',kPool:'Бассейн',kSmall:'Мелкий ремонт',kRemote:'Я не на Пхукете',
+ctWhere:'Район',
+fName:'Как вас зовут',fNamePh:'Имя',fVia:'Где вам удобнее ответить',fNeed:'Что нужно',fNotePh:'Или опишите задачу словами',whPick:'Выберите район',
+eName:'Напишите, как к вам обращаться.',eNeed:'Отметьте, что нужно, или опишите задачу словами.',eWhere:'Выберите район. Если не знаете — «Другой район».',
+goWa:'Отправить в WhatsApp',goTg:'Отправить в Telegram',goLine:'Отправить в LINE',
+stWa:'Открываем WhatsApp с готовым сообщением — останется нажать «Отправить».',stCopied:'Текст заявки скопирован. В чате {app} вставьте его и отправьте.',stNoCopy:'Скопировать автоматически не получилось — скопируйте текст ниже и отправьте в чат {app}.',stAgain:'Чат не открылся? Откройте {app}',
+fFine:'Форма сама ничего не отправляет: она откроет выбранный мессенджер с готовым текстом.',privacy:'Политика конфиденциальности',
+waName:'Имя',waNote:'Комментарий',waVia:'Ответить в',
+d_rawai:'Раваи и Най Харн',d_chalong:'Чалонг',d_kata:'Ката и Карон',d_patong:'Патонг',d_kamala:'Камала',d_bangtao:'Сурин, Банг Тао, Лагуна',d_thalang:'Таланг и север острова',d_town:'Пхукет-таун',d_other:'Другой район / не знаю',
+fSvc:'Услуги',fAreas:'Районы',fContacts:'Контакты',fHours:'Часы работы',fabT:'Написать',close:'Закрыть',
+pvH:'Политика конфиденциальности',
+pvBody:'<p>Коротко о том, какие данные попадают к нам через форму на сайте и зачем.</p><p><b>Что вы указываете.</b> Имя, удобный мессенджер, какие работы нужны, район и комментарий, если вы его написали.</p><p><b>Как это передаётся.</b> Форма не отправляет данные на сервер. Она собирает текст и открывает WhatsApp, Telegram или LINE; сообщение уходит, только когда вы сами нажмёте «Отправить». Дальше переписка идёт по правилам выбранного мессенджера.</p><p><b>Зачем.</b> Чтобы ответить вам, договориться об осмотре инженера и подготовить смету.</p><p><b>Что хранится в браузере.</b> Только выбранный язык сайта — на вашем устройстве.</p><p><b>Вопросы о данных.</b> Напишите в тот же мессенджер или на почту <span data-ct="email"></span>.</p>',
+foot1:'Ремонт внутри и снаружи · Пхукет, Таиланд',
+waHello:'Здравствуйте! Хочу записаться на бесплатный осмотр и смету.',waWork:'Работа',waQty:'Объём',waLevel:'Вариант',waRange:'Ориентир с сайта',waWant:'Нужно',waWhere:'Район',waContract:'Здравствуйте! Пришлите, пожалуйста, образец договора.',
+mln:' млн ฿',k:' тыс. ฿',unit:' ฿'
+},
+en:{
+topWa:'Message us',eyebrow:'Phuket · inside and outside the house',
+h1:'Phuket renovation, <em>no surprises</em>',
+lede:'An engineer inspects your home for free, and within 48 hours you get a quote with every job on its own line. That price goes into the contract, and you pay by stage.',
+o1b:'฿0',o1:'engineer inspection',o2b:'48 h',o2:'itemised quote',o3b:'Fixed',o3:'price in the contract',o4b:'12 mo',o4:'written warranty',
+ctaMain:'Book an inspection',ctaCalc:'Estimate my cost',
+tb1:'Official Thai company',tb2:'Work under contract',tb3:'Foreign engineer on every project',
+wyK:'Why us',wyH:'A renovation someone answers for',
+w1h:'Official Thai company',w1p:'Fully legal and on the books: an invoice and a sign-off act for every payment.',
+w2h:'Everything under contract',w2p:'Scope, materials, timeline, price and warranty in writing. You pay by stage.',
+w3h:'A foreign engineer on every project',w3p:'Supervises each stage to European standards and is accountable for the result. One English-speaking manager.',
+w4h:'Experience across Asia and the CIS',w4p:'A team with renovation and construction experience in Asian and CIS countries.',
+w5h:'Photo and video after every stage',w5p:'Sent to your messenger, daily on larger jobs. You see the work even when you are off the island.',
+w6h:'Warranty on paper',w6p:'Written into the contract: 12 months on works, 3 years on waterproofing. A warranty certificate at handover.',
+qh1:'Sample quote',qTag:'bathroom 5 m²',q_1:'Tiling 60×60, floor and walls',q_1s:'18 m² × ฿550',q_2:'Floor waterproofing',q_2s:'6 m² × ฿300',q_3:'Plumbing points',q_3s:'4 × ฿1,000',q_4:'Electrical points',q_4s:'3 × ฿500',q_5:'Ceiling painting',q_5s:'5 m² × ฿150',qTot:'Total, labour',qLock:'The price is fixed in the contract',qNote:'Sample lines at 2026 market prices, labour only. Your quote comes after the inspection.',
+tabsKicker:'Everything about the work, by section',
+tab1:'Services & prices',tab2:'Online estimate',tab3:'Terms & warranty',tab4:'Examples',tab5:'FAQ',
+nextL:'Next:',toContact:'Book an inspection',
+svH:'Everything from a socket to the roof',svSub:'17 kinds of work inside and outside the house. Tap a job to get a guide price in the calculator.',
+gIn:'Inside',gOut:'Outside',
+svNote:'“From” prices follow the 2026 Phuket market, labour only. The exact price comes after a free inspection and does not grow in the contract.',
+svCtaH:'Cannot find your job?',svCtaP:'Describe it in your request: the engineer will come and price it.',
+priceQ:'quoted after inspection',
+sv_condo:'Apartment & condo renovation',sd_condo:'Turnkey: cosmetic or full',sp_condo:'from ฿1,500/m²',
+sv_villa:'Villa renovation',sd_villa:'Full rework of the house and grounds',sp_villa:'from ฿1.5M',sx_villa:'3 bedrooms',
+sv_bath:'Turnkey bathrooms',sd_bath:'Demolition, waterproofing, tiling, plumbing',sp_bath:'from ฿80k',
+sv_kitchen:'Kitchens',sd_kitchen:'Assembly, worktops, appliances, splashback',sp_kitchen:'from ฿120k',
+sv_finish:'Finishing',sd_finish:'Painting, skim coat, decorative plaster, drywall, ceilings',sp_finish:'from ฿120/m²',sx_finish:'painting',
+sv_floor:'Floors',sd_floor:'Tiles, porcelain, SPC and laminate, parquet, levelling',sp_floor:'from ฿500/m²',sx_floor:'tiles 60×60',
+sv_electric:'Electrics',sd_electric:'Wiring, panels, sockets, lighting',sp_electric:'from ฿450',sx_electric:'per point',
+sv_plumbing:'Plumbing',sd_plumbing:'Pipes, taps, water heaters, pumps, blockages',sp_plumbing:'from ฿900',sx_plumbing:'per point',
+sv_doors:'Doors, windows, furniture',sd_doors:'Insect screens, built-in wardrobes',
+sv_handyman:'Small repairs',sd_handyman:'Hang, assemble, replace, fix',sp_handyman:'from ฿800',sx_handyman:'per hour',
+sv_roof:'Roofs',sd_roof:'Leak detection, tiles, metal roofing, flat roofs, gutters',sp_roof:'from ฿2,500',
+sv_waterproof:'Waterproofing',sd_waterproof:'Flat roofs, terraces, balconies, pools, foundations',sp_waterproof:'from ฿250/m²',
+sv_facade:'Facades',sd_facade:'Painting, plaster repair, mould and fungus treatment',
+sv_terrace:'Terraces & pergolas',sd_terrace:'Canopies, timber decking',
+sv_pool:'Pools',sd_pool:'Shell repair, retiling, equipment',
+sv_yard:'Fences & grounds',sd_yard:'Gates, paths, landscaping, drainage',
+sv_ac:'Air conditioning',sd_ac:'Installation, repair, cleaning',sp_ac:'from ฿350',sx_ac:'cleaning per unit',
+cH:'Online estimate for any job',cSub:'Pick the job and the size, and we show a range at 2026 Phuket market prices. The engineer gives the exact price after a free inspection.',
+cType:'Which job',grpIn:'Inside',grpOut:'Outside',cLevel:'Scope',
+u_m2:'m²',u_pt:'points',u_h:'h',u_pc:'units',l_m2:'Area',l_pt:'Number of points',l_h:'Hours of work',l_pc:'Number of units',l_fix:'Room area',
+lv_rep0:'Cosmetic',lv_rep0s:'paint, small fixes',lv_rep1:'Full',lv_rep1s:'incl. utilities',lv_rep2:'Premium',lv_rep2s:'high-end materials',
+lv_roof0:'Spot repair',lv_roof0s:'find and seal the leak',lv_roof1:'New layer',lv_roof1s:'over the old one',lv_roof2:'Full',lv_roof2s:'strip and redo',
+rLbl:'Market guide, labour',rFix:'Contract price does not grow',rQuote:'Quoted after inspection',rQuoteU:'There is no market “from” price for this job: the engineer prices it on site, free.',
+payH0:'How you pay on a quote of ~',payS:'Smaller job: 50/50',
+st1:'on signing the contract',st2:'after rough works',st3:'after finishing',st4:'30 days after handover',st50a:'before we start',st50b:'after sign-off',
+cBtn:'Book inspection and quote',
+t_condo:'1–3 months',t_villa:'3–6 months',t_bath:'2–4 weeks',t_def:'Timeline in the quote',
+n_condo:'Market: cosmetic ฿1,500–2,000/m², full ฿5,000–11,000/m², premium from the top of the full range.',
+n_villa:'Market: a 3-bedroom villa (about 250 m²) is ฿1.5–2.5M cosmetic, ฿3–5M full, from ฿6M premium. Scaled to your area.',
+n_bath:'Market: a turnkey bathroom of about 5 m² is ฿80–120k, ฿150–250k, from ฿300k. Larger rooms scale proportionally.',
+n_kitchen:'Market: a turnkey kitchen is ฿120–200k, ฿250–500k, from ฿600k. Guide for a kitchen of about 10 m².',
+n_finish:'Market: wall painting ฿120–180/m², labour only. Plaster and drywall are quoted.',
+n_floor:'Market: laying 60×60 tiles ฿500–650/m², labour only. Parquet, SPC and levelling are quoted.',
+n_electric:'Market: an electrical point is ฿450–600. A full panel or rewiring is quoted.',
+n_plumbing:'Market: a plumbing point is ฿900–1,200. Water heaters and pumps are quoted.',
+n_handyman:'Market: a handyman hour for foreigners is ฿800–1,500. The ฿500 call-out is credited against the work.',
+n_roof:'Market: a 100 m² flat roof, labour only: spot repair ฿13,750–20,250, new layer ฿38–55k, full ฿85–123k. Pitched roofs are quoted.',
+n_waterproof:'Market: roof waterproofing ฿250–350/m², labour only.',
+n_ac:'Market: A/C cleaning ฿350–800 per unit. Installation and repair are quoted.',
+n_quote:'Free engineer inspection and an itemised quote within 48 hours.',
+from:'from ',
+tH:'The contract price does not grow',tSub:'First the inspection and quote, then a contract with that sum. If you add work yourself, we agree its price in writing first.',
+pl1h:'Engineer inspection',pl1:'Measurements, moisture-meter check, opening up suspicious spots.',
+pl2h:'Itemised quote',pl2:'Every job and material on its own line, 2–3 options.',
+pl3h:'Price in the contract',pl3:'The sum from the quote. No “we found something, pay more”.',
+pl4h:'Deposit, then by stage',pl4:'30/30/30, the last 10% 30 days after handover.',
+s1h:'Request and photos',s1p:'Message us on WhatsApp, Telegram or LINE and send photos.',s1t:'Reply within 15 minutes by day',
+s2h:'Free inspection',s2p:'The engineer comes, measures and checks everything.',s2t:'Same or next day',
+s3h:'Quote and contract',s3p:'Itemised quote in EN or RU, contract in EN and TH.',s3t:'Quote within 48 hours',
+s4h:'Works and handover',s4p:'Photo reports in a shared chat; sign off each stage before paying, by video if you like.',s4t:'Photos after every stage',
+swipe:'Swipe through the steps',
+g1b:'12 mo',g1:'warranty on all works',g2b:'3 yrs',g2:'warranty on waterproofing',
+gBtn:'Request a sample contract',
+gc1:'Materials named in writing',gc1p:'Brand, item code and price in the quote. No swaps without your consent.',
+gc2:'Contract in English and Thai',gc2p:'Russian version on request. Scope, timeline and warranty spelled out.',
+gc3:'No need to fly in',gc3p:'Photo and video reports to your messenger after every stage, daily on larger jobs. Stage sign-off by video.',
+gc4:'Official Thai company',gc4p:'On the books: contract, invoice, sign-off act. Thai craftsmen; foreigners on the team are the manager and the supervising engineer.',
+gc5:'Paper warranty certificate',gc5p:'Warranty terms are in the contract. At handover you get a signed certificate: what is covered and until when.',
+bH:'What a job looks like, with price and timeline',bSub:'Drag the slider. These are examples: illustrative photos and market-price calculations, not company projects.',
+exTag:'Example',baBefore:'Before',baAfter:'After',baDrag:'Compare before and after',
+c0n:'Condo 60 m²',c1n:'Kitchen',c2n:'Flat roof',
+c0t:'Condo 60 m², full renovation',c1t:'Turnkey kitchen, standard',c2t:'Leaking flat roof, 100 m²',
+cl_work:'Works',cl_sum:'Quote, labour',cl_time:'Timeline',cl_pay:'Payment',cl_gua:'Warranty',
+c0w:'floors, walls, electrics, bathroom',c0s:'≈ ฿480k',c0d:'8 weeks',c0p:'30/30/30/10',c0g:'12 mo',
+c1w:'assembly, worktop, splashback, appliances',c1s:'≈ ฿320k',c1d:'4 weeks',c1p:'30/30/30/10',c1g:'12 mo',
+c2w:'leak detection, new waterproofing layer',c2s:'≈ ฿46k',c2d:'3 days',c2p:'50/50',c2g:'3 years',
+bNote:'Figures are an example at 2026 market prices. Real projects with price and timeline will appear here.',
+qH:'Questions',
+q1:'How much is the inspection and quote?',a1:'The engineer inspection and itemised quote are free. For small repairs the call-out is ฿500, credited against the work.',
+q2:'Can the price grow once work starts?',a2:'No. The contract carries the sum from the quote. If you decide to add or change work, we agree its price in writing first.',
+q3:'How do I pay?',a3:'30% deposit, then 30% and 30% after you sign off the stages, the last 10% 30 days after handover. Small jobs: 50/50.',
+q4:'What does the warranty cover?',a4:'12 months on all works and 3 years on waterproofing, written into the contract. If something is wrong, we fix it at our cost.',
+q5:'Can I renovate if I am not in Phuket?',a5:'Yes. Photo and video reports after every stage, a shared chat and stage sign-off by video. Keys can stay with your property manager or with us.',
+q6:'When should I do the roof and waterproofing?',a6:'Best in the dry season, November to April, finished before the rains by May. We find and seal leaks in any season.',
+q8:'Are you an official company?',a8:'Yes. We are an official Thai company and work fully on the books: a contract in English and Thai, an invoice and a sign-off act for every payment.',
+q9:'Who supervises the work?',a9:'A foreign engineer checks every stage to European standards before you pay for it, and takes responsibility for the result. An English-speaking project manager is your single contact from inspection to handover, with photo and video reports in a shared chat.',
+q10:'How will I see the progress?',a10:'After every stage we send photos and video to WhatsApp, Telegram or LINE, and daily on larger jobs. You see what is done even when you are off the island, and sign off each stage by video before paying.',
+q11:'Will the warranty be in writing?',a11:'Yes. It is written into the contract: 12 months on all works and 3 years on waterproofing. At handover you get a signed paper warranty certificate.',
+q7:'Do I need a condo permit?',a7:'Usually yes, from the building’s juristic office. We prepare and file the request for you.',
+ctH:'Book a free inspection',ctP:'We reply today and agree a time for the engineer’s visit.',
+ctL1:'Inspection and measuring: free',ctL2:'Itemised quote: within 48 hours',ctL3:'The quoted price goes into the contract',
+kVisit:'Engineer inspection',kInside:'Interior renovation',kBathKit:'Bathroom or kitchen',kRoof:'Roof or leak',kWater:'Waterproofing',kOut:'Facade, terrace, grounds',kPool:'Pool',kSmall:'Small repairs',kRemote:'I am abroad',
+ctWhere:'Area',
+fName:'Your name',fNamePh:'Name',fVia:'Where should we reply',fNeed:'What you need',fNotePh:'Or describe the job in words',whPick:'Choose an area',
+eName:'Please tell us your name.',eNeed:'Pick what you need or describe the job in words.',eWhere:'Choose an area. Not sure? Pick “Other area”.',
+goWa:'Send via WhatsApp',goTg:'Send via Telegram',goLine:'Send via LINE',
+stWa:'Opening WhatsApp with your message ready — just tap Send.',stCopied:'Your request is copied. Paste it into the {app} chat and send.',stNoCopy:'We could not copy it automatically — copy the text below and send it in {app}.',stAgain:'Chat did not open? Open {app}',
+fFine:'The form sends nothing by itself: it opens the messenger you chose with the text ready.',privacy:'Privacy policy',
+waName:'Name',waNote:'Comment',waVia:'Reply via',
+d_rawai:'Rawai & Nai Harn',d_chalong:'Chalong',d_kata:'Kata & Karon',d_patong:'Patong',d_kamala:'Kamala',d_bangtao:'Surin, Bang Tao, Laguna',d_thalang:'Thalang & the north',d_town:'Phuket Town',d_other:'Other area / not sure',
+fSvc:'Services',fAreas:'Areas',fContacts:'Contacts',fHours:'Hours',fabT:'Message us',close:'Close',
+pvH:'Privacy policy',
+pvBody:'<p>A short note on what data reaches us through the form on this site and why.</p><p><b>What you enter.</b> Your name, preferred messenger, the work you need, your area and a comment if you add one.</p><p><b>How it travels.</b> The form does not send data to a server. It builds the text and opens WhatsApp, Telegram or LINE; the message is sent only when you tap Send yourself. From then on the chat follows the rules of that messenger.</p><p><b>Why.</b> To reply, arrange the engineer inspection and prepare the quote.</p><p><b>What your browser keeps.</b> Only the site language you chose, on your device.</p><p><b>Questions about your data.</b> Write to us in the same messenger or at <span data-ct="email"></span>.</p>',
+foot1:'Renovation inside and out · Phuket, Thailand',
+waHello:'Hello! I would like to book a free inspection and quote.',waWork:'Job',waQty:'Size',waLevel:'Option',waRange:'Guide from the website',waWant:'I need',waWhere:'Area',waContract:'Hello! Could you send me a sample contract?',
+mln:'M',k:'k',unit:''
+}};
+
+/* каталог: ключ, группа, миниатюра (null — значок) */
+var SV=[
+ ['condo','in','th-a-hero'],['villa','in','th-c-keys'],['bath','in','th-x-bath-tile'],['kitchen','in','th-a-kitchen'],['finish','in','th-x-plaster'],
+ ['floor','in','th-x-floor'],['electric','in','th-x-electric-panel'],['plumbing','in','th-b-plumb'],['doors','in','th-a-before'],['handyman','in','th-b-shelf'],
+ ['roof','out','th-x-roof-repair'],['waterproof','out','th-x-waterproof'],['facade','out','th-x-facade-paint'],['terrace','out','th-x-terrace-deck'],
+ ['pool','out','th-x-pool-repair'],['yard','out','th-a-terrace'],['ac','out','th-b-ac']
+];
+/* модель калькулятора: только цены из брифа (рынок 2026, работа). u: m2 / pt / h / pc / fix / quote */
+var W={
+ condo:{u:'m2',min:20,max:250,step:5,def:60,lk:'rep',lv:[[1500,2000],[5000,11000],[11000,null]],tm:'t_condo'},
+ villa:{u:'m2',min:100,max:800,step:10,def:250,lk:'rep',lv:[[6000,10000],[12000,20000],[24000,null]],tm:'t_villa'},
+ bath:{u:'fix',base:5,min:3,max:20,step:1,def:5,lk:'rep',lv:[[80000,120000],[150000,250000],[300000,null]],tm:'t_bath'},
+ kitchen:{u:'fix',base:10,min:6,max:40,step:1,def:10,lk:'rep',lv:[[120000,200000],[250000,500000],[600000,null]]},
+ finish:{u:'m2',min:10,max:500,step:5,def:80,lv:[[120,180]]},
+ floor:{u:'m2',min:5,max:300,step:5,def:40,lv:[[500,650]]},
+ electric:{u:'pt',min:1,max:60,step:1,def:8,lv:[[450,600]]},
+ plumbing:{u:'pt',min:1,max:30,step:1,def:4,lv:[[900,1200]]},
+ doors:{u:'quote'},
+ handyman:{u:'h',min:1,max:16,step:1,def:3,lv:[[800,1500]]},
+ roof:{u:'m2',min:20,max:400,step:10,def:100,lk:'roof',lv:[[137.5,202.5],[380,550],[850,1230]]},
+ waterproof:{u:'m2',min:5,max:400,step:5,def:60,lv:[[250,350]]},
+ facade:{u:'quote'},terrace:{u:'quote'},pool:{u:'quote'},yard:{u:'quote'},
+ ac:{u:'pc',min:1,max:12,step:1,def:3,lv:[[350,800]]}
+};
+var QUICK=['bath','roof','condo','waterproof','ac'];
+var CASES=[
+ {b:'a-before',a:'a-hero',k:'c0'},
+ {b:'a-before',a:'a-kitchen',k:'c1'},
+ {b:'x-roof-leak',a:'x-waterproof',k:'c2'}
+];
+var S={w:'bath',qty:5,level:1};
+var lang='ru',grp='in',cs=0;
+try{var sv=localStorage.getItem('sala-lang');if(sv==='ru'||sv==='en')lang=sv;}catch(e){}
+
+function t(k){var v=(T[lang]&&T[lang][k]!=null)?T[lang][k]:(T.ru[k]||'');return typeof v==='string'?v.replace(/(\d) (\d{3})/g,'$1 $2').replace(/ (฿|млн|тыс\.)/g,' $1'):v;}
+function money(n){
+  if(lang==='ru'){
+    if(n>=1e6){return (Math.round(n/1e5)/10).toLocaleString('ru-RU')+T.ru.mln;}
+    if(n>=1e4){return Math.round(n/1e3).toLocaleString('ru-RU')+T.ru.k;}
+    return (Math.round(n/10)*10).toLocaleString('ru-RU')+T.ru.unit;
+  }
+  if(n>=1e6){return '฿'+(Math.round(n/1e5)/10)+'M';}
+  if(n>=1e4){return '฿'+Math.round(n/1e3).toLocaleString('en-US')+'k';}
+  return '฿'+(Math.round(n/10)*10).toLocaleString('en-US');
+}
+function usd(n){var v=n/FX; if(lang==='ru'){if(v>=1e6)return (Math.round(v/1e5)/10).toLocaleString('ru-RU')+' млн $'; if(v>=1e3)return (v<1e4?(Math.round(v/100)/10):Math.round(v/1e3)).toLocaleString('ru-RU')+' тыс. $'; return Math.round(v)+' $';} if(v>=1e6)return '$'+(Math.round(v/1e5)/10)+'M'; if(v>=1e3)return '$'+(v<1e4?(Math.round(v/100)/10):Math.round(v/1e3))+'k'; return '$'+Math.round(v);}
+function rangeTxt(lo,hi,f){
+  if(hi==null)return t('from')+f(lo);
+  if(lang==='ru'&&lo>=1e6&&hi>=1e6)return (Math.round(lo/1e5)/10).toLocaleString('ru-RU')+'–'+f(hi);
+  if(lang==='ru'&&lo>=1e4&&lo<1e6&&hi<1e6)return Math.round(lo/1e3).toLocaleString('ru-RU')+'–'+f(hi);
+  if(hi<1e4)return lang==='ru'?(Math.round(lo/10)*10).toLocaleString('ru-RU')+'–'+f(hi):f(lo)+'–'+(Math.round(hi/10)*10).toLocaleString('en-US');
+  return f(lo)+' – '+f(hi);
+}
+function q(id){return document.getElementById(id);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+/* ---------- sample quote card ---------- */
+var QL=[[18,550],[6,300],[4,1000],[3,500],[5,150]];
+function fmtB(n){return lang==='ru'?n.toLocaleString('ru-RU')+' ฿':'฿'+n.toLocaleString('en-US');}
+function renderQuote(){
+  var tot=0,li=QL.map(function(r,i){var s=r[0]*r[1];tot+=s;return '<li><span>'+t('q_'+(i+1))+'</span><small>'+t('q_'+(i+1)+'s')+'</small><b>'+fmtB(s)+'</b></li>';}).join('');
+  document.querySelectorAll('[data-quote]').forEach(function(el){
+    var hid=el.dataset.quote;
+    el.innerHTML='<div class="qh"><b id="'+hid+'">'+t('qh1')+'</b><span>'+t('qTag')+'</span></div><ul class="ql">'+li+'</ul>'+
+      '<div class="qt"><span>'+t('qTot')+'</span><b>'+fmtB(tot)+'</b></div>'+
+      '<div class="qlock"><svg class="i"><use href="#i-lock"/></svg>'+t('qLock')+'</div><p class="qnote">'+t('qNote')+'</p>';
+  });
+}
+
+/* ---------- catalog ---------- */
+function renderCatalog(){
+  q('svlist').innerHTML=SV.filter(function(s){return s[1]===grp;}).map(function(s){
+    var k=s[0],p=T[lang]['sp_'+k],x=T[lang]['sx_'+k];
+    var th=s[2]?'<img src="img/'+s[2]+'.webp" alt="" loading="lazy" width="56" height="56">':'<svg class="i"><use href="#i-fence"/></svg>';
+    var price=p?'<span class="p">'+t('sp_'+k)+(x?'<small>'+t('sx_'+k)+'</small>':'')+'</span>':'<span class="p q">'+t('priceQ')+'</span>';
+    return '<li><button type="button" class="sv" data-w="'+k+'"><span class="th">'+th+'</span><span><b>'+t('sv_'+k)+'</b><span class="d">'+t('sd_'+k)+'</span></span>'+price+'</button></li>';
+  }).join('');
+  document.querySelectorAll('#grp button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.g===grp?'true':'false');});
+  var im=q('svImg');if(im)im.src=grp==='in'?'img/a-hero.webp':'img/x-roof-repair.webp';
+}
+function setGrp(g){grp=g;renderCatalog();}
+q('grp').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;setGrp(b.dataset.g);});
+q('svlist').addEventListener('click',function(e){var b=e.target.closest('.sv');if(!b)return;setWork(b.dataset.w);show('calc',true);try{history.replaceState(null,'','#calc');}catch(err){}});
+
+/* ---------- calculator ---------- */
+function fillSelect(){
+  var sel=q('wsel');
+  function opts(g){return SV.filter(function(s){return s[1]===g;}).map(function(s){return '<option value="'+s[0]+'">'+esc(t('sv_'+s[0]))+'</option>';}).join('');}
+  sel.innerHTML='<optgroup label="'+esc(t('grpIn'))+'">'+opts('in')+'</optgroup><optgroup label="'+esc(t('grpOut'))+'">'+opts('out')+'</optgroup>';
+  sel.value=S.w;
+  q('quick').innerHTML=QUICK.map(function(k){return '<button type="button" data-w="'+k+'" aria-pressed="'+(k===S.w)+'">'+esc(t('sv_'+k))+'</button>';}).join('');
+}
+function calc(){
+  var m=W[S.w];if(m.u==='quote')return null;
+  var L=m.lv[m.lv.length>1?S.level:0],lo,hi;
+  if(m.u==='fix'){var f=Math.max(1,S.qty/m.base);lo=L[0]*f;hi=L[1]==null?null:L[1]*f;}
+  else{lo=L[0]*S.qty;hi=L[1]==null?null:L[1]*S.qty;}
+  return {lo:lo,hi:hi,basis:hi==null?lo:(lo+hi)/2};
+}
+function unitTxt(m){return m.u==='fix'?t('u_m2'):t('u_'+m.u);}
+function render(){
+  var m=W[S.w],c=calc(),quote=m.u==='quote',multi=!quote&&m.lv.length>1;
+  q('wsel').value=S.w;
+  document.querySelectorAll('#quick button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.w===S.w?'true':'false');});
+  q('fQty').hidden=quote;q('fLvl').hidden=!multi;q('pay').hidden=quote;
+  if(!quote){
+    var r=q('qty');
+    q('qtyL').textContent=m.u==='fix'?t('l_fix'):t('l_'+m.u);
+    q('qtyVal').textContent=S.qty;q('qtyU').textContent=unitTxt(m);
+    r.style.setProperty('--p',((S.qty-m.min)/(m.max-m.min)*100)+'%');
+    q('qMin').textContent=m.min+' '+unitTxt(m);q('qMax').textContent=m.max+' '+unitTxt(m);
+  }
+  if(multi){[0,1,2].forEach(function(i){q('lv'+i).textContent=t('lv_'+m.lk+i);q('lv'+i+'s').textContent=t('lv_'+m.lk+i+'s');});
+    document.querySelectorAll('#levelSeg .opt').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.level===S.level?'true':'false');});}
+  q('rTime').textContent=t(m.tm||'t_def');
+  var rng;
+  if(quote){q('rBig').textContent=t('rQuote');q('rUsd').textContent='';q('rNote').textContent=t('rQuoteU')+' '+t('n_quote');}
+  else{
+    rng=rangeTxt(c.lo,c.hi,money);
+    q('rBig').textContent=rng;
+    q('rUsd').textContent='≈ '+(c.hi==null?(lang==='ru'?'от ':'from ')+usd(c.lo):usd(c.lo)+' – '+usd(c.hi))+(lang==='ru'?' · курс 33,5 ฿ за $':' · at ฿33.5 per $');
+    q('rNote').textContent=t('n_'+S.w);
+    var big=c.basis>=50000,parts=big?[[.3,'st1'],[.3,'st2'],[.3,'st3'],[.1,'st4']]:[[.5,'st50a'],[.5,'st50b']];
+    q('payH').textContent=big?t('payH0')+money(c.basis):t('payS')+' · ~'+money(c.basis);
+    var bar=q('payBar');bar.style.gridTemplateColumns=big?'3fr 3fr 3fr 1fr':'1fr 1fr';
+    bar.innerHTML=parts.map(function(){return '<i></i>';}).join('');
+    q('payList').innerHTML=parts.map(function(p){return '<li><b>'+money(c.basis*p[0])+'</b><em>'+Math.round(p[0]*100)+'%</em> · '+t(p[1])+'</li>';}).join('');
+  }
+  var msg=[t('waHello'),t('waWork')+': '+t('sv_'+S.w)];
+  if(!quote){msg.push(t('waQty')+': '+S.qty+' '+unitTxt(m));if(multi)msg.push(t('waLevel')+': '+t('lv_'+m.lk+S.level));msg.push(t('waRange')+': '+rng);}
+  q('calcWa').href=link('wa',msg.join('\n'));
+}
+function setWork(w){if(!W[w])return;S.w=w;var m=W[w];if(m.u!=='quote'){var r=q('qty');r.min=m.min;r.max=m.max;r.step=m.step;S.qty=m.def;r.value=m.def;}S.level=1;render();}
+q('wsel').addEventListener('change',function(e){setWork(e.target.value);});
+q('quick').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;setWork(b.dataset.w);});
+q('levelSeg').addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;S.level=+b.dataset.level;render();});
+q('qty').addEventListener('input',function(e){S.qty=+e.target.value;render();});
+
+/* ---------- cases ---------- */
+function renderCase(){
+  var c=CASES[cs];
+  q('beforeImg').src='img/'+c.b+'.webp';q('afterImg').src='img/'+c.a+'.webp';
+  q('cTitle').textContent=t(c.k+'t');
+  q('cList').innerHTML=[['cl_work','w'],['cl_sum','s'],['cl_time','d'],['cl_pay','p'],['cl_gua','g']].map(function(r){return '<li><span>'+t(r[0])+'</span><b>'+t(c.k+r[1])+'</b></li>';}).join('');
+  document.querySelectorAll('#baPick .opt').forEach(function(x){x.setAttribute('aria-pressed',+x.dataset.case===cs?'true':'false');});
+}
+var ba=q('ba'),bar=q('baRange');
+bar.addEventListener('input',function(){ba.style.setProperty('--x',bar.value+'%');});
+q('baPick').addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;cs=+b.dataset.case;renderCase();});
+
+/* contacts from CONFIG */
+function fillContacts(){
+  document.querySelectorAll('[data-c]').forEach(function(a){if(a.id==='calcWa')return;var m=a.dataset.msg;a.href=link(a.dataset.c,m?t(m):'');});
+  document.querySelectorAll('[data-ct]').forEach(function(el){var v=CONFIG[el.dataset.ct];if(v&&typeof v==='object')v=v[lang]||v.ru;el.textContent=v||'';});
+}
+var DIST=['rawai','chalong','kata','patong','kamala','bangtao','thalang','town','other'];
+function fillDist(){
+  var sel=q('where'),cur=sel.value;
+  sel.innerHTML='<option value="">'+t('whPick')+'</option>'+DIST.map(function(d){return '<option value="'+d+'">'+t('d_'+d)+'</option>';}).join('');
+  sel.value=cur;
+  q('fAreas').innerHTML=DIST.filter(function(d){return d!=='other';}).map(function(d){return '<li>'+t('d_'+d)+'</li>';}).join('');
+}
+
+/* lead form → messenger */
+var APP={wa:'WhatsApp',tg:'Telegram',line:'LINE'},touched=false;
+function via(){var r=document.querySelector('input[name="via"]:checked');return r?r.value:'wa';}
+function goLabel(){var v=via();q('ctGoT').textContent=t({wa:'goWa',tg:'goTg',line:'goLine'}[v]);q('ctGoI').setAttribute('href','#i-'+v);}
+function picks(){var a=[];document.querySelectorAll('#pick button[aria-pressed="true"]').forEach(function(b){a.push(t(b.dataset.k));});return a;}
+function setErr(id,els,key){var e=q(id);e.hidden=!key;e.textContent=key?t(key):'';els.forEach(function(f){if(key)f.setAttribute('aria-invalid','true');else f.removeAttribute('aria-invalid');});}
+function validate(focus){
+  var first=null,nm=q('fName'),nt=q('fNote'),pk=q('pick'),wh=q('where');
+  var bad1=nm.value.trim().length<2;setErr('eName',[nm],bad1?'eName':null);if(bad1)first=nm;
+  var bad2=!picks().length&&nt.value.trim().length<3;setErr('eNeed',[pk,nt],bad2?'eNeed':null);if(bad2&&!first)first=pk.querySelector('button');
+  var bad3=!wh.value;setErr('eWhere',[wh],bad3?'eWhere':null);if(bad3&&!first)first=wh;
+  if(focus&&first)first.focus();
+  return !first;
+}
+function leadText(){
+  var n=q('fName').value.trim().slice(0,60),p=picks(),note=q('fNote').value.trim().slice(0,200),w=q('where').value;
+  var L=[t('waHello')];
+  if(n)L.push(t('waName')+': '+n);
+  if(p.length)L.push(t('waWant')+': '+p.join(', '));
+  if(note)L.push(t('waNote')+': '+note);
+  if(w)L.push(t('waWhere')+': '+t('d_'+w));
+  L.push(t('waVia')+': '+APP[via()]);
+  return L.join('\n');
+}
+function copyText(txt){
+  var ok=false;
+  try{var ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='0';ta.style.opacity='0';document.body.appendChild(ta);ta.select();ok=document.execCommand('copy');document.body.removeChild(ta);}catch(err){ok=false;}
+  try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(function(){},function(){});}}catch(err){}
+  return ok;
+}
+q('lead').addEventListener('submit',function(e){
+  e.preventDefault();touched=true;var st=q('fSt');st.textContent='';
+  if(!validate(true))return;
+  var v=via(),app=APP[v],txt=leadText(),url=link(v,txt),copied=true;
+  if(v!=='wa')copied=copyText(txt);
+  q('lead').dataset.url=url;
+  try{window.open(url,'_blank','noopener');}catch(err){}
+  var p=document.createElement('span');p.textContent=(v==='wa'?t('stWa'):(copied?t('stCopied'):t('stNoCopy'))).replace('{app}',app)+' ';
+  var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent=t('stAgain').replace('{app}',app);
+  st.appendChild(p);st.appendChild(a);
+  if(!copied){var ta=document.createElement('textarea');ta.readOnly=true;ta.value=txt;st.appendChild(ta);}
+});
+q('pick').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');if(touched)validate(false);});
+['fName','fNote','where'].forEach(function(id){q(id).addEventListener(id==='where'?'change':'input',function(){if(touched)validate(false);});});
+document.querySelectorAll('input[name="via"]').forEach(function(r){r.addEventListener('change',function(){goLabel();q('fSt').textContent='';});});
+
+/* i18n */
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){el.innerHTML=t(el.dataset.i18n);});
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){el.placeholder=t(el.dataset.i18nPh);});
+  document.querySelectorAll('[data-i18n-aria]').forEach(function(el){el.setAttribute('aria-label',t(el.dataset.i18nAria));});
+  document.querySelectorAll('#pick button').forEach(function(b){b.textContent=t(b.dataset.k);});
+  document.querySelectorAll('button[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===lang?'true':'false');});
+  document.title=CONFIG.brand+(lang==='ru'?' · ремонт на Пхукете без сюрпризов':' · Phuket renovation, no surprises');
+  fillDist();fillContacts();goLabel();renderQuote();renderCatalog();fillSelect();renderCase();
+  q('fSt').textContent='';if(touched)validate(false);
+  render();
+}
+document.addEventListener('click',function(e){var b=e.target.closest('button[data-lang]');if(!b)return;lang=b.dataset.lang;try{localStorage.setItem('sala-lang',lang);}catch(err){}applyLang();});
+
+/* privacy dialog */
+var pv=q('pv');
+function pvOpen(){if(typeof pv.showModal==='function'){pv.showModal();}else{pv.setAttribute('open','');}q('pvX').focus();}
+function pvClose(){if(typeof pv.close==='function'){pv.close();}else{pv.removeAttribute('open');}}
+document.querySelectorAll('.js-privacy').forEach(function(b){b.addEventListener('click',pvOpen);});
+q('pvX').addEventListener('click',pvClose);
+pv.addEventListener('click',function(e){if(e.target===pv)pvClose();});
+
+/* floating button: phones only, hidden over hero, form and footer */
+var fab=q('fab'),vis={};
+function fabUpd(){var off=window.pageYOffset<window.innerHeight*.6||vis.lead||vis.footer;fab.classList.toggle('off',!!off);fab.tabIndex=off?-1:0;fab.setAttribute('aria-hidden',off?'true':'false');}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){vis[en.target.id]=en.isIntersecting;});fabUpd();},{rootMargin:'-'+Math.max(0,window.innerHeight-110)+'px 0px 0px 0px'});io.observe(q('lead'));io.observe(q('footer'));}
+window.addEventListener('scroll',fabUpd,{passive:true});fabUpd();
+
+/* structured data from CONFIG */
+try{
+  var mkOffer=function(name,min,max,unit){var ps={'@type':unit?'UnitPriceSpecification':'PriceSpecification',priceCurrency:'THB',minPrice:min};if(max)ps.maxPrice=max;if(unit)ps.unitCode=unit;return {'@type':'Offer',itemOffered:{'@type':'Service',name:name},priceSpecification:ps};};
+  var base=location.href.split('#')[0];
+  var ld={'@context':'https://schema.org','@type':'HomeAndConstructionBusiness',name:CONFIG.brand,
+    description:'Renovation in Phuket inside and outside: free engineer inspection, itemised quote within 48 hours, fixed contract price, staged payments, written warranty.',
+    url:base,image:new URL('img/a-site.webp',base).href,telephone:CONFIG.phone,email:CONFIG.email,
+    address:{'@type':'PostalAddress',addressLocality:'Phuket',addressRegion:'Phuket',addressCountry:'TH'},
+    areaServed:{'@type':'AdministrativeArea',name:'Phuket'},
+    openingHours:CONFIG.hoursSchema,currenciesAccepted:'THB',knowsLanguage:['en','ru','th'],
+    sameAs:[link('ig'),link('fb'),link('tg'),link('line')],
+    hasOfferCatalog:{'@type':'OfferCatalog',name:'Renovation services',itemListElement:[
+      mkOffer('Condo renovation, per m²',1500,11000,'MTK'),
+      mkOffer('Villa renovation, 3 bedrooms (~250 m²)',1500000,5000000),
+      mkOffer('Turnkey bathroom (~5 m²)',80000,250000),
+      mkOffer('Turnkey kitchen (~10 m²)',120000,500000),
+      mkOffer('Wall painting, per m²',120,180,'MTK'),
+      mkOffer('Tiling 60×60, per m²',500,650,'MTK'),
+      mkOffer('Roof waterproofing, per m²',250,350,'MTK'),
+      mkOffer('Flat roof repair (100 m²)',13750,123000),
+      mkOffer('A/C cleaning, per unit',350,800)]}};
+  var sc=document.createElement('script');sc.type='application/ld+json';sc.id='ld-business';sc.textContent=JSON.stringify(ld);document.head.appendChild(sc);
+}catch(err){}
+
+/* tabs */
+var ids=['services','calc','terms','cases','faq'];
+function show(id,scroll){
+  if(ids.indexOf(id)<0)return false;
+  ids.forEach(function(x){var p=q(x),tb=q('t-'+x),on=x===id;p.hidden=!on;p.classList.toggle('in',on);tb.setAttribute('aria-selected',on?'true':'false');tb.tabIndex=on?0:-1;});
+  var tb=q('t-'+id),tl=tb.parentNode,tr=tb.getBoundingClientRect(),lr=tl.getBoundingClientRect();if(tr.left<lr.left||tr.right>lr.right){tl.scrollLeft+=tr.left-lr.left-12;}
+  if(scroll){var y=q('tabs').getBoundingClientRect().top+window.pageYOffset-4;window.scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+  return true;
+}
+document.querySelector('.tablist').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;show(b.dataset.tab,false);try{history.replaceState(null,'','#'+b.dataset.tab);}catch(err){}});
+document.querySelector('.tablist').addEventListener('keydown',function(e){
+  if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;var cur=ids.indexOf(document.querySelector('.tab[aria-selected="true"]').dataset.tab);
+  var n=(cur+(e.key==='ArrowRight'?1:-1)+ids.length)%ids.length;show(ids[n],false);q('t-'+ids[n]).focus();
+});
+function goContact(){q('contact').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.next;
+  if(id==='contact'){goContact();return;}
+  show(id,true);try{history.replaceState(null,'','#'+id);}catch(err){}});});
+window.addEventListener('hashchange',function(){show((location.hash||'').slice(1),true);});
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var h=a.getAttribute('href').slice(1);
+  if(a.dataset.svc)setWork(a.dataset.svc);
+  if(a.dataset.grp)setGrp(a.dataset.grp);
+  if(a.dataset.pick){var pb=document.querySelector('#pick [data-k="'+a.dataset.pick+'"]');if(pb){pb.setAttribute('aria-pressed','true');if(touched)validate(false);}}
+  if(ids.indexOf(h)>=0){e.preventDefault();show(h,true);try{history.replaceState(null,'','#'+h);}catch(err){}}
+  else if(h==='contact'){e.preventDefault();goContact();}});
+
+setWork('bath');
+applyLang();
+var h0=(location.hash||'').slice(1);
+if(ids.indexOf(h0)>=0){show(h0,true);}else{show('services',false);}
+})();
+</script>
+</body>
+</html>
